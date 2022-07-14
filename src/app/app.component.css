@@ -1,4 +1,5 @@
 /* loging page start*/
+/* First section start */
 .swiggylogoimg {
   width: 190px;
   height: auto;
@@ -34,7 +35,7 @@
 .loginbtn:hover {
   color: var(--main-color);
 }
-
+/* text animation start */
 .movinglogingdiv,
 .movinglogingdiv:before,
 .movinglogingdiv:after {
@@ -61,6 +62,7 @@
   color: black;
   animation: spin_words alternate-reverse infinite;
   animation-duration: 20s;
+  text-transform: capitalize;
 }
 
 @keyframes spin_words {
@@ -96,3 +98,81 @@
     transform: translateY(-400%);
   }
 }
+/* text animation end */
+/* location input start*/
+.locationinput{
+  height: 58px;
+  line-height: 28px;
+  padding-top: 0;
+  padding-left: 15px;
+  padding-right: 160px;
+  caret-color: var(--main-color);
+  font-size: 18px;
+  font-weight: 500;
+  border-right: none;
+  outline: none !important;
+  border: 1px solid #bebfc5;
+}
+.locationinput:focus{
+  caret-color:var(--main-color);
+  border: 1px solid var(--main-color) ;
+}
+.locationinputdivmain{
+  position: relative;
+  display: flex;
+}
+.gitlocation{
+  position: absolute;
+  right: 120px;
+  top: 8px;
+}
+.gitlocation span{
+  color: #535665;
+  font-size: 12px;
+}
+.gitlocation button:hover{
+  background-color: #e9e9eb;
+}
+.locationicon{
+  vertical-align:-webkit-baseline-middle;
+  font-size: 15px;
+  color: #535665;
+}
+.findfoodbtndiv a{
+      text-decoration: none;
+      cursor: pointer;
+      display: inline-block;
+      text-align: center;
+      border: none;
+      color: #fff;
+      background-color: var(--main-color);
+      box-shadow: 0 1px 3px 0 rgb(0 0 0 / 12%);
+      right: 0;
+      height: 58px;
+      line-height: 60px;
+      width: 140px;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: .53px;
+      padding: 0;
+}
+/* location input end */
+.locationinputdoendiv p{
+  color: #a9abb2;
+}
+.locationinputdoendiv ul{
+  color: #93959f;
+  display: flex;
+}
+.locationinputdoendiv ul li:nth-child(odd) a{
+ color: #686b78;
+ font-weight: 500;
+}
+.locationinputdoendiv ul li:nth-child(even) a{
+  color: #93959f;
+}
+.list-group-item{
+  border: none !important;
+}
+/* first section end*/
+/* loging page end*/

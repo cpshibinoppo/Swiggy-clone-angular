@@ -1,14 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 :root{
   --main-color:#fc8019;
-}
-a{
-  text-decoration: none;
 }
 *{
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
 }
+a{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+  padding: 0;
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
