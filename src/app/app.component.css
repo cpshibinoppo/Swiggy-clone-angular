@@ -33,6 +33,7 @@
   background-color: black;
   font-weight: 600;
   padding: 5px 15px;
+  cursor: pointer;
 }
 
 .loginbtn:hover {
@@ -209,10 +210,79 @@
 }
 /* top img end */
 /*section 2 start */
+.section2row{
+  padding-bottom: 3.5rem;
+}
 .section2{
   background-color: #2b1e16;
   color: #fff;
 }
+.section2con{
+  display: flex;
+  justify-content: space-around;
+}
+.feactermain1 {
+  text-align: center;
+}
+.feactermain1 img{
+  width: 115px;
+  height: 205px;
+}
+.feactermain1 p{
+  font-size: 15px;
+  width: 260px;
+  margin-top: 10px;
+  color: #e0cbc1;
+  line-height: 1.3;
+}
+.feactermain1 h2{
+  padding-top: 1.5rem;
+}
 /*section 2 end */
+/* section 3 start */
+.section3row{
+  padding-top: 4rem;
+}
+.section3row .col-5 h2{
+  font-size: 40px;
+  font-weight: 500;
+  width: 300px;
+  line-height: 1;
+  padding-top: 3rem;
+}
+.section3row .col-5 h5{
+  font-size: 20px;
+    width: 400px;
+    font-weight: 300;
+    padding-top: 7px;
+    padding-bottom: 50px;
+    color: #7e808c;
+    line-height: 1.2;
+}
+.app-link{
+display: flex;
+}
+.app-link a{
+  width: 38%;
+}
+.app-link img{
+  width: 87%;
+}
+.phonelogingdiv img{
+  width: 370px;
+}
+.phoneimg1{
+  margin-top: -130px;
+}
+/* section 3 end */
+/* slide section start */
+.slidecol{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #FFF;
+  height: 100vh;
+}
+/* slide section end */
 /* first section end*/
 /* loging page end*/
