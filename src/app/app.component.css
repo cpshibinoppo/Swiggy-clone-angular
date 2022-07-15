@@ -4,7 +4,10 @@
   width: 190px;
   height: auto;
 }
-
+.logocol{
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
 .loginlogomaindiv {
   display: flex;
 }
@@ -113,6 +116,9 @@
   outline: none !important;
   border: 1px solid #bebfc5;
 }
+.logingmaincon{
+  padding-top: 4.5rem;
+}
 .locationinput:focus{
   caret-color:var(--main-color);
   border: 1px solid var(--main-color) ;
@@ -123,8 +129,8 @@
 }
 .gitlocation{
   position: absolute;
-  right: 120px;
-  top: 8px;
+  right: 125px;
+  top: 16px;
 }
 .gitlocation span{
   color: #535665;
@@ -137,6 +143,16 @@
   vertical-align:-webkit-baseline-middle;
   font-size: 15px;
   color: #535665;
+}
+.orderfoodtextp{
+  font-size: 24px;
+    font-weight: 300;
+    width: 600px;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    letter-spacing: -.3px;
+    color: #686b78;
 }
 .findfoodbtndiv a{
       text-decoration: none;
@@ -174,5 +190,29 @@
 .list-group-item{
   border: none !important;
 }
+.puneul{
+  line-height: 0;
+}
+/* top img start */
+.topfoodimage{
+  position: relative;
+  left: calc(2% + 50px);
+  right: 0;
+  width: 136%;
+  background-repeat: no-repeat;
+  height: 100%;
+  background-size: cover;
+  background-position: 100%;
+  top: 0;
+  background-color: hsla(26,5%,70%,.2);
+  background-image: url(../assets/image/logingpage/logingfoodimg2.jpeg);
+}
+/* top img end */
+/*section 2 start */
+.section2{
+  background-color: #2b1e16;
+  color: #fff;
+}
+/*section 2 end */
 /* first section end*/
 /* loging page end*/
