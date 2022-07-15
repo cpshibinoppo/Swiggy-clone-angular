@@ -60,42 +60,42 @@
   display: block;
   height: 100%;
   color: black;
-  animation: spin_words alternate-reverse infinite;
+  animation: spin_words infinite;
   animation-duration: 20s;
   text-transform: capitalize;
 }
 
 @keyframes spin_words {
   10% {
-    transform: translateY(-112%);
+    transform: translateY(-70%);
   }
 
   25% {
-    transform: translateY(-100%);
+    transform: translateY(-60%);
   }
 
   35% {
-    transform: translateY(-212%);
+    transform: translateY(-170%);
   }
 
   50% {
-    transform: translateY(-200%);
+    transform: translateY(-160%);
   }
 
   60% {
-    transform: translateY(-312%);
+    transform: translateY(-270%);
   }
 
   75% {
-    transform: translateY(-300%);
+    transform: translateY(-260%);
   }
 
   85% {
-    transform: translateY(-412%);
+    transform: translateY(-370%);
   }
 
   100% {
-    transform: translateY(-400%);
+    transform: translateY(-360%);
   }
 }
 /* text animation end */
