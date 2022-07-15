@@ -197,7 +197,7 @@
 /* top img start */
 .topfoodimage{
   position: relative;
-  left: calc(2% + 50px);
+  left: calc(2% + 43px);
   right: 0;
   width: 136%;
   background-repeat: no-repeat;
@@ -277,12 +277,13 @@ display: flex;
 /* section 3 end */
 /* slide section start */
 .slidecol{
-  position: absolute;
-  top: 0;
-  right: 0;
   background: #FFF;
-  height: 100vh;
+  height: 100%;
 }
+.mat-drawer-opened{
+  width: 30%;
+}
+
 /* slide section end */
 /* first section end*/
 /* loging page end*/
