@@ -11,9 +11,16 @@ export class AppComponent {
   title = 'Swiggy';
   options: any = {componentRestrictions: { country: 'IN' },};
   opened = false;
+  toggle = false;
+status = 'Enable';
   handleAddressChange(address: Address) {
     console.log(address.formatted_address);
     console.log(address.geometry.location.lat());
     console.log(address.geometry.location.lng());
   }
+  enableDisableRule() {
+    this.toggle = !this.toggle;
+    this.status = this.toggle ? 'Enable' : 'Disable';
+    console.log("btnclick");
+}
 }

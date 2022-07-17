@@ -4,10 +4,12 @@
   width: 190px;
   height: auto;
 }
-.logocol{
+
+.logocol {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
+
 .loginlogomaindiv {
   display: flex;
 }
@@ -39,6 +41,7 @@
 .loginbtn:hover {
   color: var(--main-color);
 }
+
 /* text animation start */
 .movinglogingdiv,
 .movinglogingdiv:before,
@@ -102,9 +105,10 @@
     transform: translateY(-360%);
   }
 }
+
 /* text animation end */
 /* location input start*/
-.locationinput{
+.locationinput {
   height: 58px;
   line-height: 28px;
   padding-top: 0;
@@ -117,85 +121,101 @@
   outline: none !important;
   border: 1px solid #bebfc5;
 }
-.logingmaincon{
+
+.logingmaincon {
   padding-top: 4.5rem;
 }
-.locationinput:focus{
-  caret-color:var(--main-color);
-  border: 1px solid var(--main-color) ;
+
+.locationinput:focus {
+  caret-color: var(--main-color);
+  border: 1px solid var(--main-color);
 }
-.locationinputdivmain{
+
+.locationinputdivmain {
   position: relative;
   display: flex;
 }
-.gitlocation{
+
+.gitlocation {
   position: absolute;
   right: 125px;
   top: 16px;
 }
-.gitlocation span{
+
+.gitlocation span {
   color: #535665;
   font-size: 12px;
 }
-.gitlocation button:hover{
+
+.gitlocation button:hover {
   background-color: #e9e9eb;
 }
-.locationicon{
-  vertical-align:-webkit-baseline-middle;
+
+.locationicon {
+  vertical-align: -webkit-baseline-middle;
   font-size: 15px;
   color: #535665;
 }
-.orderfoodtextp{
+
+.orderfoodtextp {
   font-size: 24px;
-    font-weight: 300;
-    width: 600px;
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    letter-spacing: -.3px;
-    color: #686b78;
+  font-weight: 300;
+  width: 600px;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  letter-spacing: -.3px;
+  color: #686b78;
 }
-.findfoodbtndiv a{
-      text-decoration: none;
-      cursor: pointer;
-      display: inline-block;
-      text-align: center;
-      border: none;
-      color: #fff;
-      background-color: var(--main-color);
-      box-shadow: 0 1px 3px 0 rgb(0 0 0 / 12%);
-      right: 0;
-      height: 58px;
-      line-height: 60px;
-      width: 140px;
-      font-size: 16px;
-      font-weight: 700;
-      letter-spacing: .53px;
-      padding: 0;
+
+.findfoodbtndiv a {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  border: none;
+  color: #fff;
+  background-color: var(--main-color);
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 12%);
+  right: 0;
+  height: 58px;
+  line-height: 60px;
+  width: 140px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: .53px;
+  padding: 0;
 }
+
 /* location input end */
-.locationinputdoendiv p{
+.locationinputdoendiv p {
   color: #a9abb2;
 }
-.locationinputdoendiv ul{
+
+.locationinputdoendiv ul {
   color: #93959f;
   display: flex;
 }
-.locationinputdoendiv ul li:nth-child(odd) a{
- color: #686b78;
- font-weight: 500;
+
+.locationinputdoendiv ul li:nth-child(odd) a {
+  color: #686b78;
+  font-weight: 500;
 }
-.locationinputdoendiv ul li:nth-child(even) a{
+
+.locationinputdoendiv ul li:nth-child(even) a {
   color: #93959f;
 }
-.list-group-item{
+
+.list-group-item {
   border: none !important;
 }
-.puneul{
+
+.puneul {
   line-height: 0;
 }
+
 /* top img start */
-.topfoodimage{
+.topfoodimage {
   position: relative;
   left: calc(2% + 43px);
   right: 0;
@@ -205,86 +225,197 @@
   background-size: cover;
   background-position: 100%;
   top: 0;
-  background-color: hsla(26,5%,70%,.2);
+  background-color: hsla(26, 5%, 70%, .2);
   background-image: url(../assets/image/logingpage/logingfoodimg2.jpeg);
 }
+
 /* top img end */
 /*section 2 start */
-.section2row{
+.section2row {
   padding-bottom: 3.5rem;
 }
-.section2{
+
+.section2 {
   background-color: #2b1e16;
   color: #fff;
 }
-.section2con{
+
+.section2con {
   display: flex;
   justify-content: space-around;
 }
+
 .feactermain1 {
   text-align: center;
 }
-.feactermain1 img{
+
+.feactermain1 img {
   width: 115px;
   height: 205px;
 }
-.feactermain1 p{
+
+.feactermain1 p {
   font-size: 15px;
   width: 260px;
   margin-top: 10px;
   color: #e0cbc1;
   line-height: 1.3;
 }
-.feactermain1 h2{
+
+.feactermain1 h2 {
   padding-top: 1.5rem;
 }
+
 /*section 2 end */
 /* section 3 start */
-.section3row{
+.section3row {
   padding-top: 4rem;
 }
-.section3row .col-5 h2{
+
+.section3row .col-5 h2 {
   font-size: 40px;
   font-weight: 500;
   width: 300px;
   line-height: 1;
   padding-top: 3rem;
 }
-.section3row .col-5 h5{
+
+.section3row .col-5 h5 {
   font-size: 20px;
-    width: 400px;
-    font-weight: 300;
-    padding-top: 7px;
-    padding-bottom: 50px;
-    color: #7e808c;
-    line-height: 1.2;
+  width: 400px;
+  font-weight: 300;
+  padding-top: 7px;
+  padding-bottom: 50px;
+  color: #7e808c;
+  line-height: 1.2;
 }
-.app-link{
-display: flex;
+
+.app-link {
+  display: flex;
 }
-.app-link a{
+
+.app-link a {
   width: 38%;
 }
-.app-link img{
+
+.app-link img {
   width: 87%;
 }
-.phonelogingdiv img{
+
+.phonelogingdiv img {
   width: 370px;
 }
-.phoneimg1{
+
+.phoneimg1 {
   margin-top: -130px;
 }
+
 /* section 3 end */
-/* slide section start */
-.slidecol{
+/* slide signup section start */
+.slidecol {
   background: #FFF;
   height: 100%;
 }
-.mat-drawer-opened{
+
+.mat-drawer-opened {
   width: 30%;
 }
 
-/* slide section end */
+.closeiconbtn {
+  background: none;
+  border: none;
+}
+
+.closeiconbtn:focus {
+  display: none;
+}
+
+.signuptologinlink:after {
+  content: "";
+  position: absolute;
+  bottom: -22px;
+  left: 0;
+  width: 30px;
+  border: 1px solid #000;
+}
+
+.signuptextmain {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slidelogoimg {
+  width: 100px;
+}
+
+.mat-drawer.mat-drawer-end {
+  width: 40% !important;
+}
+
+.signuptext a {
+  color: var(--main-color);
+}
+
+/* form */
+.formmaindiv {
+  display: block;
+}
+
+.sample1 {
+  border-bottom: 0;
+  border: 1px solid #d4d5d9;
+  padding: 0;
+  display: block;
+  position: relative;
+  transform: translateZ(0);
+}
+
+.inptsample {
+  background-color: transparent;
+  line-height: normal;
+  border: none;
+  outline: none;
+  height: 70px;
+  width: 100%;
+  font-size: 17px;
+  margin: 0;
+  padding: 0 20px;
+  padding-top: 22px;
+  font-weight: 500;
+}
+
+.samplelabel {
+  position: absolute;
+  left: 0;
+  bottom: 24px;
+  padding-left: 20px;
+  line-height: 20px;
+  font-size: 17px;
+  transition: .2s ease;
+  width: 100%;
+  color: #93959f;
+  will-change: transform, color, font-size;
+  pointer-events: none;
+  font-weight: 400;
+}
+
+.samplelabel:focus {
+  font-size: 12px;
+  font-weight: 500;
+  color: #7e808c;
+  -ms-transform: translateY(-70%);
+  transform: translateY(-70%);
+}
+
+/* slide signup section end */
 /* first section end*/
 /* loging page end*/
 
+.red {
+  font-size: 12px;
+  font-weight: 500;
+  color: #7e808c;
+  -ms-transform: translateY(-70%);
+  transform: translateY(-70%);
+}

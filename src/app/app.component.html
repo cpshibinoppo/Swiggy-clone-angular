@@ -9,7 +9,7 @@
                 <img src="../assets/image/logingpage/swiggy-logo.png" alt="swiggy-logo" class="swiggylogoimg">
               </div>
               <div class="loginpagebuttonmaindiv">
-                <a class="loginbtn"  href="#">Login</a>
+                <a class="loginbtn" href="#">Login</a>
                 <a class="singupbtn" (click)="opened=!opened">Sign Up</a>
               </div>
             </div>
@@ -126,20 +126,46 @@
       </section>
     </mat-sidenav-content>
     <mat-sidenav position="end" [(opened)]="opened">
-      <!-- slide section start -->
+      <!-- slide-signup section start -->
       <section>
         <div right class="container">
           <div class="row">
-            <div class="col-5 slidecol">
-              <button (click)="opened=!opened">
-                <mat-icon>close</mat-icon>
-              </button>
-              <h1>Mohammed</h1>
+            <div class="col-7 slidecol">
+              <div class="mainsignupdiv">
+                <button class="closeiconbtn" (click)="opened=!opened">
+                  <mat-icon>close</mat-icon>
+                </button>
+                <div class="signuptextmain">
+                  <div class="signuptext">
+                    <h2>Sing up</h2>
+                    <div>
+                      or <a class="signuptologinlink" href="">login to your account</a>
+                    </div>
+                  </div>
+                  <div class="slidelogoimgdiv">
+                    <img class="slidelogoimg" src="../assets/image/logingpage/slidelogo.png" alt="slidelogo">
+                  </div>
+                </div>
+                <form action="">
+                  <div class="formmaindiv">
+                    <div class="sample1" (click)="enableDisableRule()">
+                      <input type="text" class="inptsample">
+                      <label [ngClass]="{'red' : toggle}" class="samplelabel" for="">Phone number</label>
+                    </div>
+                  </div>
+                  <div class="formmaindiv">
+                    <div class="sample1" (click)="enableDisableRule()">
+                      <input type="text" class="inptsample">
+                      <label [ngClass]="{'red' : toggle}" class="samplelabel" for="">Phone number</label>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- slide section end -->
+      <!-- slide signup section end -->
     </mat-sidenav>
   </mat-sidenav-container>
 </div>
