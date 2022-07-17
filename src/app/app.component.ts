@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Address } from 'ngx-google-places-autocomplete/objects/address';
 type PaneType = 'left' | 'right';
 @Component({
@@ -7,22 +7,13 @@ type PaneType = 'left' | 'right';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  private app = document.getElementById("sampleid");
-
+  // @ViewChild('sampleid', { read: ElementRef }) tref!: ElementRef;
   title = 'Swiggy';
-  options: any = {
-    componentRestrictions: { country: 'IN' },
-  };
+  options: any = {componentRestrictions: { country: 'IN' },};
   opened = false;
   handleAddressChange(address: Address) {
     console.log(address.formatted_address);
     console.log(address.geometry.location.lat());
     console.log(address.geometry.location.lng());
-  }
-  getsignuppage() {
-    console.log('Get signup page');
-
-      console.log(this.app);
-     console.log("color");
   }
 }
