@@ -1,5 +1,4 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { flush } from '@angular/core/testing';
 import { Address } from 'ngx-google-places-autocomplete/objects/address';
 type PaneType = 'left' | 'right';
 @Component({
@@ -38,20 +37,6 @@ export class AppComponent {
       console.log('sueess');
     }
   }
-  check(){
-    if(this.status = 'Disable'){
-     this.toggle = true;
 
-    }
-  }
-  sampleclick() {
-    // console.log(this.ElementRef.nativeElement.value);
-    // console.log('erro');
-    // this.myusername = this.usernameElement.nativeElement.value;
-    // if (this.myusername == '') {
-    //   console.log('null');
-    // } else {
-    //   console.log('sueess');
-    // }
-  }
+
 }

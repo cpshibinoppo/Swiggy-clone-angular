@@ -312,117 +312,11 @@
 
 /* section 3 end */
 /* slide signup section start */
-.slidecol {
-  background: #FFF;
-  height: 100%;
-}
-
 .mat-drawer-opened {
   width: 30%;
 }
-
-.closeiconbtn {
-  background: none;
-  border: none;
-}
-
-.closeiconbtn:focus {
-  display: none;
-}
-
-.signuptologinlink:after {
-  content: "";
-  position: absolute;
-  bottom: -22px;
-  left: 0;
-  width: 30px;
-  border: 1px solid #000;
-}
-
-.signuptextmain {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-}
-
-.slidelogoimg {
-  width: 100px;
-}
-
 .mat-drawer.mat-drawer-end {
   width: 40% !important;
 }
-
-.signuptext a {
-  color: var(--main-color);
-}
-
-/* form */
-.formmaindiv {
-  display: block;
-}
-
-.sample1 {
-  border-bottom: 0;
-  border: 1px solid #d4d5d9;
-  padding: 0;
-  display: block;
-  position: relative;
-  transform: translateZ(0);
-}
-
-.inptsample {
-  background-color: transparent;
-  line-height: normal;
-  border: none;
-  outline: none;
-  height: 70px;
-  width: 100%;
-  font-size: 17px;
-  margin: 0;
-  padding: 0 20px;
-  padding-top: 22px;
-  font-weight: 500;
-}
-
-.samplelabel {
-  position: absolute;
-  left: 0;
-  bottom: 24px;
-  padding-left: 20px;
-  line-height: 20px;
-  font-size: 17px;
-  transition: .2s ease;
-  width: 100%;
-  color: #93959f;
-  will-change: transform, color, font-size;
-  pointer-events: none;
-  font-weight: 400;
-}
-
-.formmaindiv :focus .samplelabel {
-  font-size: 12px;
-  font-weight: 500;
-  color: #7e808c;
-  -ms-transform: translateY(-70%);
-  transform: translateY(-70%);
-}
-
 /* slide signup section end */
-/* first section end*/
 /* loging page end*/
-
-.red {
-  font-size: 12px;
-  font-weight: 500;
-  color: #7e808c;
-  -ms-transform: translateY(-70%);
-  transform: translateY(-70%);
-}
-.inptsample:focus .samplelabel{
-  font-size: 12px;
-  font-weight: 500;
-  color: #7e808c;
-  -ms-transform: translateY(-70%);
-  transform: translateY(-70%);
-}
