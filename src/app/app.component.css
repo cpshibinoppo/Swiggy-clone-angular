@@ -400,7 +400,7 @@
   font-weight: 400;
 }
 
-.samplelabel:focus {
+.formmaindiv :focus .samplelabel {
   font-size: 12px;
   font-weight: 500;
   color: #7e808c;
@@ -413,6 +413,13 @@
 /* loging page end*/
 
 .red {
+  font-size: 12px;
+  font-weight: 500;
+  color: #7e808c;
+  -ms-transform: translateY(-70%);
+  transform: translateY(-70%);
+}
+.inptsample:focus .samplelabel{
   font-size: 12px;
   font-weight: 500;
   color: #7e808c;

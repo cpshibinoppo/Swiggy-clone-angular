@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { flush } from '@angular/core/testing';
 import { Address } from 'ngx-google-places-autocomplete/objects/address';
 type PaneType = 'left' | 'right';
 @Component({
@@ -7,20 +8,50 @@ type PaneType = 'left' | 'right';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  // @ViewChild('sampleid', { read: ElementRef }) tref!: ElementRef;
+  @ViewChild('username', { static: true }) usernameElement!: ElementRef;
+  @ViewChild('usernamee', { static: true }) usernameElementt!: ElementRef;
+
+  myusername: string = '';
+  ElementRef: any;
+  constructor(usernameElement: ElementRef) {
+    this.usernameElement = usernameElement;
+  }
   title = 'Swiggy';
-  options: any = {componentRestrictions: { country: 'IN' },};
+  options: any = { componentRestrictions: { country: 'IN' } };
   opened = false;
   toggle = false;
-status = 'Enable';
+  status = 'Enable';
+  userdata: string = '';
   handleAddressChange(address: Address) {
     console.log(address.formatted_address);
     console.log(address.geometry.location.lat());
     console.log(address.geometry.location.lng());
   }
   enableDisableRule() {
-    this.toggle = !this.toggle;
-    this.status = this.toggle ? 'Enable' : 'Disable';
-    console.log("btnclick");
-}
+    this.myusername = this.usernameElement.nativeElement.value;
+    if (this.myusername == '') {
+       this.toggle = !this.toggle;
+      this.status = this.toggle ? 'Enable' : 'Disable';
+
+      console.log(this.status);
+    } else {
+      console.log('sueess');
+    }
+  }
+  check(){
+    if(this.status = 'Disable'){
+     this.toggle = true;
+
+    }
+  }
+  sampleclick() {
+    // console.log(this.ElementRef.nativeElement.value);
+    // console.log('erro');
+    // this.myusername = this.usernameElement.nativeElement.value;
+    // if (this.myusername == '') {
+    //   console.log('null');
+    // } else {
+    //   console.log('sueess');
+    // }
+  }
 }

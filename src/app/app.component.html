@@ -125,9 +125,9 @@
         </div>
       </section>
     </mat-sidenav-content>
-    <mat-sidenav position="end" [(opened)]="opened">
+    <mat-sidenav position="end" [(opened)]="opened" >
       <!-- slide-signup section start -->
-      <section>
+      <section (click)="check()" >
         <div right class="container">
           <div class="row">
             <div class="col-7 slidecol">
@@ -143,22 +143,17 @@
                     </div>
                   </div>
                   <div class="slidelogoimgdiv">
-                    <img class="slidelogoimg" src="../assets/image/logingpage/slidelogo.png" alt="slidelogo">
+                    <img  class="slidelogoimg" src="../assets/image/logingpage/slidelogo.png" alt="slidelogo">
                   </div>
                 </div>
                 <form action="">
                   <div class="formmaindiv">
                     <div class="sample1" (click)="enableDisableRule()">
-                      <input type="text" class="inptsample">
+                      <input type="text" class="inptsample" id="username" name="username" #username [ngModel]="userdata" value="{{userdata}}"  required>
                       <label [ngClass]="{'red' : toggle}" class="samplelabel" for="">Phone number</label>
                     </div>
                   </div>
-                  <div class="formmaindiv">
-                    <div class="sample1" (click)="enableDisableRule()">
-                      <input type="text" class="inptsample">
-                      <label [ngClass]="{'red' : toggle}" class="samplelabel" for="">Phone number</label>
-                    </div>
-                  </div>
+                  <input type="submit" (click)="sampleclick()">
                 </form>
               </div>
             </div>
