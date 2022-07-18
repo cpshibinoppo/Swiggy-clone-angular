@@ -87,16 +87,6 @@ slidecol {
   -ms-transform: translateY(-70%);
   transform: translateY(-70%);
 }
-$test: 3;
-@if $test < 5 {
-//  .inptsample:focus + .samplelabel,
-// .inptsample.not-empty + .samplelabel {
-//   font-size: 12px;
-//   font-weight: 500;
-//   color: #7e808c;
-//   -ms-transform: translateY(-70%);
-//   transform: translateY(-70%);
-// }
  .sa{
   font-size: 12px;
   font-weight: 500;
@@ -104,4 +94,4 @@ $test: 3;
   -ms-transform: translateY(-70%);
   transform: translateY(-70%);
 }
-}
+
