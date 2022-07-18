@@ -18,16 +18,16 @@
             </div>
           </div>
           <form class="formmain" action="">
-            <div class="formmaindiv">
+            <div class="formmaindiv" >
               <div class="sample1" >
-                <input type="text" class="inptsample" id="username" name="username" #username   required>
-                <label  class="samplelabel" for="">Phone number</label>
+                <input (focus)="onFocus()" (focusout)="focusOut()"  type="text" class="inptsample" #username [(ngModel)]="userdata" value="{{userdata}}"  required>
+                <label   class="samplelabel" [ngClass]="{'sa' : this.car}" for="">Phone number</label>
               </div>
             </div>
             <div class="formmaindiv">
               <div class="sample1" >
                 <input type="text" class="inptsample" id="username" name="username" #username   required>
-                <label  class="samplelabel" for="">Phone number</label>
+                <label   class="samplelabel" for="">Phone number</label>
               </div>
             </div>
             <input type="submit">

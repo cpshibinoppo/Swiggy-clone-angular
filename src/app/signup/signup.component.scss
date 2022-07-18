@@ -1,4 +1,5 @@
-.slidecol {
+
+slidecol {
   background: #FFF;
   height: 100%;
 }
@@ -86,11 +87,21 @@
   -ms-transform: translateY(-70%);
   transform: translateY(-70%);
 }
-.formmain .inptsample:focus + .samplelabel,
-.formmain.inptsample.not-empty + .samplelabel {
+$test: 3;
+@if $test < 5 {
+//  .inptsample:focus + .samplelabel,
+// .inptsample.not-empty + .samplelabel {
+//   font-size: 12px;
+//   font-weight: 500;
+//   color: #7e808c;
+//   -ms-transform: translateY(-70%);
+//   transform: translateY(-70%);
+// }
+ .sa{
   font-size: 12px;
   font-weight: 500;
   color: #7e808c;
   -ms-transform: translateY(-70%);
   transform: translateY(-70%);
+}
 }

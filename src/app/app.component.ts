@@ -9,7 +9,6 @@ type PaneType = 'left' | 'right';
 export class AppComponent {
   @ViewChild('username', { static: true }) usernameElement!: ElementRef;
   @ViewChild('usernamee', { static: true }) usernameElementt!: ElementRef;
-
   myusername: string = '';
   ElementRef: any;
   constructor(usernameElement: ElementRef) {
