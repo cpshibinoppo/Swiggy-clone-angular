@@ -42,7 +42,7 @@ slidecol {
   display: block;
 }
 
-.sample1 {
+.formmaindiv div{
   border-bottom: 0;
   border: 1px solid #d4d5d9;
   padding: 0;
@@ -51,7 +51,7 @@ slidecol {
   transform: translateZ(0);
 }
 
-.inptsample {
+.inputsignup{
   background-color: transparent;
   line-height: normal;
   border: none;
@@ -65,7 +65,7 @@ slidecol {
   font-weight: 500;
 }
 
-.samplelabel {
+.inputlabel {
   position: absolute;
   left: 0;
   bottom: 24px;
@@ -80,14 +80,14 @@ slidecol {
   font-weight: 400;
 }
 
-.formmaindiv :focus .samplelabel {
+/* .formmaindiv :focus .samplelabel {
   font-size: 12px;
   font-weight: 500;
   color: #7e808c;
   -ms-transform: translateY(-70%);
   transform: translateY(-70%);
-}
- .sa{
+} */
+ .focuslabel{
   font-size: 12px;
   font-weight: 500;
   color: #7e808c;

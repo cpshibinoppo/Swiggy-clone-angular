@@ -19,15 +19,15 @@
           </div>
           <form class="formmain" action="">
             <div class="formmaindiv" >
-              <div class="sample1" >
-                <input (focus)="onFocus('one')" (focusout)="focusOut()" name="one"  type="text" class="inptsample" #username [(ngModel)]="userdata" value="{{userdata}}"  required>
-                <label   class="samplelabel" [ngClass]="{'sa' : this.car}" for="">Phone number</label>
+              <div  >
+                <input (focus)="onFocus('one')" (focusout)="focusOut()" name="one"  type="text" class="inputsignup" #username [(ngModel)]="userdata" value="{{userdata}}"  required>
+                <label   class="inputlabel" [ngClass]="{'focuslabel' : this.car}" for="">Phone number</label>
               </div>
             </div>
             <div class="formmaindiv" >
-              <div class="sample1" >
-                <input (focus)="onFocus('two')" (focusout)="focusOut()" name="one"  type="text" class="inptsample" #username [(ngModel)]="userdata" value="{{userdata}}"  required>
-                <label   class="samplelabel" [ngClass]="{'sa' : this.carr}" for="">Phone number</label>
+              <div  >
+                <input (focus)="onFocus('two')" (focusout)="focusOut()" name="one"  type="text" class="inputsignup" #username [(ngModel)]="userdata" value="{{userdata}}"  required>
+                <label   class="inputlabel" [ngClass]="{'focuslabel' : this.carr}" for="">Phone number</label>
               </div>
             </div>
             <input type="submit">
@@ -37,37 +37,3 @@
     </div>
   </div>
 </section>
-<!-- <div style="padding-top:20px;">
-  <mat-card class="col-4" style="margin:0 auto;float:none;margin-bottom: 10px;">
-    <div>
-      <div>
-        <img class="imageclass" src="../../assets/image/logingpage/slidelogo.png" alt="">
-      </div>
-      <div class="signupformClass" style="background-color:yellowgreen;color: white;">
-        <mat-card>
-<h3>Signup form</h3>
-        </mat-card>
-      </div>
-      <div>
-        <div>
-          <div class="row">
-            <div class="col">
-              <mat-form-field style="width: 100%;">
-                <mat-label>First Name</mat-label>
-                <input matInput>
-              </mat-form-field>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <mat-form-field style="width: 100%;">
-                <mat-label>First Name</mat-label>
-                <input matInput>
-              </mat-form-field>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </mat-card>
-</div> -->
