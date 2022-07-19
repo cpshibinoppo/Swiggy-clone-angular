@@ -1,0 +1,43 @@
+<section>
+  <div right class="container">
+    <div class="row">
+      <div class="col-7 slidecol">
+        <div class="mainsignupdiv">
+          <button class="closeiconbtn" >
+            <mat-icon>close</mat-icon>
+          </button>
+          <div class="signuptextmain">
+            <div class="signuptext">
+              <h2>Login</h2>
+              <div>
+                or <a class="signuptologinlink" href="">create an account</a>
+              </div>
+            </div>
+            <div class="slidelogoimgdiv">
+              <img  class="slidelogoimg" src="../assets/image/logingpage/slidelogo.png" alt="slidelogo">
+            </div>
+          </div>
+          <form class="formmain pt-5" [formGroup]="loginForm" (ngSubmit)="onsubmit()">
+            <div class="formmaindiv" [ngClass]="{'erro' : sub&&f.phonenumber.errors}">
+              <div>
+                <input type="text" class="inputsignup" formControlName="phonenumber" required>
+                <label [ngClass]="{'focuslabel' : this.sub}" class="inputlabel">Phone number</label>
+                <div *ngIf="sub&&f.phonenumber.errors">
+                  <div *ngIf="f.phonenumber.errors['required']">required</div>
+                  <div *ngIf="f.phonenumber.errors['pattern']">pattern</div>
+                </div>
+              </div>
+            </div>
+            <div class="formmaindiv" >
+              <div>
+                <input type="text" type="password" class="inputsignup" formControlName="password">
+                <label class="inputlabel">Password</label>
+              </div>
+            </div>
+            <input type="submit">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

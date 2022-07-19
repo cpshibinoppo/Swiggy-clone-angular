@@ -11,6 +11,7 @@ export class AppComponent {
   title = 'Swiggy';
   options: any = { componentRestrictions: { country: 'IN' } };
   opened = false;
+  loginop = false;
   handleAddressChange(address: Address) {
     console.log(address.formatted_address);
     console.log(address.geometry.location.lat());

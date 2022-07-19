@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+// import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-signup',
@@ -6,10 +7,25 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./signup.component.css'],
 })
 export class SignupComponent implements OnInit {
+  // constructor(private fb: FormBuilder) {}
+  // signupform = this.fb.group({
+  //   firstnum: ['',Validators.required],
+  //   firstname: [''],
+  //   firstemail: [''],
+  //   firstpass: ['']
+  // });
+  // submit = false;
+  // get f(){
+  //   return this.signupform.controls;
+  // }
+  // onsubmit(){
+  //   this.submit = true;
+  //   console.log("submitsu");
+  // }
   @ViewChild('username', { static: true }) usernameElement!: ElementRef;
   @ViewChild('userphonenumberid', { static: true })userphonenumberid!: ElementRef;
-  @ViewChild('useremailid', { static: true })useremailid!: ElementRef;
-  @ViewChild('userepassword', { static: true })userepasswordid!: ElementRef;
+  @ViewChild('useremailid', { static: true }) useremailid!: ElementRef;
+  @ViewChild('userepassword', { static: true }) userepasswordid!: ElementRef;
 
   userdata: string = '';
   usernumervalue: string = '';
@@ -17,8 +33,8 @@ export class SignupComponent implements OnInit {
   userpassvalue: string = '';
   myusername: string = '';
   myusernumber: string = '';
-  myuseremail:string = '';
-  myuserpassword:string = '';
+  myuseremail: string = '';
+  myuserpassword: string = '';
   ElementRef: any;
   num = false;
   nameuser = false;
@@ -34,17 +50,16 @@ export class SignupComponent implements OnInit {
     if (par == 'phone') {
       if (this.myusernumber == '') {
         this.num = true;
-        console.log('on');
       }
     } else if (par == 'name') {
       if (this.myusername == '') {
         this.nameuser = true;
       }
-    } else if(par == 'email'){
+    } else if (par == 'email') {
       if (this.myuseremail == '') {
         this.emailuser = true;
       }
-    } else if(par == 'password'){
+    } else if (par == 'password') {
       if (this.myuserpassword == '') {
         this.passworduser = true;
       }
@@ -67,11 +82,11 @@ export class SignupComponent implements OnInit {
       if (this.myuseremail == '') {
         this.emailuser = false;
       }
-    }else if (par == 'password') {
+    } else if (par == 'password') {
       if (this.myuserpassword == '') {
         this.passworduser = false;
       }
-    }else {
+    } else {
       this.num = true;
       this.nameuser = true;
       this.emailuser = true;
