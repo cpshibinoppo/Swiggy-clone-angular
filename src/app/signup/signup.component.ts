@@ -7,32 +7,44 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 })
 export class SignupComponent implements OnInit {
   @ViewChild('username', { static: true }) usernameElement!: ElementRef;
+  @ViewChild('userphonenumberid', { static: true })
+  userphonenumberid!: ElementRef;
   userdata: string = '';
+  usernumervalue: string = '';
   myusername: string = '';
+  myusernumber: string = '';
   ElementRef: any;
   car = false;
   carr = false;
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
   onFocus(one: any) {
     console.log(one);
     this.myusername = this.usernameElement.nativeElement.value;
+    this.myusernumber = this.userphonenumberid.nativeElement.value;
     if (one == 'one') {
-      if (this.myusername == '') {
+      if (this.myusernumber == '') {
         this.car = true;
         console.log('on');
       }
-    }else if(one == 'two'){
-      this.carr = true;
+    } else if (one == 'two') {
+      if (this.myusername == '') {
+        this.carr = true;
+      }
     }
   }
-  focusOut() {
+  focusOut(one: any) {
     this.myusername = this.usernameElement.nativeElement.value;
-    if (this.myusername == '') {
-      this.car = false;
-      this.carr = false;
-      console.log('outoff');
+    this.myusernumber = this.userphonenumberid.nativeElement.value;
+    if (one == 'one') {
+      if (this.myusernumber == '') {
+        this.car = false;
+        console.log('on');
+      }
+    } else if (one == 'two') {
+      if (this.myusername == '') {
+        this.carr = false;
+      }
     } else {
       this.car = true;
       this.carr = true;

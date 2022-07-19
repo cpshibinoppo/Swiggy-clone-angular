@@ -19,14 +19,14 @@
           </div>
           <form class="formmain" action="">
             <div class="formmaindiv" >
-              <div  >
-                <input (focus)="onFocus('one')" (focusout)="focusOut()" name="one"  type="text" class="inputsignup" #username [(ngModel)]="userdata" value="{{userdata}}"  required>
+              <div>
+                <input (focus)="onFocus('one')" (focusout)="focusOut('one')" name="one"  type="text" class="inputsignup" #userphonenumberid [(ngModel)]="usernumervalue" value="{{usernumervalue}}"  required>
                 <label   class="inputlabel" [ngClass]="{'focuslabel' : this.car}" for="">Phone number</label>
               </div>
             </div>
             <div class="formmaindiv" >
               <div  >
-                <input (focus)="onFocus('two')" (focusout)="focusOut()" name="one"  type="text" class="inputsignup" #username [(ngModel)]="userdata" value="{{userdata}}"  required>
+                <input (focus)="onFocus('two')" (focusout)="focusOut('two')" name="one"  type="text" class="inputsignup" #username [(ngModel)]="userdata" value="{{userdata}}"  required>
                 <label   class="inputlabel" [ngClass]="{'focuslabel' : this.carr}" for="">Phone number</label>
               </div>
             </div>
