@@ -14,7 +14,6 @@ export class SignupComponent implements OnInit {
   carr = false;
 
   ngOnInit(): void {
-    console.log(this.usernameElement.nativeElement.name);
   }
   onFocus(one: any) {
     console.log(one);
