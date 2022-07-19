@@ -17,17 +17,29 @@
               <img  class="slidelogoimg" src="../assets/image/logingpage/slidelogo.png" alt="slidelogo">
             </div>
           </div>
-          <form class="formmain" action="">
+          <form class="formmain pt-5" action="">
             <div class="formmaindiv" >
               <div>
                 <input (focus)="onFocus('one')" (focusout)="focusOut('one')" name="one"  type="text" class="inputsignup" #userphonenumberid [(ngModel)]="usernumervalue" value="{{usernumervalue}}"  required>
-                <label   class="inputlabel" [ngClass]="{'focuslabel' : this.car}" for="">Phone number</label>
+                <label   class="inputlabel" [ngClass]="{'focuslabel' : this.num}" for="">Phone number</label>
               </div>
             </div>
             <div class="formmaindiv" >
-              <div  >
+              <div>
                 <input (focus)="onFocus('two')" (focusout)="focusOut('two')" name="one"  type="text" class="inputsignup" #username [(ngModel)]="userdata" value="{{userdata}}"  required>
-                <label   class="inputlabel" [ngClass]="{'focuslabel' : this.carr}" for="">Phone number</label>
+                <label   class="inputlabel" [ngClass]="{'focuslabel' : this.nameuser}" for="">Name</label>
+              </div>
+            </div>
+            <div class="formmaindiv" >
+              <div>
+                <input (focus)="onFocus('three')" (focusout)="focusOut('three')" name="three"  type="text" class="inputsignup" #useremailid [(ngModel)]="useremailvalue" value="{{useremailvalue}}"  required>
+                <label   class="inputlabel" [ngClass]="{'focuslabel' : this.emailuser}" for="">Email</label>
+              </div>
+            </div>
+            <div class="formmaindiv" >
+              <div>
+                <input (focus)="onFocus('four')" (focusout)="focusOut('four')" name="four"  type="text" class="inputsignup" #userepassword [(ngModel)]="userpassvalue" value="{{userpassvalue}}"  required>
+                <label   class="inputlabel" [ngClass]="{'focuslabel' : this.passworduser}" for="">Password</label>
               </div>
             </div>
             <input type="submit">
