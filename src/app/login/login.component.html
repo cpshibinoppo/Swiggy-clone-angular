@@ -17,21 +17,22 @@
               <img  class="slidelogoimg" src="../assets/image/logingpage/slidelogo.png" alt="slidelogo">
             </div>
           </div>
-          <form class="formmain pt-5" [formGroup]="loginForm" (ngSubmit)="onsubmit()">
+          <form class="formmain pt-5" [formGroup]="loginForm" (ngSubmit)="onsubmit('one')">
             <div class="formmaindiv" [ngClass]="{'erro' : sub&&f.phonenumber.errors}">
               <div>
-                <input type="text" class="inputsignup" formControlName="phonenumber" required>
-                <label [ngClass]="{'focuslabel' : this.sub}" class="inputlabel">Phone number</label>
-                <div *ngIf="sub&&f.phonenumber.errors">
+                <input (focus)="onFocus('one')" (focusout)="focusOut('one')" type="text" class="inputsignup" formControlName="phonenumber"  required>
+                <label [ngClass]="{'focuslabel' : this.sam}" class="inputlabel"><span *ngIf="sub&&f.phonenumber.errors">Enter Your </span> <span *ngIf="f.phonenumber!">Phone number</span> <span *ngIf="sub&&f.phonenumber.errors">error</span> </label>
+                <!-- <label [ngClass]="{'focuslabel' : this.sub}" class="inputlabel" *ngIf="sub&&f.phonenumber.errors">erro</label> -->
+                <!-- <div *ngIf="sub&&f.phonenumber.errors">
                   <div *ngIf="f.phonenumber.errors['required']">required</div>
                   <div *ngIf="f.phonenumber.errors['pattern']">pattern</div>
-                </div>
+                </div> -->
               </div>
             </div>
             <div class="formmaindiv" >
               <div>
-                <input type="text" type="password" class="inputsignup" formControlName="password">
-                <label class="inputlabel">Password</label>
+                <input (focus)="onFocus('two')" (focusout)="focusOut('two')" type="text" type="password" class="inputsignup" formControlName="password">
+                <label [ngClass]="{'focuslabel' : this.pass}" class="inputlabel">Password</label>
               </div>
             </div>
             <input type="submit">

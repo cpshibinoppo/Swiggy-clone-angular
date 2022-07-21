@@ -1,5 +1,4 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-// import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-signup',
@@ -7,21 +6,6 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./signup.component.css'],
 })
 export class SignupComponent implements OnInit {
-  // constructor(private fb: FormBuilder) {}
-  // signupform = this.fb.group({
-  //   firstnum: ['',Validators.required],
-  //   firstname: [''],
-  //   firstemail: [''],
-  //   firstpass: ['']
-  // });
-  // submit = false;
-  // get f(){
-  //   return this.signupform.controls;
-  // }
-  // onsubmit(){
-  //   this.submit = true;
-  //   console.log("submitsu");
-  // }
   @ViewChild('username', { static: true }) usernameElement!: ElementRef;
   @ViewChild('userphonenumberid', { static: true })userphonenumberid!: ElementRef;
   @ViewChild('useremailid', { static: true }) useremailid!: ElementRef;
