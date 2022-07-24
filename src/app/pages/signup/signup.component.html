@@ -34,7 +34,7 @@
                 <label [ngClass]="{'focuslabel' : this.usernam,'eorrortext' : usernumerror&&this.f.username.errors}" class="inputlabel">
                   <span *ngIf="usernumerror&&f.username.errors">Enter Your </span>
                   <span *ngIf="f.username!">Name</span>
-                  <span *ngIf="usernumerror&&f.username.errors?.['minlength']"> Mim 3</span>
+                  <span *ngIf="usernumerror&&f.username.errors?.['minlength']"> should be min 3 chars</span>
                 </label>
               </div>
             </div>
@@ -54,8 +54,8 @@
                 <label [ngClass]="{'focuslabel' : this.userpassword,'eorrortext' : userpassworderror&&this.f.userpassword.errors}" class="inputlabel">
                   <span *ngIf="userpassworderror&&f.userpassword.errors">Enter Your </span>
                   <span *ngIf="f.userpassword!">Password</span>
-                  <span *ngIf="userpassworderror&&f.userpassword.errors?.['minlength']">Min 8</span>
-                  <span *ngIf="userpassworderror&&f.userpassword.errors?.['maxlength']">Max 10</span>
+                  <span *ngIf="userpassworderror&&f.userpassword.errors?.['minlength']">should be min 8 chars</span>
+                  <span *ngIf="userpassworderror&&f.userpassword.errors?.['maxlength']"> Max 10</span>
                 </label>
               </div>
             </div>

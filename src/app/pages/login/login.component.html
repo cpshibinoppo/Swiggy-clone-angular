@@ -1,7 +1,7 @@
 <section>
-  <div right class="container">
+  <div right class="container pt-5">
     <div class="row">
-      <div class="col-7 slidecol">
+      <div class="col-8 slidecol">
         <div class="mainsignupdiv">
           <button class="closeiconbtn">
             <mat-icon>close</mat-icon>
@@ -25,12 +25,12 @@
                 <label [ngClass]="{'focuslabel' : this.sam}" class="inputlabel">
                   <span *ngIf="sub&&f.phonenumber.errors">Enter Your </span>
                   <span *ngIf="f.phonenumber!">Phone number</span>
-                  <span *ngIf="f.phonenumber.errors&&f.phonenumber.errors!['pattern']">correctly</span>
+                  <span *ngIf="f.phonenumber.errors&&f.phonenumber.errors?.['pattern']">correctly</span>
                 </label>
               </div>
             </div>
             <button class="loginbtn" type="submit">LOGIN</button>
-            <p>By clicking on Login, <a href="#"> I accept the Terms & Conditions & Privacy Policy</a></p>
+            <p class="termspara">By clicking on Login, <a href="#"> I accept the Terms & Conditions & Privacy Policy</a></p>
           </form>
         </div>
       </div>

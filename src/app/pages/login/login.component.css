@@ -1,4 +1,6 @@
 
+/* @import "~bootstrap/dist/css/bootstrap.css"; */
+
 .slidecol {
   background: #FFF;
   height: 100%;
@@ -8,11 +10,13 @@
 .closeiconbtn {
   background: none;
   border: none;
-  color: #535665;
-  cursor: pointer;
-  font-weight: 100;
 }
-
+.signuptext{
+  padding-top: 1rem;
+}
+.signuptext h2{
+  font-size: 2rem;
+}
 .closeiconbtn:focus {
   display: none;
 }
@@ -35,12 +39,8 @@
 .slidelogoimg {
   width: 100px;
 }
-.signuptext{
-  padding-top: 1rem;
-}
-.signuptext h2{
-  font-size: 2rem;
-}
+
+
 
 .signuptext a {
   color: var(--main-color);
@@ -87,14 +87,6 @@
   pointer-events: none;
   font-weight: 400;
 }
-
-/* .formmaindiv :focus .samplelabel {
-  font-size: 12px;
-  font-weight: 500;
-  color: #7e808c;
-  -ms-transform: translateY(-70%);
-  transform: translateY(-70%);
-} */
  .focuslabel{
   font-size: 12px;
   font-weight: 500;
@@ -111,14 +103,13 @@ input[type=number]::-webkit-outer-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
-.eorrorbor{
-  border: 1px solid red;
+/* error start */
+.erro{
+  border: 1px solid #dc3545;
+  background-image: url();
 }
-.eorrortext{
-  color:red;
-}
-.signupbtn{
-
+.loginbtn{
+  margin-top: 20px;
   width: 100%;
   cursor: pointer;
   text-align: center;
@@ -131,9 +122,6 @@ input[type=number] {
   color: #fff;
   background-color: var(--main-color);
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 12%);
-}
-.code{
-  line-height: 5;
 }
 .termspara{
   padding-top: 0.7rem;
