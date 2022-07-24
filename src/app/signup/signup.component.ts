@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+// import {opened} from '../app.component';
+
 
 
 @Component({
@@ -7,6 +9,7 @@ import { FormBuilder, Validators } from '@angular/forms';
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css'],
 })
+
 export class SignupComponent implements OnInit {
 
   constructor(private fb: FormBuilder) {}
