@@ -1,0 +1,34 @@
+.companycont {
+  color: #fff;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.companycol ul li a {
+  color: #fff;
+}
+
+.maincol {
+  display: flex;
+}
+
+.imgdiv1 img {
+  width: 200px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+
+.imgdiv2 img {
+  width: 200px;
+  border: 1px solid #fff;
+  margin-top: 2rem;
+  border-radius: 10px;
+}
+
+.imgdiv1 a,.imgdiv2 a {
+  display: block;
+  transition: transform .5s cubic-bezier(.215,.61,.355,1),-webkit-transform .5s cubic-bezier(.215,.61,.355,1);
+}
+.imgdiv1 a:hover,.imgdiv2 a:hover{
+transform: scale3d(1.05,1.05,1);
+}
