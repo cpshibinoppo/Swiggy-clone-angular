@@ -118,7 +118,7 @@ input[type=number] {
   color:red;
 }
 .signupbtn{
-  margin-top: 20px;
+
   width: 100%;
   cursor: pointer;
   text-align: center;
@@ -131,4 +131,14 @@ input[type=number] {
   color: #fff;
   background-color: var(--main-color);
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 12%);
+}
+.code{
+  line-height: 5;
+}
+.termspara{
+  padding-top: 0.7rem;
+}
+.termspara a{
+  color: #000;
+  font-weight: 600;
 }
