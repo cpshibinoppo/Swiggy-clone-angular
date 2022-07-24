@@ -17,10 +17,10 @@
               <img class="slidelogoimg" src="../assets/image/logingpage/slidelogo.png" alt="slidelogo">
             </div>
           </div>
-          <form class="formmain pt-5" [formGroup]="loginForm" (ngSubmit)="onsubmit('one')">
+          <form class="formmain pt-5" [formGroup]="loginForm" (ngSubmit)="onsubmit()">
             <div class="formmaindiv" [ngClass]="{'erro' : sub&&f.phonenumber.errors}">
               <div>
-                <input (focus)="onFocus('one')" (focusout)="focusOut('one')" type="text" class="inputsignup"
+                <input (focus)="onFocus()" (focusout)="focusOut()" type="text" class="inputsignup"
                   formControlName="phonenumber" required>
                 <label [ngClass]="{'focuslabel' : this.sam}" class="inputlabel">
                   <span *ngIf="sub&&f.phonenumber.errors">Enter Your </span>

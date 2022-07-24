@@ -103,3 +103,24 @@ input[type=number]::-webkit-outer-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+.eorrorbor{
+  border: 1px solid red;
+}
+.eorrortext{
+  color:red;
+}
+.signupbtn{
+  margin-top: 20px;
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  line-height: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  height: 50px;
+  padding: 0 2rem;
+  color: #fff;
+  background-color: var(--main-color);
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 12%);
+}

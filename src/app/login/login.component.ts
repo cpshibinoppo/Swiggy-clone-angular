@@ -19,7 +19,7 @@ export class LoginComponent {
   get f() {
     return this.loginForm.controls;
   }
-  onsubmit(par: any) {
+  onsubmit() {
     this.sub = true;
       if (this.f.phonenumber.value == '') {
         this.sam = false;
@@ -28,12 +28,12 @@ export class LoginComponent {
       this.sam = true;
     }
   }
-  onFocus(par: any) {
+  onFocus() {
     if (this.f.phonenumber.value == '') {
       this.sam = true;
     }
   }
-  focusOut(par: any) {
+  focusOut() {
     this.sub = true;
 
     if (this.f.phonenumber.value == '') {

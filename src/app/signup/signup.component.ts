@@ -1,4 +1,6 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-signup',
@@ -6,75 +8,79 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./signup.component.css'],
 })
 export class SignupComponent implements OnInit {
-  @ViewChild('username', { static: true }) usernameElement!: ElementRef;
-  @ViewChild('userphonenumberid', { static: true })userphonenumberid!: ElementRef;
-  @ViewChild('useremailid', { static: true }) useremailid!: ElementRef;
-  @ViewChild('userepassword', { static: true }) userepasswordid!: ElementRef;
 
-  userdata: string = '';
-  usernumervalue: string = '';
-  useremailvalue: string = '';
-  userpassvalue: string = '';
-  myusername: string = '';
-  myusernumber: string = '';
-  myuseremail: string = '';
-  myuserpassword: string = '';
-  ElementRef: any;
-  num = false;
-  nameuser = false;
-  emailuser = false;
-  passworduser = false;
+  constructor(private fb: FormBuilder) {}
+  loginForm = this.fb.group({
+  contphonenumber: ['',[Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
+  username:['',[Validators.required,Validators.minLength(3)]],
+  useremail:['',[Validators.required,Validators.email]],
+  userpassword:['',[Validators.required,Validators.minLength(8),Validators.maxLength(10)]]
+  });
+  get f() {
+    return this.loginForm.controls;
+  }
+
+  phonenubererror = false;
+  usernumerror = false;
+  useremailerror = false;
+  userpassworderror = false;
+  usernumber = false;
+  usernam = false;
+  useremail = false;
+  userpassword = false;
   ngOnInit(): void {}
-  onFocus(par: any) {
-    this.myusername = this.usernameElement.nativeElement.value;
-    this.myusernumber = this.userphonenumberid.nativeElement.value;
-    this.myuseremail = this.useremailid.nativeElement.value;
-    this.myuserpassword = this.userepasswordid.nativeElement.value;
 
-    if (par == 'phone') {
-      if (this.myusernumber == '') {
-        this.num = true;
+  onFocus(par:any){
+    if(par == "phone"){
+    if (this.f.contphonenumber.value == '') {
+      this.usernumber = true;
+      this.phonenubererror = true;
+    }}else if(par == "name"){
+     if(this .f.username.value == ''){
+      this.usernam = true;
+      this.usernumerror = true;
+    }}
+    else if(par == 'email'){
+      if(this.f.useremail.value == ''){
+        this.useremail = true;
+        this.useremailerror = true;
       }
-    } else if (par == 'name') {
-      if (this.myusername == '') {
-        this.nameuser = true;
-      }
-    } else if (par == 'email') {
-      if (this.myuseremail == '') {
-        this.emailuser = true;
-      }
-    } else if (par == 'password') {
-      if (this.myuserpassword == '') {
-        this.passworduser = true;
+    }
+    else if(par == 'password'){
+      if(this.f.userpassword.value == ''){
+        this.userpassword = true;
+        this.userpassworderror = true;
       }
     }
   }
-  focusOut(par: any) {
-    this.myusername = this.usernameElement.nativeElement.value;
-    this.myusernumber = this.userphonenumberid.nativeElement.value;
-    this.myuseremail = this.useremailid.nativeElement.value;
-    this.myuserpassword = this.userepasswordid.nativeElement.value;
-    if (par == 'phone') {
-      if (this.myusernumber == '') {
-        this.num = false;
+  focusOut(par:any){
+    if(par == 'phone'){
+      if (this.f.contphonenumber.value == '') {
+        this.usernumber = false;
+        this.phonenubererror = true;
+      }}else if(par == "name"){
+       if(this .f.username.value == ''){
+        this.usernam = false;
+        this.usernumerror = true;
+      }}
+      else if( par == 'email' ){
+        if(this.f.useremail.value == ''){
+          this.useremail =false;
+        this.useremailerror = true;
+        }
       }
-    } else if (par == 'name') {
-      if (this.myusername == '') {
-        this.nameuser = false;
+      else if(par == 'password'){
+        if(this.f.userpassword.value == ''){
+        this.userpassword = false;
+        this.userpassworderror = true;
+        }
       }
-    } else if (par == 'email') {
-      if (this.myuseremail == '') {
-        this.emailuser = false;
-      }
-    } else if (par == 'password') {
-      if (this.myuserpassword == '') {
-        this.passworduser = false;
-      }
-    } else {
-      this.num = true;
-      this.nameuser = true;
-      this.emailuser = true;
-      this.passworduser = true;
+      else {
+      this.usernumber = true;
+      this.usernam = true;
+      this.useremail = true;
+      this.userpassword = true;
     }
   }
 }
+
