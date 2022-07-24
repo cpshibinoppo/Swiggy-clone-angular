@@ -16,8 +16,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './pages/login/login.component';
+import { FooterComponent } from './layout/footer/footer.component';
 @NgModule({
-  declarations: [AppComponent, SignupComponent, LoginComponent],
+  declarations: [AppComponent, SignupComponent, LoginComponent, FooterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
