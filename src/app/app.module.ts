@@ -17,8 +17,9 @@ import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './pages/login/login.component';
 import { FooterComponent } from './layout/footer/footer.component';
+import { LocationComponent } from './pages/location/location.component';
 @NgModule({
-  declarations: [AppComponent, SignupComponent, LoginComponent, FooterComponent],
+  declarations: [AppComponent, SignupComponent, LoginComponent, FooterComponent, LocationComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
