@@ -8,6 +8,19 @@
   color: #fff;
 }
 
+.col-3 ul li a {
+  color: #fff;
+  transition: all .3s;
+}
+
+.col-3 ul li {
+  padding-top: 10px;
+}
+.col-3 ul li a:hover{
+  font-weight: 600;
+  font-size: 16px;
+}
+
 .maincol {
   display: flex;
 }
@@ -25,10 +38,13 @@
   border-radius: 10px;
 }
 
-.imgdiv1 a,.imgdiv2 a {
+.imgdiv1 a,
+.imgdiv2 a {
   display: block;
-  transition: transform .5s cubic-bezier(.215,.61,.355,1),-webkit-transform .5s cubic-bezier(.215,.61,.355,1);
+  transition: transform .5s cubic-bezier(.215, .61, .355, 1), -webkit-transform .5s cubic-bezier(.215, .61, .355, 1);
 }
-.imgdiv1 a:hover,.imgdiv2 a:hover{
-transform: scale3d(1.05,1.05,1);
+
+.imgdiv1 a:hover,
+.imgdiv2 a:hover {
+  transform: scale3d(1.05, 1.05, 1);
 }
