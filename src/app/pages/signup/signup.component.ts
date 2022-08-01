@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Address } from 'ngx-google-places-autocomplete/objects/address';
 import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
