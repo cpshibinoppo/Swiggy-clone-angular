@@ -42,7 +42,7 @@ nav{
 .dropdownlist{
  margin-top: 8px;
   position: absolute;
-display: none;
+/* display: none; */
   width: 8%;
   height: 280px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;

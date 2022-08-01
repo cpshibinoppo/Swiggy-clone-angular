@@ -10,9 +10,9 @@
           <div class="navlinkmaindiv">
             <div><a href="">Investor Relations</a></div>
             <div><a href="">Add Restaurant</a></div>
-            <div (click)="showlist()" class="username"> <img src="../../../assets/image/locationpage/userimg.jpeg" alt=""> cpshibin<mat-icon>
+            <div (click)="toggle=!toggle" class="username"> <img src="../../../assets/image/locationpage/userimg.jpeg" alt=""> cpshibin<mat-icon>
                 expand_more</mat-icon>
-                <div class="dropdownlist">
+                <div class="dropdownlist" *ngIf="toggle">
                   <ul>
                     <li class="toplist"><a href="">Profile</a></li>
                     <li><a href="">Notifications</a></li>
