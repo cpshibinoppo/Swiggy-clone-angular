@@ -34,10 +34,7 @@ export class LogingandsignupComponent implements OnInit {
   // loging
   constructor(private fb: FormBuilder) {}
   loginForm = this.fb.group({
-    phonenumber: [
-      '',
-      [Validators.required, Validators.pattern('^((\\+91-?)|0)?[0-9]{10}$')],
-    ],
+    phonenumber: ['',[Validators.required, Validators.pattern('^((\\+91-?)|0)?[0-9]{10}$')]],
     contphonenumber: [
       '',
       [Validators.required, Validators.pattern('^((\\+91-?)|0)?[0-9]{10}$')],
