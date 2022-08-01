@@ -10,16 +10,16 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SignupComponent } from './pages/signup/signup.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
-import { LoginComponent } from './pages/login/login.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { LocationComponent } from './pages/location/location.component';
+import { HomeComponent } from './pages/home/home.component';
+import { LogingandsignupComponent } from './pages/logingandsignup/logingandsignup.component';
 @NgModule({
-  declarations: [AppComponent, SignupComponent, LoginComponent, FooterComponent, LocationComponent],
+  declarations: [AppComponent,FooterComponent, LocationComponent, HomeComponent, LogingandsignupComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

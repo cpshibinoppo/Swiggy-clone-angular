@@ -1,0 +1,73 @@
+.topsection{
+  padding-bottom: 2rem;
+  background-image: url(../../../assets/image/locationpage/locanbackgroudimag.png);
+}
+nav{
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.navlinkmaindiv{
+  width: 40%;
+  justify-content: space-between;
+  display: flex;
+  font-size: 17px;
+  align-items: center;
+}
+.navlinkmaindiv a{
+  color: #fff;
+}
+.getappdiv mat-icon{
+  color: #fff;
+  font-size: 19px;
+  padding-top: 6px;
+  padding-left: 5px;
+}
+.getappdiv a{
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+.username{
+  color: #fff;
+  cursor: pointer;
+}
+.username img{
+  border-radius: 50%;
+  width: 45px;
+}
+.username mat-icon{
+  vertical-align: text-top;
+}
+.dropdownlist{
+ margin-top: 8px;
+  position: absolute;
+display: none;
+  width: 8%;
+  height: 280px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+}
+.dropdownlist ul{
+  padding-top: 5px;
+}
+.dropdownlist ul li {
+  padding: 7px 7px;
+  background-color: #fff;
+}
+.toplist{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.bottomlist{
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.dropdownlist ul li a{
+  color: black;
+  font-weight: 200;
+  font-size: 15.5px;
+}
+.dropdownlist ul li:hover{
+  background: rgb(232, 232, 232);
+}
