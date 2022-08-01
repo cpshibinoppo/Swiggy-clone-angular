@@ -3,12 +3,11 @@ import { Address } from 'ngx-google-places-autocomplete/objects/address';
 type PaneType = 'left' | 'right';
 
 @Component({
-  selector: 'app-logingandsignup',
-  templateUrl: './logingandsignup.component.html',
-  styleUrls: ['./logingandsignup.component.css']
+  selector: 'app-notlogin',
+  templateUrl: './notlogin.component.html',
+  styleUrls: ['./notlogin.component.css'],
 })
-export class LogingandsignupComponent implements OnInit {
-
+export class NotloginComponent implements OnInit {
   ElementRef: any;
   title = 'Swiggy';
   options: any = { componentRestrictions: { country: 'IN' } };
@@ -19,5 +18,9 @@ export class LogingandsignupComponent implements OnInit {
     console.log(address.formatted_address);
     console.log(address.geometry.location.lat());
     console.log(address.geometry.location.lng());
+  }
+  closeloginandsignup() {
+    this.opened = false;
+    this.loginop = false;
   }
 }

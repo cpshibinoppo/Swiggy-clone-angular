@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LocationComponent } from './pages/location/location.component';
-import { LogingandsignupComponent } from './pages/logingandsignup/logingandsignup.component';
+import { NotloginComponent } from './static/notlogin/notlogin.component';
 
 const routes: Routes = [
-  {path:"",component:LogingandsignupComponent},
+  {path:'',component:NotloginComponent},
   {path:'location',component:LocationComponent}
 ];
 

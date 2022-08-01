@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { NotloginComponent } from '../../static/notlogin/notlogin.component'
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ export class LoginComponent implements OnInit {
   sub = false;
   sam = false;
   // loging
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder,private closefn:NotloginComponent) {}
   loginForm = this.fb.group({
     phonenumber: [
       '',
@@ -45,5 +46,8 @@ export class LoginComponent implements OnInit {
     } else {
       this.sam = true;
     }
+  }
+  close(){
+    this.closefn.closeloginandsignup();
   }
 }

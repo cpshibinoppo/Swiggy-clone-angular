@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { NotloginComponent } from '../../static/notlogin/notlogin.component'
 
 @Component({
   selector: 'app-signup',
@@ -22,7 +23,7 @@ export class SignupComponent implements OnInit {
   sub = false;
   sam = false;
   // loging
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder,private closefn:NotloginComponent) {}
   loginForm = this.fb.group({
     phonenumber: ['',[Validators.required, Validators.pattern('^((\\+91-?)|0)?[0-9]{10}$')]],
     contphonenumber: [
@@ -107,6 +108,9 @@ export class SignupComponent implements OnInit {
       this.useremail = true;
       this.userpassword = true;
     }
+  }
+  close(){
+    this.closefn.closeloginandsignup()
   }
 
 }
