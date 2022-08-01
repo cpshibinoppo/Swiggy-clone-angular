@@ -18,8 +18,9 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { LocationComponent } from './pages/location/location.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LogingandsignupComponent } from './pages/logingandsignup/logingandsignup.component';
+import { SignupComponent } from './pages/signup/signup.component';
 @NgModule({
-  declarations: [AppComponent,FooterComponent, LocationComponent, HomeComponent, LogingandsignupComponent],
+  declarations: [AppComponent,FooterComponent, LocationComponent, HomeComponent, LogingandsignupComponent, SignupComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -1,0 +1,143 @@
+.slidecol {
+  background: #FFF;
+  height: 100%;
+  padding: 0 0px 0px 40px;
+}
+
+.closeiconbtn {
+  background: none;
+  border: none;
+  color: #535665;
+  cursor: pointer;
+  font-weight: 100;
+}
+
+.closeiconbtn:focus {
+  display: none;
+}
+
+.signuptologinlink:after {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width: 30px;
+  border: 1px solid #000;
+}
+
+.signuptextmain {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slidelogoimg {
+  width: 100px;
+}
+.signuptext{
+  padding-top: 1rem;
+}
+.signuptext h2{
+  font-size: 2rem;
+}
+
+.signuptext a {
+  color: var(--main-color);
+}
+
+.formmaindiv {
+  display: block;
+}
+
+.formmaindiv div{
+  border-bottom: 0;
+  border: 1px solid #d4d5d9;
+  padding: 0;
+  display: block;
+  position: relative;
+  transform: translateZ(0);
+}
+
+.inputsignup{
+  background-color: transparent;
+  line-height: normal;
+  border: none;
+  outline: none;
+  height: 70px;
+  width: 100%;
+  font-size: 17px;
+  margin: 0;
+  padding: 0 20px;
+  padding-top: 22px;
+  font-weight: 500;
+}
+
+.inputlabel {
+  position: absolute;
+  left: 0;
+  bottom: 24px;
+  padding-left: 20px;
+  line-height: 20px;
+  font-size: 17px;
+  transition: .2s ease;
+  width: 100%;
+  color: #93959f;
+  will-change: transform, color, font-size;
+  pointer-events: none;
+  font-weight: 400;
+}
+
+/* .formmaindiv :focus .samplelabel {
+  font-size: 12px;
+  font-weight: 500;
+  color: #7e808c;
+  -ms-transform: translateY(-70%);
+  transform: translateY(-70%);
+} */
+ .focuslabel{
+  font-size: 12px;
+  font-weight: 500;
+  color: #7e808c;
+  -ms-transform: translateY(-70%);
+  transform: translateY(-70%);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.eorrorbor{
+  border: 1px solid red;
+}
+.eorrortext{
+  color:red;
+}
+.signupbtn{
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  line-height: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  height: 50px;
+  padding: 0 2rem;
+  color: #fff;
+  background-color: var(--main-color);
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 12%);
+}
+.code{
+  line-height: 5;
+}
+.termspara{
+  padding-top: 0.7rem;
+}
+.termspara a{
+  color: #000;
+  font-weight: 600;
+}
+
