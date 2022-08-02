@@ -17,7 +17,7 @@
               <img class="slidelogoimg" src="../assets/image/logingpage/slidelogo.png" alt="slidelogo">
             </div>
           </div>
-          <form class="formmain pt-5" [formGroup]="loginForm" (ngSubmit)="onsubmit()">
+          <form class="formmain pt-5" [formGroup]="loginForm" (ngSubmit)="onsubmit()" action="location">
             <div class="formmaindiv" [ngClass]="{'erro' : sub&&f.phonenumber.errors}">
               <div>
                 <input (focus)="onFocus()" (focusout)="focusOut()" type="text" class="inputsignup"
