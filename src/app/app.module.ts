@@ -15,13 +15,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './layout/footer/footer.component';
-import { LocationComponent } from './pages/location/location.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { LoginComponent } from './pages/login/login.component';
 import { NotloginComponent } from './static/notlogin/notlogin.component';
+import { NavbarComponent } from './layout/navbar/navbar.component';
 @NgModule({
-  declarations: [AppComponent,FooterComponent, LocationComponent, HomeComponent, SignupComponent, LoginComponent, NotloginComponent],
+  declarations: [AppComponent,FooterComponent,HomeComponent, SignupComponent, LoginComponent, NotloginComponent, NavbarComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

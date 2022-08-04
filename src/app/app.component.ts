@@ -1,6 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
-import { Address } from 'ngx-google-places-autocomplete/objects/address';
-import { FormBuilder, Validators } from '@angular/forms';
+import { Component } from '@angular/core';
 type PaneType = 'left' | 'right';
 @Component({
   selector: 'app-root',
