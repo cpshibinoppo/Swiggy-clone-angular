@@ -1,4 +1,4 @@
-.main{
+.main {
   box-shadow: 0 15px 40px -20px rgb(40 44 63 / 15%);
   position: fixed;
   top: 0;
@@ -12,20 +12,77 @@
   transition: transform .3s ease;
   padding-bottom: 6rem;
 }
-nav{
-  padding-top: 2rem;
+
+nav {
+  padding-top: 1.5rem;
   display: flex;
   justify-content: space-between;
 }
-.logosection{
+.locationdiv p{
+  margin-left: 20px;
+  font-size: 14px;
+  font-weight: 300;
+  cursor: pointer;
+  color: #686b78;
+  transition: all 0.5s ease-in;
+}
+.locationdiv p a{
+  margin-right: 8px;
+  color: #3d4152;
+  font-weight: 700;
+  position: relative;
+  transition: all .5s ease-in;
+}
+.locationdiv mat-icon{
+  color: var(--main-color);
+  vertical-align: text-bottom;
+  margin-left: 2px;
+}
+.locationdiv:hover p a{
+  color: var(--main-color) ;
+}
+.locationdiv:hover a::after{
+  background-color: var(--main-color) !important;
+}
+.locationdiv:hover p{
+  color: #93959f;
+}
+.locationdiv p a::after{
+  content: "";
+  position: absolute;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  background: #3d4152;
+  transition: all .5s ease-in;
+}
+.logosection {
+  align-items:baseline;
   display: flex;
 }
-.navbar ul{
+
+.navbar ul {
   display: flex;
 }
-.navbar ul li{
-  padding-left: 15px;
+
+.navbar ul li {
+  padding-left: 25px;
 }
-.navbar ul li a{
+
+.navbar ul li a {
   display: flex;
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  transition:color 0.4s ease-in-out;
+}
+
+.navbar ul li a div {
+  margin-right: 5px;
+}
+
+.navbar ul li a:hover {
+  color: var(--main-color);
 }
