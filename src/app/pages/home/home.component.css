@@ -1,0 +1,13 @@
+.homesection{
+  padding-top:8rem;
+}
+::ng-deep .mat-tab-group.mat-primary .mat-ink-bar {
+  background-color: #3d4152;
+}
+.mainhead{
+  position: relative;
+}
+.mainhead h1{
+  position: absolute;
+  top: 10px;
+}

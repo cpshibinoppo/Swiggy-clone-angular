@@ -20,6 +20,7 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { LoginComponent } from './pages/login/login.component';
 import { NotloginComponent } from './static/notlogin/notlogin.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
+import {MatTabsModule} from '@angular/material/tabs';
 @NgModule({
   declarations: [AppComponent,FooterComponent,HomeComponent, SignupComponent, LoginComponent, NotloginComponent, NavbarComponent],
   imports: [
@@ -35,7 +36,8 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -24,14 +24,14 @@ nav {
   font-weight: 300;
   cursor: pointer;
   color: #686b78;
-  transition: all 0.5s ease-in;
+  transition: all 0.2s ease-in;
 }
 .locationdiv p a{
   margin-right: 8px;
   color: #3d4152;
   font-weight: 700;
   position: relative;
-  transition: all .5s ease-in;
+  transition: all .2s ease-in;
 }
 .locationdiv mat-icon{
   color: var(--main-color);
@@ -55,7 +55,7 @@ nav {
   bottom: -5px;
   width: 100%;
   background: #3d4152;
-  transition: all .5s ease-in;
+  transition: all .2s ease-in;
 }
 .logosection {
   align-items:baseline;
