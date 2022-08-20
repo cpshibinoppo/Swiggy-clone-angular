@@ -103,11 +103,10 @@
 }
 .maincheck{
   display: flex;
-  justify-content: space-between;
-  width: 45%;
+  width: 50%;
 }
 .subcheck ul li{
-  margin-top: 25px;
+  margin-top: 15px;
 }
 .sublabel {
   display: block;
@@ -121,9 +120,11 @@
   -ms-user-select: none;
   user-select: none;
   color: #282c3f;
+  transition: all .2s ease-in;
 }
 .sublabel:hover {
   color: black;
+  font-size: 15.5px;
 }
 
 .sublabel input {
@@ -163,8 +164,8 @@
 }
 
 .sublabel .checkmark:after {
-  left: 9px;
-  top: 5px;
+  left: 5px;
+  top: 3px;
   width: 5px;
   height: 10px;
   border: solid white;
@@ -172,4 +173,7 @@
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+.subcheck2{
+  margin-left: 50px;
 }
