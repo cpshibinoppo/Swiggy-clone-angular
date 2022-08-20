@@ -1,13 +1,55 @@
 .homesection{
   padding-top:8rem;
 }
-::ng-deep .mat-tab-group.mat-primary .mat-ink-bar {
-  background-color: #3d4152;
-}
 .mainhead{
+  display: flex;
+  justify-content: space-between;
+}
+.fliterdiv{
+  display: flex;
+}
+.fliterdiv ul{
+  display: flex;
   position: relative;
 }
-.mainhead h1{
+.fliterdiv ul li button{
+  border: none;
+  padding-right: 15px;
+  background: none;
+}
+.fliterdiv ul li button::after{
   position: absolute;
-  top: 10px;
+  content: "";
+  left: 0;
+  right: 0;
+  height: 1px;
+  top: 31px;
+  background: #282c3f;
+  transition: all .2s ease-in;
+}
+.rele,.block{
+  display: none ;
+}
+.show{
+  display: block;
+}
+.btnn{
+  background-color: #fff;
+  border: none;
+  margin-right: 15px;
+  color: #686b78;
+  position: relative;
+}
+.active{
+  color: black;
+}
+.active::after{
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  height: 1px;
+  top: 31px;
+  background: #282c3f;
+  transition: all .2s ease-in;
 }
