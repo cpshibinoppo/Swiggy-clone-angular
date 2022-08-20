@@ -2,8 +2,13 @@
   padding-top:8rem;
 }
 .mainhead{
+  border-bottom: 1px solid #e9e9eb;
   display: flex;
   justify-content: space-between;
+}
+.mainhead h1{
+  font-size: 28px;
+  font-weight: 500;
 }
 .fliterdiv{
   display: flex;
@@ -27,7 +32,22 @@
   background: #282c3f;
   transition: all .2s ease-in;
 }
-.rele,.block{
+.btn-group{
+  align-items: center !important;
+}
+.filter-btn{
+  margin: 0;
+  cursor: pointer;
+  transition: all .2s ease-in;
+}
+.filter-btn:hover{
+  color: var(--main-color);
+}
+.filter-btn i{
+  font-size: 22px;
+  color: var(--main-color);
+}
+.block{
   display: none ;
 }
 .show{
@@ -39,6 +59,10 @@
   margin-right: 15px;
   color: #686b78;
   position: relative;
+  transition: all .2s ease-in;
+}
+.btnn:hover{
+  color: black;
 }
 .active{
   color: black;
@@ -52,4 +76,100 @@
   top: 31px;
   background: #282c3f;
   transition: all .2s ease-in;
+}
+.main{
+  height: 100%;
+}
+.mat-drawer-container{
+  height: 100% !important;
+}
+.mat-sidenav{
+  width: 30%;
+}
+.closediv{
+  display: flex;
+}
+.closediv h2{
+  margin-left: 7px;
+}
+.closediv mat-icon{
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+  font-weight: 200;
+}
+.slide{
+  padding: 2rem 20px;
+}
+.maincheck{
+  display: flex;
+  justify-content: space-between;
+  width: 45%;
+}
+.subcheck ul li{
+  margin-top: 25px;
+}
+.sublabel {
+  display: block;
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #282c3f;
+}
+.sublabel:hover {
+  color: black;
+}
+
+.sublabel input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: transparent;
+  border: 1px solid #686b78;
+}
+
+.sublabel:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.sublabel input:checked ~ .checkmark {
+  background-color: var(--main-color);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.sublabel input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.sublabel .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }

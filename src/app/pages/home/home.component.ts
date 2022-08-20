@@ -7,6 +7,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 })
 
 export class HomeComponent implements OnInit {
+  add = false;
  clickedElement:any;
   constructor() { }
   ngOnInit(): void {}
