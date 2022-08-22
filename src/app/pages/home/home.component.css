@@ -107,7 +107,7 @@
 }
 
 .closediv {
-  padding: 2rem 20px 0 ;
+  padding: 2rem 20px 1.5rem;
   display: flex;
   box-shadow: 0 2px 4px 0 #e9e9eb;
   position: sticky;
@@ -117,7 +117,7 @@
 }
 
 .closediv h2 {
-  margin-left: 7px;
+  margin: 0 7px;
   letter-spacing: 1px;
 }
 
@@ -269,30 +269,96 @@
   /* box-shadow: 0 1px 3px 0 rgb(0 0 0 / 12%); */
   transition: all .2s ease-in;
 }
-
+.closeiconbtn{
+  border: none;
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+}
 
 /* card start */
-.cardsub{
+.cardsub {
+  width: 20rem;
+  text-align: -webkit-center;
+  transition: all .2s ease-in;
+  border: 1px solid transparent;
+}
+.cardsub:hover{
+  border:1px solid #d3d5df;
+  box-shadow: 0 4px 7px 0 rgb(218 220 230 / 60%);
+}
+
+.cardcon {
+  padding-top: 1rem;
   width: 18rem;
 }
-.cardimg img{
-  width: 260px;
-  height: 160px;
+
+.cardimg img {
+  width: 100%;
 }
-.cardtext{
-  margin-top: 8px;
-  border-bottom:1px solid black;
+
+.cardtext {
+  margin-top: 10px;
+  text-align: start;
 }
-.cardtitle{
-  font-size: 17px;
+
+.cardtitle {
+  font-size: 18px;
   font-weight: 500;
   word-break: break-word;
+  margin: 0 0 5px;
 }
-.cardsubtext{
+
+.cardsubtext {
   color: #686b78;
   font-size: 13px;
+  margin: 0 0 15px;
 }
-.cardstar{
+
+.cardstar {
+  width: 45px;
+  padding: 0 5px;
   background-color: var(--main-color);
   color: #fff;
+  display: flex;
+}
+
+.cardprice {
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.offerdiv {
+  border-top: 1px solid #e9e9eb;
+  padding: 10px 0 10px 0;
+  margin-top: 0;
+  color: #8a584b;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.quickdiv {
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  border-top: 1px solid #e9e9eb;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.quickdiv button {
+  background-color: transparent;
+  color: #5d8ed5;
+  border: none;
+  font-weight: 600;
+}
+.quickdiv button:hover{
+  color: #93959f;
+}
+.cardsub:hover .quickdiv{
+  visibility: visible;
+  opacity: 1;
 }

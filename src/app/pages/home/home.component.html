@@ -8,13 +8,13 @@
             <div class="mainhead">
               <h1>34 restaurants</h1>
               <div class="fliterdiv">
-                <div class="btn-group" (click)="onButtonGroupClick($event)">
+                <div class="btn-group" (click)="onButtonGroupClick($event)" >
                   <button #rele class="btnn active" type="button" id="rele">Relevance</button>
                   <button class="btnn" type="button" id="deli">Delivery Time</button>
                   <button #rati class="btnn" type="button" id="rati">Rating</button>
                   <button class="btnn" type="button" id="lowt">Cost:Low To High</button>
                   <button class="btnn" type="button" id="high">Cost:High To Low</button>
-                  <h3 (click)="add=!add" class="filter-btn">Filter<i class='bx bx-filter'></i></h3>
+                  <h3  (click)="add=!add" id="{{this.checkid}}" class="filter-btn">Filter<i class='bx bx-filter'></i></h3>
                 </div>
               </div>
             </div>
@@ -24,17 +24,22 @@
             <div [ngClass]="{'show':this.clickedElement?.id == undefined,'block':this.clickedElement?.id!=='rele'}">
               <section class="pt-3">
                 <div class="cardsub">
+                  <div class="cardcon">
                   <div class="cardimg">
                     <img src="../../../assets/image/restaurant img/rest1.jpeg" alt="">
                   </div>
                   <div class="cardtext">
                     <p class="cardtitle">Chicking</p>
                     <p class="cardsubtext">Snacks, Grill,Fast Food,American</p>
-                    <div class="cardprice"><span class="cardstar"><i class='bx bxs-star'></i>3.8</span><span>•</span><span>49 min</span><span>•</span><span>₹300 For Two</span></div>
+                    <div class="cardprice"><div class="cardstar"><span><i class='bx bxs-star'></i></span><span>3.8</span></div><div>•</div><div>49 min</div><div>•</div><div>₹300 For Two</div></div>
                   </div>
                   <div class="offerdiv">
-                    <div class="offer"><span><i class='bx bxs-offer' ></i></span><span>60% off | Use TRYNEW</span></div>
+                  <span><i class='bx bxs-offer' ></i></span><span>60% off | Use TRYNEW</span>
                   </div>
+                  <div class="quickdiv">
+                    <button>QUICK VIEW</button>
+                  </div>
+                </div>
                 </div>
               </section>
             </div>
@@ -56,7 +61,9 @@
     </mat-sidenav-content>
     <mat-sidenav position="end" [(opened)]="add">
       <div class="closediv">
-        <mat-icon>close</mat-icon>
+        <a  class="closeiconbtn" (click)="add=!add" >
+          <mat-icon>close</mat-icon>
+        </a>
         <h2>Filter</h2>
       </div>
       <div class="slide">
