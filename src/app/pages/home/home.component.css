@@ -1,5 +1,5 @@
 .homesection {
-  padding-top: 8rem;
+  padding-top: 3rem;
 }
 
 .mainhead {
@@ -346,7 +346,7 @@
   border-top: 1px solid #e9e9eb;
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0.2s, opacity 0.3s linear ;
 }
 
 .quickdiv button {

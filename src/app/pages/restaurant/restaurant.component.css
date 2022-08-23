@@ -1,0 +1,246 @@
+.headmain {
+  background-color: #171a29;
+  color: #fff;
+}
+
+.headcon {
+  padding: 2rem 0 2rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.restimgdiv {
+  width: 260px;
+}
+
+.restimgdiv img {
+  width: 100%;
+}
+
+.headtext h1 {
+  max-width: 538px;
+  font-weight: 300;
+  font-size: 32px;
+}
+
+.headtext p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: inherit;
+  opacity: .7;
+  font-size: 15px;
+  max-width: 538px;
+}
+
+.ratingmain {
+  display: flex;
+}
+
+.filtermain {
+  display: flex;
+}
+
+.offertext {
+  display: flex;
+}
+
+.ratingmain {
+  justify-content: space-between;
+  width: 70%;
+}
+
+.ratingmain span {
+  color: inherit;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.serchdiv {
+  width: 230px;
+  display: table;
+  table-layout: fixed;
+  box-shadow: 0 3px 15px 0 rgb(40 44 63 / 10%);
+  border: 1px solid rgba(0, 0, 0, .04);
+  height: 35px;
+  background-color: #fff;
+}
+
+.icon-search {
+  width: 35px;
+  text-align: right;
+  font-size: 16px;
+  font-weight: 700;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.icon-search i {
+  width: 30px;
+  text-align: right;
+  font-size: 20px;
+  font-weight: 700;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.icon-search::before {
+  margin-right: 15px;
+}
+
+.searchinput {
+  display: table-cell;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  color: #3d4152;
+  font-weight: 500;
+  font-size: 14px;
+  pointer-events: auto;
+}
+
+.serchdiv span i {
+  color: #171a29;
+}
+
+.serchdiv input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  padding: 1px 2px;
+  border: none;
+  -webkit-appearance: textfield;
+  -webkit-rtl-ordering: logical;
+  vertical-align: middle;
+  width: 100%;
+  height: 22px;
+  line-height: 22px;
+  font-weight: 600;
+  position: relative;
+  top: -1px;
+  caret-color: #fc8019;
+}
+
+.serchdiv input:focus {
+  outline: none;
+}
+
+.vegdiv {
+  cursor: pointer;
+  float: right;
+  display: table;
+  table-layout: fixed;
+  box-shadow: 0 3px 15px 0 rgb(40 44 63 / 10%);
+  border: 1px solid rgba(0, 0, 0, .04);
+  height: 35px;
+  background-color: #fff;
+  margin-left: 22px;
+}
+
+.checkspan {
+  vertical-align: top;
+  padding-top: 11px;
+  text-align: right;
+  width: 41px;
+  display: table-cell;
+  font-size: 14px;
+  color: #3d4152;
+  font-weight: 500;
+}
+
+.vegtext {
+  display: table-cell;
+  vertical-align: middle;
+  padding-right: 15px;
+  text-transform: capitalize;
+  font-weight: 600;
+  transition: color .2s ease-in-out;
+  will-change: color;
+  color: #3d4152;
+  font-size: 14px;
+}
+
+.vegdiv:hover .vegtext {
+  color: #60b246;
+}
+
+.checklabel {
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  display: inline-block;
+}
+
+.checklabel input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  cursor: pointer;
+  display: block;
+  height: 100%;
+  border-color: #3d4152;
+  border: 1.5px solid #7e808c;
+  transition: border .3s;
+}
+
+.checklabel input:checked~.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  cursor: pointer;
+  display: block;
+  height: 100%;
+  border-color: #3d4152;
+  border: 1.5px solid #7e808c;
+  transition: border .3s;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checklabel input:checked~.checkmark:after {
+  display: block;
+}
+
+.checklabel .checkmark:after {
+  left: 5px;
+  top: 3px;
+  width: 3px;
+  height: 7px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.checklabel input:checked~svg {
+  height: 16px;
+  width: 16px;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  overflow: hidden;
+  fill: #60b246;
+  opacity: 1;
+}
+
+svg {
+  opacity: 0;
+}

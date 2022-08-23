@@ -11,6 +11,7 @@
   transform: translateZ(0);
   transition: transform .3s ease;
   padding-bottom: 6rem;
+  position: inherit;
 }
 
 nav {
