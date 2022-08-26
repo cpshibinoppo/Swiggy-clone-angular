@@ -32,7 +32,7 @@
             <div class="vegdiv">
               <span class="checkspan">
                 <label class="checklabel">
-                  <input type="checkbox" class="checkinp">
+                  <input type="checkbox" class="checkinp" id="veg">
                   <span class="checkmark"></span>
                   <svg width="16" class="_2m7ny" viewBox="0 0 24 24">
                     <path
@@ -41,13 +41,13 @@
                   </svg>
                 </label>
               </span>
-              <span class="vegtext">veg only</span>
+              <label class="vegtext" for="veg">veg only</label>
             </div>
-            <div class="favouritebtn">
-              <span class="onespan bx bx-heart">
-                  <i class="bi bi-heart-fill red-color"></i>
-              </span>
-              <span class="spantwo">Favourite</span>
+            <div class="favouritebtn" (click)="this.full = !this.full">
+              <span class="onespan bx bx-heart" *ngIf="!this.full"></span>
+              <i class="onespan bi bi-heart-fill red-color" *ngIf="this.full"></i>
+              <span class="spantwo" *ngIf="!this.full">Favourite</span>
+              <span class="spantwo" *ngIf="this.full">Favourited</span>
             </div>
           </div>
         </div>
@@ -55,8 +55,14 @@
           <div class="offer">
             <h1>OFFER</h1>
             <div class="offertext">
-              <div><i class='bx bxs-offer'></i></div>
-              <div>60% off up to ₹120 | Use code TRYNEW</div>
+              <div class="suboffer">
+                <div><i class='bx bxs-offer'></i></div>
+                <div>60% off up to ₹120 | Use code TRYNEW</div>
+              </div>
+              <div class="suboffer pt-2">
+                <div><i class='bx bxs-offer'></i></div>
+                <div>60% off up to ₹120 | Use code TRYNEW</div>
+              </div>
             </div>
           </div>
         </div>
@@ -64,5 +70,48 @@
     </div>
   </div>
 </section>
-<span class="bi bi-heart-fill red-color"> </span>
-<!-- <i class="bi bi-star-fill red-color"></i>   -->
+<section class="miansection pt-5">
+  <div class="showfoodmain container">
+    <div class="showfood">
+      <div class="showfoodtext">
+        <div class="foodtext">
+          <!-- <a (click)="scrollToElement(target,$event)"><p>Sukrutham Specials</p></a>
+          <a href="#C4"><p>Sadhya Nadan</p></a>
+          <a href="#C4"><p>Variety Breads</p></a>
+          <a href="#C4"><p>Sweets And Savouries</p></a>
+          <a href="#C4"><p>Payasam</p></a> -->
+          <div class="link-group" (click)="onButtonGroupClick($event)" >
+              <button #rele class="btnn active" type="button" id="rele">Pothichoru</button>
+              <button class="btnn" type="button" id="deli">Biryani And Rice</button>
+              <button #rati class="btnn" type="button" id="rati">Beef Add Ons</button>
+              <button class="btnn" type="button" id="high">All Day Combos</button>
+              <button class="btnn" type="button" id="high">Veg Add Ons</button>
+          </div>
+        </div>
+      </div>
+      <div class="linediv">
+        <div class="line"></div>
+      </div>
+      <div class="foodshow">
+        <div class="foodtitlediv">
+          <h3>Sukrutham Specials</h3>
+          <p>11 ITEMS</p>
+        </div>
+        <div class="foodditlesdiv">
+          <div class="foodditles">
+            <i class="styles_icon__m6Ujp styles_itemIcon__1LXTw icon-Veg styles_iconVeg__shLxJ" role="presentation" aria-hidden="true" style="line-height: 1.2;"></i>
+          </div>
+          <div class="foodimg">
+            <img src="" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cartmain" >
+      <div><h1>Cart Empty</h1></div>
+    </div>
+  </div>
+</section>
+<section>
+  <div #target>shibin</div>
+</section>

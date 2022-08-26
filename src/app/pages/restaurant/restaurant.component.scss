@@ -8,6 +8,7 @@
   padding: 2rem 0 2rem 0;
   display: flex;
   justify-content: space-between;
+  width: 90%;
 }
 
 .restimgdiv {
@@ -61,7 +62,7 @@
   width: 230px;
   display: table;
   table-layout: fixed;
-  box-shadow: 0 3px 15px 0 rgb(40 44 63 / 10%);
+  box-shadow: 0 3px 15px 0 rgb(40 44 63 / 20%);
   border: 1px solid rgba(0, 0, 0, 0.04);
   height: 35px;
   background-color: #fff;
@@ -87,6 +88,10 @@
 
 .icon-search::before {
   margin-right: 15px;
+}
+.textmain {
+  margin-bottom: -50px;
+  padding-top: 13px;
 }
 
 .searchinput {
@@ -131,7 +136,7 @@
   float: right;
   display: table;
   table-layout: fixed;
-  box-shadow: 0 3px 15px 0 rgb(40 44 63 / 10%);
+  box-shadow: 0 3px 15px 0 rgb(40 44 63 / 20%);
   border: 1px solid rgba(0, 0, 0, 0.04);
   height: 35px;
   background-color: #fff;
@@ -213,10 +218,6 @@
   display: none;
 }
 
-.checklabel input:checked ~ .checkmark:after {
-  display: block;
-}
-
 .checklabel .checkmark:after {
   left: 5px;
   top: 3px;
@@ -228,7 +229,18 @@
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-
+.checklabel:hover svg {
+  height: 16px;
+  width: 16px;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  overflow: hidden;
+  fill: #60b246;
+  opacity: 1;
+}
 .checklabel input:checked ~ svg {
   height: 16px;
   width: 16px;
@@ -253,7 +265,7 @@ svg {
   width: 115px;
   display: table;
   table-layout: fixed;
-  box-shadow: 0 3px 15px 0 rgb(40 44 63 / 10%);
+  box-shadow: 0 3px 15px 0 rgb(40 44 63 / 20%);
   border: 1px solid rgba(0, 0, 0, 0.04);
   height: 35px;
   background-color: #fff;
@@ -277,6 +289,9 @@ svg {
 .bx-heart:before {
   margin-right: 7px;
 }
+.bi-heart-fill::before {
+  margin-right: 7px !important;
+}
 .spantwo {
   display: table-cell;
   vertical-align: middle;
@@ -288,5 +303,144 @@ svg {
 }
 .red-color {
   color: red;
-  display: none;
+}
+/* offerdiv */
+.offerdiv {
+  color: inherit;
+  width: 298px;
+  height: 100%;
+  display: table-cell;
+  vertical-align: top;
+}
+.offerdiv h1 {
+  color: inherit;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: #171a29;
+  display: inline-block;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  position: absolute;
+  top: -13px;
+  left: -6px;
+}
+.offer {
+  transform: translateZ(0);
+  transition: transform 0.2s ease-in-out;
+  border: 1px solid #bec0c8;
+  position: relative;
+}
+.offertext {
+  padding: 31px 40px 25px 25px;
+  display: block;
+}
+.suboffer {
+  display: flex;
+}
+/* show food */
+.miansection {
+  height: 100%;
+}
+.showfoodmain {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.showfood {
+  display: flex;
+  width: 80%;
+}
+.showfoodtext {
+  width:24%;
+  text-align: right;
+}
+.foodshow {
+  width: 74%;
+  padding: 5px 55px 100px;
+}
+.foodshow h3{
+  margin: 0 0 -1px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.cartmain {
+  width: 20%;
+}
+.cartmain div {
+  width: 100%;
+}
+.foodtext {
+  position: relative;
+  height: 100%;
+}
+.foodtext::after {
+  content: " ";
+  position: absolute;
+  top: -21px;
+  bottom: 0;
+  right: 0;
+  border-right: 1px solid #e9e9eb;
+  box-sizing: inherit;
+}
+.foodtext a p{
+  padding-bottom: 3px;
+  display: block;
+  font-size: 15px;
+  color: #282c3f;
+  padding-top: 3px;
+  font-weight: 400;
+  margin-right: -15px;
+  padding-right: 20px;
+  transition: all .3s;
+}
+.foodtext a p:hover{
+  color: var(--main-color);
+}
+.foodtext a p:checked{
+  color: var(--main-color);
+}
+/* botton links start */
+.link-group{
+  display: grid;
+}
+.btnn {
+  text-align: right;
+  background-color: #fff;
+  border: none;
+  margin-right: 25px;
+  color: #686b78;
+  transition: all .2s ease-in;
+  position: relative;
+  padding-top: 0.9rem;
+}
+
+.btnn:hover {
+  color: var(--main-color);
+}
+
+.active {
+  color: var(--main-color);
+}
+
+.active::after {
+  position: absolute;
+  content: "";
+  right: -24px;
+  width: 2%;
+  height: 20px;
+  top: 14px;
+  background: #282c3f;
+  transition: all 0.2s ease-in;
+  background: var(--main-color);
+}
+/* show food list */
+.foodtitlediv p{
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #686b78;
+}
+.icon-Veg:before {
+  content: "\E997";
 }
