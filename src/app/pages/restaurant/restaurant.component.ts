@@ -10,15 +10,11 @@ export class RestaurantComponent implements OnInit {
   checkid:any
   full = false
   demo = false
-
+  add = false
+ addnum = 1
   constructor() { }
 
   ngOnInit(): void {
-  }
-  scrollToElement(targetname:any,$event:any): void {
-    $event.currentTarget.style.color = 'red';
-    // console.log($event.currentTarget);
-    targetname.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
   }
   onButtonGroupClick($event:any){
     this.clickedElement = $event.target || $event.srcElement;
@@ -35,6 +31,10 @@ export class RestaurantComponent implements OnInit {
      }
      this.clickedElement.className += " active";
    }
-
+ }
+ addsum(){
+  // console.log(typeof this.addnum);
+  console.log( this.addnum);
+  Number(this.addnum) + 1;
  }
  };

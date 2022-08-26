@@ -110,8 +110,14 @@
           </div>
           <div class="foodimg">
             <img src="../../../assets/image/restautant sub/restaurantimg1.jpeg" alt="">
-            <div class="addbtn">
-
+            <div class="addbtndiv">
+              <div class="addbtn" (click)="this.add = !this.add" *ngIf="this.add">ADD</div>
+              <div class="subpop" *ngIf="this.add">+</div>
+              <div class="adddiv">
+              <div class="decrease" (click)="this.addnum = this.addnum - 1" *ngIf="!this.add">-</div>
+              <div class="sum" *ngIf="!this.add">{{this.addnum}}</div>
+              <div class="increase" (click)="this.addnum = this.addnum + 1" *ngIf="!this.add">+</div>
+            </div>
             </div>
           </div>
         </div>
