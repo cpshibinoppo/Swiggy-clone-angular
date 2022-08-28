@@ -4,7 +4,7 @@
     <div class="row">
       <div class="headcon">
         <div class="restimgdiv">
-          <img src="../../../assets/image/restautantsub/restaurantimg1.jpeg" alt="">
+          <img src="../../../assets/image/restautant sub/restaurantimg1.jpeg" alt="">
         </div>
         <div class="textmain">
           <div class="headtext">
@@ -97,7 +97,7 @@
           <h3>Sukrutham Specials</h3>
           <p>11 ITEMS</p>
         </div>
-        <div class="foodditlesdiv">
+        <div class="foodditlesdiv pt-2">
           <div class="foodditles">
             <i class='bx bx-checkbox'> <i class='bx bxs-circle'></i></i>
             <h3>Butter Roast Dosa</h3>
@@ -111,13 +111,13 @@
           <div class="foodimg">
             <img src="../../../assets/image/restautant sub/restaurantimg1.jpeg" alt="">
             <div class="addbtndiv">
-              <div class="addbtn" (click)="this.add = !this.add" *ngIf="this.add">ADD</div>
-              <div class="subpop" *ngIf="this.add">+</div>
-              <div class="adddiv">
-              <div class="decrease" (click)="this.addnum = this.addnum - 1" *ngIf="!this.add">-</div>
-              <div class="sum" *ngIf="!this.add">{{this.addnum}}</div>
-              <div class="increase" (click)="this.addnum = this.addnum + 1" *ngIf="!this.add">+</div>
-            </div>
+              <div class="addbtn" *ngIf="!this.add || !this.zero" (click)="this.add =true;zerocheckadd()">ADD</div>
+              <div class="subpop" *ngIf="!this.add || !this.zero">+</div>
+              <div class="adddiv" *ngIf="this.zero">
+                <div class="decrease" (click)="this.addnum = this.addnum - 1;zerocheck()" *ngIf="this.add">-</div>
+                <div class="sum" *ngIf="this.add">{{this.addnum}}</div>
+                <div class="increase" (click)="this.addnum = this.addnum + 1" *ngIf="this.add">+</div>
+              </div>
             </div>
           </div>
         </div>

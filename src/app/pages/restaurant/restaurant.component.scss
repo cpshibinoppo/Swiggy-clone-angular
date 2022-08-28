@@ -473,6 +473,8 @@ svg {
 .foodditlesdiv {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #d4d5d9;
 }
 .foodimg {
   position: relative;
@@ -519,4 +521,6 @@ svg {
 .decrease,.increase{
 cursor: pointer;
 }
-
+.hi{
+  display: none;
+}
