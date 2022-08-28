@@ -498,7 +498,7 @@ svg {
   transform: translateX(-50%);
   display: inline-block;
   height: 36px;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 500;
   text-align: center;
   background-color: #fff;
@@ -514,13 +514,31 @@ svg {
   top: -25%;
   cursor: pointer;
 }
-.adddiv{
+.adddiv {
   display: flex;
   justify-content: space-around;
 }
-.decrease,.increase{
-cursor: pointer;
+.decrease,
+.increase {
+  cursor: pointer;
 }
-.hi{
-  display: none;
+/* cart */
+.emptycartdiv h1 {
+  color: #7e808c;
+  letter-spacing: -0.3px;
+  font-size: 32px;
+  font-weight: 500;
+}
+.emptycartdiv img {
+  width: 100%;
+  height: 212px;
+  margin-top: 47px;
+  opacity: 0.5;
+}
+.emptycartdiv p{
+  color: #93959f;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 200;
+    max-width: 250px;
 }
