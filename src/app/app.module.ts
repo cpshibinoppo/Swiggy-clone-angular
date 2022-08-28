@@ -22,8 +22,9 @@ import { NotloginComponent } from './static/notlogin/notlogin.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { RestaurantComponent } from './pages/restaurant/restaurant.component';
+import { CartComponent } from './pages/cart/cart.component';
 @NgModule({
-  declarations: [AppComponent,FooterComponent,HomeComponent, SignupComponent, LoginComponent, NotloginComponent, NavbarComponent, RestaurantComponent],
+  declarations: [AppComponent,FooterComponent,HomeComponent, SignupComponent, LoginComponent, NotloginComponent, NavbarComponent, RestaurantComponent, CartComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

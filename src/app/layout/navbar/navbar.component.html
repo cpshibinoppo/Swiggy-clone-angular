@@ -18,8 +18,9 @@
             </svg>
           </div>
           <div class="locationdiv">
-            <p><a href="">other</a>Pullur, Kerala, India<mat-icon>expand_more</mat-icon>
+            <p *ngIf="!this.same"><a href="">other</a>Pullur, Kerala, India<mat-icon>expand_more</mat-icon>
             </p>
+            <p *ngIf="this.same">{{this.same}}</p>
           </div>
         </div>
         <div class="navbar">
