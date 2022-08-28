@@ -23,6 +23,7 @@
           <div class="row">
             <div [ngClass]="{'show':this.clickedElement?.id == undefined,'block':this.clickedElement?.id!=='rele'}">
               <section class="pt-3">
+                <a href="home/restaurant">
                 <div class="cardsub">
                   <div class="cardcon">
                   <div class="cardimg">
@@ -41,6 +42,7 @@
                   </div>
                 </div>
                 </div>
+              </a>
               </section>
             </div>
             <div *ngIf="this.clickedElement?.id == 'deli'">

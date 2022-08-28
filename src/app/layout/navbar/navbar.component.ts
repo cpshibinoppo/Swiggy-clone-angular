@@ -7,12 +7,12 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 
 export class NavbarComponent implements OnInit {
-  @Input() public same: string | undefined;
+  @Input() public cartName: string | undefined;
 
   constructor() { }
 
   ngOnInit(): void {
-    console.log("add"+this.same)
+    console.log("add"+this.cartName)
   }
 
 }

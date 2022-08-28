@@ -87,3 +87,8 @@ nav {
 .navbar ul li a:hover {
   color: var(--main-color);
 }
+.carthead{
+  font-weight: 600 !important;
+  color: black !important;
+  text-transform: uppercase;
+}

@@ -11,7 +11,7 @@ const routes: Routes = [
   {path:'location',component:NavbarComponent},
   {path:'home',component:HomeComponent},
   {path:'home/restaurant',component:RestaurantComponent},
-  {path:'home/cart',component:CartComponent, data: {con: 'some value'}}
+  {path:'home/cart',component:CartComponent, data: {con: 'SECURE CHECKOUT'}}
 ];
 
 @NgModule({
