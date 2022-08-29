@@ -16,43 +16,182 @@
   </div>
 </div>
 <div class="cartmain">
-  <div class="container pt-3">
+  <div class="container pt-5">
     <div class="row">
-      <div class="col-8 addresscol">
-        <div class="addressmain">
-          <div class="selectaddressdiv">
-            <div class="line"></div>
-            <div class="addressicon">
-              <i class='bx bx-map'></i>
+      <div class="col-8 ">
+        <div class="addressandpyment" *ngIf="this.subpayment">
+          <div class="addressmain addresscol">
+            <div class="selectaddressdiv">
+              <div class="line"></div>
+              <div class="addressicon">
+                <i class='bx bx-map'></i>
+              </div>
+              <h2>Select delivery address</h2>
+              <p>You have a saved address in this location</p>
             </div>
-            <h2>Select delivery address</h2>
-            <p>You have a saved address in this location</p>
+            <div class="showaddress">
+              <div class="useraddress" (click)="this.subpayment = !this.subpayment">
+                <i class='bx bx-home-alt'></i>
+                <div class="addresstext">
+                  <h3>Home</h3>
+                  <p>cp home, 44Q3+45C, Pullur, Pulpatta, Kerala 676121, India</p>
+                </div>
+                <div class="deliverybtn">
+                  <p>36 MINS</p>
+                  <button>DELIVER HERE</button>
+                </div>
+              </div>
+              <div class="addaddress">
+                <i class='bx bx-map'>
+                  <mat-icon>add_circle</mat-icon>
+                </i>
+                <div class="addresstextdef">
+                  <h3>Add New Address</h3>
+                  <p>44Q3+45C, Pullur, Pulpatta, Kerala 676121, India</p>
+                </div>
+                <div class="deliverybtndef">
+                  <button>ADD NEW</button>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="showaddress">
-            <div class="useraddress">
-              <i class='bx bx-home-alt'></i>
-              <div class="addresstext">
-                <h3>Home</h3>
-                <p>cp home, 44Q3+45C, Pullur, Pulpatta, Kerala 676121, India</p>
-              </div>
-              <div class="deliverybtn">
-                <p>36 MINS</p>
-                <button>DELIVER HERE</button>
-              </div>
+          <div class="paymentsubshow mt-4">
+            <div class="addressicon walleticon">
+              <i class='bx bx-wallet'></i>
             </div>
-            <div class="addaddress">
-              <i class='bx bx-map'><mat-icon>add_circle</mat-icon></i>
-              <div class="addresstextdef">
-                <h3>Add New Address</h3>
-                <p>44Q3+45C, Pullur, Pulpatta, Kerala 676121, India</p>
-              </div>
-              <div class="deliverybtndef">
-                <button>ADD NEW</button>
-              </div>
-            </div>
-          </div>
+            <h2>Payment</h2>
           </div>
         </div>
+        <!--sub-->
+        <div class="addressandpyment" *ngIf="!this.subpayment">
+          <div class="addressmain addresscol subcol">
+            <div class="selectaddressdiv subselect">
+              <div class="line"></div>
+              <div class="addressicon">
+                <i class='bx bx-map'></i>
+              </div>
+              <div class="subhead">
+                <h2>Deliver address</h2> <i class='bx bxs-check-circle'></i>
+              </div>
+              <button class="changebtn" (click)="this.subpayment = !this.subpayment">CHANGE</button>
+            </div>
+            <div class="showaddress">
+              <div class="useraddress sumaddress">
+                <div class="addresstext ">
+                  <h3>Home</h3>
+                  <p>cp home, 44Q3+45C, Pullur, Pulpatta, Kerala 676121, India</p>
+                </div>
+                <div class="deliverybtn">
+                  <p>36 MINS</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="paymentshow mt-4">
+            <div class="addressicon walleticon subwalleticon">
+              <i class='bx bx-wallet'></i>
+            </div>
+            <h2>Choose payment method</h2>
+            <div class="paymentmain">
+              <div class="paymentap">
+                <div class="wallets active" (click)="this.wallets = !this.wallets">
+                  <i class='bx bxs-wallet-alt'></i><span>Wallets</span>
+                </div>
+                <div class="ceranddeb">
+                  <i class='bx bxs-credit-card-front'></i><span>Credit & Debit cards</span>
+                </div>
+                <div class="sedexo">
+                  <i class='bx bxs-credit-card'></i><span>Sedexo</span>
+                </div>
+                <div class="netbank">
+                  <i class='bx bxs-bank'></i><span>Netbanking</span>
+                </div>
+                <div class="upi">
+                  <i class='bx bxl-paypal'></i><span>UPI</span>
+                </div>
+                <div class="payon">
+                  <i class='bx bx-package'></i><span>Pay on delivery</span>
+                </div>
+                <!-- <div class="btn-group" (click)="onButtonGroupClick($event)" >
+                  <button #rele class="btnn active" type="button" id="rele"><i class='bx bxs-wallet-alt' ></i>Wallets</button>
+                  <button class="btnn" type="button" id="deli"><i class='bx bxs-credit-card-front' ></i>Credit & Debit cards</button>
+                  <button #rati class="btnn" type="button" id="rati"><i class='bx bxs-credit-card' ></i>Sedexo</button>
+                  <button class="btnn" type="button" id="lowt"><i class='bx bxs-bank' ></i>Netbanking</button>
+                  <button class="btnn" type="button" id="high"><i class='bx bxl-paypal'></i>UPI</button>
+                  <button class="btnn" type="button" id="high"><i class='bx bx-package'></i>Pay on delivery</button>
+                </div> -->
+              </div>
+              <div class="walletshow" *ngIf="!this.wallets">
+                <div class="payshow">
+                  <div class="paylogo">
+                    <img src="../../../assets/image/payment/amazon.png" alt="">
+                  </div>
+                  <h3 class="pt-3">Amazon Pay</h3>
+                  <button>PAY ₹70</button>
+                </div>
+                <div class="payshow">
+                  <div class="paylogo">
+                    <img src="../../../assets/image/payment/paytm.png" alt="">
+                  </div>
+                  <h3 class="pt-3">Paytm</h3>
+                  <a href="">LINK ACCOUNT</a>
+                </div>
+                <div class="payshow">
+                  <div class="paylogo">
+                    <img src="../../../assets/image/payment/phonepe.png" alt="">
+                  </div>
+                  <h3 class="pt-3">PhonePe</h3>
+                  <a href="">LINK ACCOUNT</a>
+                </div>
+              </div>
+              <div class="walletshow" *ngIf="this.wallets">
+                <h2>Add new card</h2>
+                <div class="cardname">
+                  <span>WE ACCEPT</span>
+                  <div class="bankimg">
+                    <img src="../../../assets/image/bank/Visa.png" alt="">
+                    <img src="../../../assets/image/bank/Mastercard.png" alt="">
+                    <img src="../../../assets/image/bank/Amex.png" alt="">
+                    <img src="../../../assets/image/bank/RuPayColoured.png" alt="">
+                  </div>
+                </div>
+                <div class="cardinputmain pt-5">
+                  <form action="">
+                    <div class="carddiv">
+                      <input class="cardinput" (focus)="onFocus('cardnum')" (focusout)="focusOut('cardnum')" type="number" required>
+                      <label [ngClass]="{'focuslabel' : this.cardnum}" class="inputlabel">Card number</label>
+                    </div>
+                    <div class="date-cvv">
+                      <div class="carddiv date">
+                        <input class="cardinput" (focus)="onFocus('cardnum')" (focusout)="focusOut('cardnum')"  type="text" required>
+                        <label [ngClass]="{'focuslabel' : this.cardnum}" class="inputlabel">Valid through(MM/YY)</label>
+                      </div>
+                      <div class="carddiv cvv">
+                        <input class="cardinput" (focus)="onFocus('cardnum')" (focusout)="focusOut('cardnum')"  type="text" required>
+                        <label [ngClass]="{'focuslabel' : this.cardnum}" class="inputlabel">CVV</label>
+                      </div>
+                    </div>
+                    <div class="carddiv">
+                      <input class="cardinput" (focus)="onFocus('cardnum')" (focusout)="focusOut('cardnum')" type="number" required>
+                      <label [ngClass]="{'focuslabel' : this.cardnum}" class="inputlabel">Name on card</label>
+                    </div>
+                    <div class="pt-3 checkboxdiv" (click)="this.checkboxshow = !this.checkboxshow">
+                    <label class="sublabel" >Securely save this card for a faster checkout next time.
+                      <input type="checkbox" checked>
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="btnpay pt-3">
+                    <button>PAY ₹90</button>
+                    <span *ngIf="this.checkboxshow">Card details will be saved securely, based of the industry standard</span>
+                  </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+  <app-footer></app-footer>

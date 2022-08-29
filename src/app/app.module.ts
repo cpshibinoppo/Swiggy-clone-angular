@@ -23,6 +23,7 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { RestaurantComponent } from './pages/restaurant/restaurant.component';
 import { CartComponent } from './pages/cart/cart.component';
+import { NgxCleaveDirectiveModule } from 'ngx-cleave-directive';
 @NgModule({
   declarations: [AppComponent,FooterComponent,HomeComponent, SignupComponent, LoginComponent, NotloginComponent, NavbarComponent, RestaurantComponent, CartComponent],
   imports: [
@@ -39,7 +40,8 @@ import { CartComponent } from './pages/cart/cart.component';
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
-    MatTabsModule
+    MatTabsModule,
+    NgxCleaveDirectiveModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

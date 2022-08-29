@@ -15,7 +15,6 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
   onButtonGroupClick($event:any){
-
      this.clickedElement = $event.target || $event.srcElement;
     let isCertainButtonAlreadyActive = this.clickedElement.parentElement.querySelector(".active");
     if(this.clickedElement.id == ''){
