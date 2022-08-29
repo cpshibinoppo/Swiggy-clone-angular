@@ -1,4 +1,59 @@
 <app-navbar cartName="{{this.product.con}}"></app-navbar>
-
-<p>cart works!</p>
-<h1>{{this.product.con}}</h1>
+<div class="noncart" *ngIf="this.noncart">
+  <div class="container">
+    <div class="noncartcon">
+      <div class="noncartimgdiv">
+        <img src="../../../assets/image/cart/noncart.png" alt="">
+      </div>
+      <div class="noncarttextdiv">
+        <h2>Your cart is empty</h2>
+        <p>You can go to home page to view more restaurants</p>
+      </div>
+      <div class="noncartbtn pt-2">
+        <button>SEE RESTAURANTS NEAR YOU</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="cartmain">
+  <div class="container pt-3">
+    <div class="row">
+      <div class="col-8 addresscol">
+        <div class="addressmain">
+          <div class="selectaddressdiv">
+            <div class="line"></div>
+            <div class="addressicon">
+              <i class='bx bx-map'></i>
+            </div>
+            <h2>Select delivery address</h2>
+            <p>You have a saved address in this location</p>
+          </div>
+          <div class="showaddress">
+            <div class="useraddress">
+              <i class='bx bx-home-alt'></i>
+              <div class="addresstext">
+                <h3>Home</h3>
+                <p>cp home, 44Q3+45C, Pullur, Pulpatta, Kerala 676121, India</p>
+              </div>
+              <div class="deliverybtn">
+                <p>36 MINS</p>
+                <button>DELIVER HERE</button>
+              </div>
+            </div>
+            <div class="addaddress">
+              <i class=''></i>
+              <div class="addresstextdef">
+                <h3>Home</h3>
+                <p>cp home, 44Q3+45C, Pullur, Pulpatta, Kerala 676121, India</p>
+              </div>
+              <div class="deliverybtndef">
+                <p>36 MINS</p>
+                <button>DELIVER HERE</button>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

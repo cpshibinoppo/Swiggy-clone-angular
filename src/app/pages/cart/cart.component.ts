@@ -7,19 +7,15 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-sub:any
   product: any;
+  noncart = false;
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.sub = this.route
-      .data
-      .subscribe(v => console.log(v));
       this.route.data.subscribe(data => {
         this.product=data;
     })
-      console.log(this.product.con);
 
   }
 
