@@ -527,3 +527,16 @@ input[type=number]::-webkit-outer-spin-button {
 .checkboxdiv{
   cursor: pointer;
 }
+.carddiv img{
+  height: 15px!important;
+  position: absolute;
+  right: 15px;
+  bottom: -25px;
+  animation-name: example;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes example {
+  from {bottom: -20;}
+  to {bottom: 15px;}
+}

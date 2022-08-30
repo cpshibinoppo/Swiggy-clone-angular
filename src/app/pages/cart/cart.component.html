@@ -158,26 +158,27 @@
                 <div class="cardinputmain pt-5">
                   <form action="">
                     <div class="carddiv">
-                      <input class="cardinput" (focus)="onFocus('cardnum')" (focusout)="focusOut('cardnum')" type="number" required>
+                      <img src="../../../assets/image/bank/{{this.cardimgname}}" *ngIf="this.cardimgname" alt="">
+                      <input class="cardinput" mask="0000 0000 0000 0000 00"   (focus)="onFocus('cardnum')"  (focusout)="focusOut('cardnum')" (input)="getCardType(username.value)" #username  type="text" required>
                       <label [ngClass]="{'focuslabel' : this.cardnum}" class="inputlabel">Card number</label>
                     </div>
                     <div class="date-cvv">
                       <div class="carddiv date">
-                        <input class="cardinput" (focus)="onFocus('cardnum')" (focusout)="focusOut('cardnum')"  type="text" required>
+                        <input class="cardinput" [specialCharacters]="[  '\\' ]" mask="00\00" (focus)="onFocus('cardnum')" (focusout)="focusOut('cardnum')"  type="text" required>
                         <label [ngClass]="{'focuslabel' : this.cardnum}" class="inputlabel">Valid through(MM/YY)</label>
                       </div>
                       <div class="carddiv cvv">
-                        <input class="cardinput" (focus)="onFocus('cardnum')" (focusout)="focusOut('cardnum')"  type="text" required>
+                        <input class="cardinput"  mask="000"  (focus)="onFocus('cardnum')" (focusout)="focusOut('cardnum')"  type="text" required>
                         <label [ngClass]="{'focuslabel' : this.cardnum}" class="inputlabel">CVV</label>
                       </div>
                     </div>
                     <div class="carddiv">
-                      <input class="cardinput" (focus)="onFocus('cardnum')" (focusout)="focusOut('cardnum')" type="number" required>
+                      <input class="cardinput"  oninput="this.value = this.value.toUpperCase()"(focus)="onFocus('cardnum')" (focusout)="focusOut('cardnum')" type="text" required>
                       <label [ngClass]="{'focuslabel' : this.cardnum}" class="inputlabel">Name on card</label>
                     </div>
-                    <div class="pt-3 checkboxdiv" (click)="this.checkboxshow = !this.checkboxshow">
+                    <div class="pt-3 checkboxdiv">
                     <label class="sublabel" >Securely save this card for a faster checkout next time.
-                      <input type="checkbox" checked>
+                      <input type="checkbox" checked (change)="this.checkboxshow = !this.checkboxshow">
                       <span class="checkmark"></span>
                     </label>
                   </div>

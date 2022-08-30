@@ -24,6 +24,14 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { RestaurantComponent } from './pages/restaurant/restaurant.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { NgxCleaveDirectiveModule } from 'ngx-cleave-directive';
+import { NgxMaskModule, IConfig } from 'ngx-mask';
+
+const maskConfigFunction: () => Partial<IConfig> = () => {
+  return {
+    validation: false,
+  };
+};
+
 @NgModule({
   declarations: [AppComponent,FooterComponent,HomeComponent, SignupComponent, LoginComponent, NotloginComponent, NavbarComponent, RestaurantComponent, CartComponent],
   imports: [
@@ -41,7 +49,7 @@ import { NgxCleaveDirectiveModule } from 'ngx-cleave-directive';
     MatInputModule,
     ReactiveFormsModule,
     MatTabsModule,
-    NgxCleaveDirectiveModule,
+    NgxMaskModule.forRoot(maskConfigFunction),
   ],
   providers: [],
   bootstrap: [AppComponent],

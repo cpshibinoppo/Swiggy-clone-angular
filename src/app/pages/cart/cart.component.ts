@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-// import  Cleave from "cleave.js";
+
 
 
 
@@ -17,24 +17,15 @@ export class CartComponent implements OnInit {
   checkid:any
   wallets= true
   cardnum = false;
-  cleave: any;
-  cleaveDate: any;
   date: string = '';
   checkboxshow = true
-
-  constructor(private route: ActivatedRoute ) {
-   }
+  cardimgname:any
+  constructor(private route: ActivatedRoute ) {}
 
   ngOnInit(): void {
       this.route.data.subscribe(data => {
         this.product=data;
     })
-  //   this.cleaveDate = new Cleave('.input-date', {
-  //     date: true,
-  //     delimiter: '-',
-  //     datePattern: ['Y', 'm', 'd']
-  //  });
-
   }
   onButtonGroupClick($event:any){
     this.clickedElement = $event.target || $event.srcElement;
@@ -50,7 +41,6 @@ export class CartComponent implements OnInit {
      }
      this.clickedElement.className += " active";
    }
-
  }
  onFocus(name:any){
   if(name == 'cardnum'){
@@ -61,4 +51,33 @@ export class CartComponent implements OnInit {
   this.cardnum = false
  }
 
+  creditCardType(cc: string):string|undefined {
+  let amex = new RegExp('^3[47][0-9]{5,}$');
+  let visa = new RegExp('^4[0-9]{6,}$');
+  let mastercard = new RegExp('^5[1-5][0-9]{14}$');
+  let mastercard2 = new RegExp('^2[2-7][0-9]{14}$');
+  let rupay =  new RegExp('^(((60)([0-9]{14}))|((6521)([0-9]{12}))|((6522)([0-9]{12})))$');
+  let rupaytest = new RegExp('^6[0-9]{6,}$');
+
+  if (visa.test(cc)) {
+    return 'Visa.png';
+  }
+  if (amex.test(cc)) {
+    return 'Amex.png';
+  }
+  if (mastercard.test(cc) || mastercard2.test(cc)) {
+    return 'Mastercard.png';
+  }
+  if (rupay.test(cc)) {
+    return 'RuPayColoured.png';
+  }
+  if (rupaytest.test(cc)) {
+    return 'RuPayColoured.png';
+  }
+  return undefined;
+}
+getCardType (number:any) {
+  let result = number.replace(/\s/g,'')
+  this.cardimgname = this.creditCardType(result);
+}
 }
