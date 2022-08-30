@@ -17,9 +17,10 @@ export class CartComponent implements OnInit {
   checkid:any
   wallets= true
   cardnum = false;
-  date: string = '';
   checkboxshow = true
   cardimgname:any
+  textcard:any
+  pathofimg = '../../../assets/image'
   constructor(private route: ActivatedRoute ) {}
 
   ngOnInit(): void {
@@ -43,12 +44,12 @@ export class CartComponent implements OnInit {
    }
  }
  onFocus(name:any){
-  if(name == 'cardnum'){
-    this.cardnum = true
-  }
+    this.textcard = name
  }
- focusOut(name:any){
-  this.cardnum = false
+ focusOut(con:any){
+  if(con == ""){
+  this.textcard = false
+  }
  }
 
   creditCardType(cc: string):string|undefined {

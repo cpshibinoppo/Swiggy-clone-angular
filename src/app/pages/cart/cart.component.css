@@ -424,6 +424,20 @@
   pointer-events: none;
   font-weight: 400;
 }
+.inp{
+  position: absolute;
+  left: 0;
+  bottom: 24px;
+  padding-left: 20px;
+  line-height: 20px;
+  font-size: 17px;
+  cursor: text;
+  transition: .2s ease;
+  width: 100%;
+  color: #93959f;
+  pointer-events: none;
+  font-weight: 400;
+}
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
@@ -539,4 +553,78 @@ input[type=number]::-webkit-outer-spin-button {
 @keyframes example {
   from {bottom: -20;}
   to {bottom: 15px;}
+}
+/* netbaking */
+.radiocontainer {
+  position: relative;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+
+}
+.radiocontainer input {
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  height: 20px;
+  width: 20px;
+  border-radius: 25px;
+  top: 5px;
+  left: -15px;
+}
+
+.radiocontainer input:checked ~ .checkmark {
+  background-color: #60b246;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.radiocontainer input:checked ~ .checkmark:after {
+  display: block;
+}
+.radiocontainer .checkmark:after {
+  left: 7px;
+  top: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+.bankbtn{
+  justify-content: space-between;
+  display:inline-flex;
+  background: none;
+  align-items: center;
+  border: 1px solid #e9e9eb;
+  padding: 10px 15px;
+  width: 182px;
+  margin: 0 20px 20px 0;
+  border-radius: 3px;
+  outline: 0;
+}
+.netbankimg img{
+  max-height: 40px;
+  width: 40px;
+}
+.bankname{
+  font-weight: 500;
+  color: #282c3f;
+  font-size: 15px;
+  align-self: center;
+  margin-left: 10px;
+}
+.netbakinimgname{
+  display: flex;
+}
+.fnalbottom{
+  border-bottom: 1px solid #e9e9eb;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
 }
