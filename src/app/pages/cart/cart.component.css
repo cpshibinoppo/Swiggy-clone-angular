@@ -268,9 +268,10 @@
 }
 
 /* payment start */
-.addressandpyment{
+.addressandpyment {
   padding-bottom: 6rem;
 }
+
 .paymentmain {
   display: flex;
   justify-content: space-between;
@@ -424,7 +425,8 @@
   pointer-events: none;
   font-weight: 400;
 }
-.inp{
+
+.inp {
   position: absolute;
   left: 0;
   bottom: 24px;
@@ -518,7 +520,7 @@ input[type=number]::-webkit-outer-spin-button {
   transform: rotate(45deg);
 }
 
-.btnpay button{
+.btnpay button {
   height: 50px;
   line-height: 50px;
   background: #60b246;
@@ -530,19 +532,23 @@ input[type=number]::-webkit-outer-spin-button {
   border: none;
   transition: all .3s ease;
 }
-.btnpay button:hover{
+
+.btnpay button:hover {
   box-shadow: 0 4px 14px #d4d5d9;
 }
-.btnpay span{
+
+.btnpay span {
   color: #93959f;
   font-size: 12px;
   font-weight: 300;
 }
-.checkboxdiv{
+
+.checkboxdiv {
   cursor: pointer;
 }
-.carddiv img{
-  height: 15px!important;
+
+.carddiv img {
+  height: 15px !important;
   position: absolute;
   right: 15px;
   bottom: -25px;
@@ -550,10 +556,17 @@ input[type=number]::-webkit-outer-spin-button {
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
 }
+
 @keyframes example {
-  from {bottom: -20;}
-  to {bottom: 15px;}
+  from {
+    bottom: -20;
+  }
+
+  to {
+    bottom: 15px;
+  }
 }
+
 /* netbaking */
 .radiocontainer {
   position: relative;
@@ -562,12 +575,14 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 22px;
 
 }
+
 .radiocontainer input {
   opacity: 0;
   cursor: pointer;
   height: 0;
   width: 0;
 }
+
 .checkmark {
   height: 20px;
   width: 20px;
@@ -576,7 +591,7 @@ input[type=number]::-webkit-outer-spin-button {
   left: -15px;
 }
 
-.radiocontainer input:checked ~ .checkmark {
+.radiocontainer input:checked~.checkmark {
   background-color: #60b246;
 }
 
@@ -585,9 +600,11 @@ input[type=number]::-webkit-outer-spin-button {
   position: absolute;
   display: none;
 }
-.radiocontainer input:checked ~ .checkmark:after {
+
+.radiocontainer input:checked~.checkmark:after {
   display: block;
 }
+
 .radiocontainer .checkmark:after {
   left: 7px;
   top: 4px;
@@ -597,9 +614,10 @@ input[type=number]::-webkit-outer-spin-button {
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
 }
-.bankbtn{
+
+.bankbtn {
   justify-content: space-between;
-  display:inline-flex;
+  display: inline-flex;
   background: none;
   align-items: center;
   border: 1px solid #e9e9eb;
@@ -608,23 +626,88 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0 20px 20px 0;
   border-radius: 3px;
   outline: 0;
+  transition: all .3s ease;
 }
-.netbankimg img{
+
+.netbankimg img {
   max-height: 40px;
   width: 40px;
 }
-.bankname{
+
+.bankname {
   font-weight: 500;
   color: #282c3f;
   font-size: 15px;
   align-self: center;
   margin-left: 10px;
 }
-.netbakinimgname{
+
+.netbakinimgname {
   display: flex;
 }
-.fnalbottom{
+
+.fnalbottom {
   border-bottom: 1px solid #e9e9eb;
   padding-bottom: 20px;
   margin-bottom: 40px;
+}
+
+.otherselect {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #e9e9eb;
+  padding: 0 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  height: 50px;
+  align-items: center;
+}
+
+.otherselect p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.otherselect i {
+  color: var(--main-color);
+  font-size: 30px;
+}
+
+/* dropdown start */
+.dropdownshow {
+  height: 130px;
+  overflow: auto;
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  border: 1px solid #e9e9eb;
+  top: 50px;
+}
+
+.dropdownshow ul {
+  padding: 0 15px;
+}
+
+.dropdownshow ul li {
+  padding-left: 15px;
+  color: #686b78;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.dropdownshow ul li:hover {
+  color: black;
+}
+
+.dropbtn {
+  height: 0px !important;
+}
+
+.otherbanks {
+  position: relative;
+}
+.bankbtn:hover{
+  box-shadow: 0 2px 8px #d4d5d9;
 }

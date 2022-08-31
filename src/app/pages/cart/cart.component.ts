@@ -1,84 +1,112 @@
+import { VariableBinding } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
-
-
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.css']
+  styleUrls: ['./cart.component.css'],
 })
 export class CartComponent implements OnInit {
   product: any;
   noncart = false;
-  subpayment = false
-  clickedElement:any;
-  checkid:any
-  wallets= true
+  subpayment = false;
+  clickedElement: any;
+  checkid: any;
+  wallets = true;
   cardnum = false;
-  checkboxshow = true
-  cardimgname:any
-  textcard:any
-  pathofimg = '../../../assets/image'
-  constructor(private route: ActivatedRoute ) {}
+  checkboxshow = true;
+  cardimgname: any;
+  textcard: any;
+  pathofimg = '../../../assets/image';
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-      this.route.data.subscribe(data => {
-        this.product=data;
-    })
+    this.route.data.subscribe((data) => {
+      this.product = data;
+    });
   }
-  onButtonGroupClick($event:any){
+  onButtonGroupClick($event: any) {
     this.clickedElement = $event.target || $event.srcElement;
-   let isCertainButtonAlreadyActive = this.clickedElement.parentElement.querySelector(".active");
-   if(this.clickedElement.id == ''){
-     this.checkid = 'rele'
-   }else{
-     this.checkid = this.clickedElement.id
-   }
-   if( this.clickedElement.nodeName === "BUTTON" ) {
-     if( isCertainButtonAlreadyActive) {
-         isCertainButtonAlreadyActive.classList.remove("active");
-     }
-     this.clickedElement.className += " active";
-   }
- }
- onFocus(name:any){
-    this.textcard = name
- }
- focusOut(con:any){
-  if(con == ""){
-  this.textcard = false
+    let isCertainButtonAlreadyActive =
+      this.clickedElement.parentElement.querySelector('.active');
+    if (this.clickedElement.id == '') {
+      this.checkid = 'rele';
+    } else {
+      this.checkid = this.clickedElement.id;
+    }
+    if (this.clickedElement.nodeName === 'BUTTON') {
+      if (isCertainButtonAlreadyActive) {
+        isCertainButtonAlreadyActive.classList.remove('active');
+      }
+      this.clickedElement.className += ' active';
+    }
   }
- }
+  onFocus(name: any) {
+    this.textcard = name;
+  }
+  focusOut(con: any) {
+    if (con == '') {
+      this.textcard = false;
+    }
+  }
 
-  creditCardType(cc: string):string|undefined {
-  let amex = new RegExp('^3[47][0-9]{5,}$');
-  let visa = new RegExp('^4[0-9]{6,}$');
-  let mastercard = new RegExp('^5[1-5][0-9]{14}$');
-  let mastercard2 = new RegExp('^2[2-7][0-9]{14}$');
-  let rupay =  new RegExp('^(((60)([0-9]{14}))|((6521)([0-9]{12}))|((6522)([0-9]{12})))$');
-  let rupaytest = new RegExp('^6[0-9]{6,}$');
+  creditCardType(cc: string): string | undefined {
+    let amex = new RegExp('^3[47][0-9]{5,}$');
+    let visa = new RegExp('^4[0-9]{6,}$');
+    let mastercard = new RegExp('^5[1-5][0-9]{14}$');
+    let mastercard2 = new RegExp('^2[2-7][0-9]{14}$');
+    let rupay = new RegExp(
+      '^(((60)([0-9]{14}))|((6521)([0-9]{12}))|((6522)([0-9]{12})))$'
+    );
+    let rupaytest = new RegExp('^6[0-9]{6,}$');
 
-  if (visa.test(cc)) {
-    return 'Visa.png';
+    if (visa.test(cc)) {
+      return 'Visa.png';
+    }
+    if (amex.test(cc)) {
+      return 'Amex.png';
+    }
+    if (mastercard.test(cc) || mastercard2.test(cc)) {
+      return 'Mastercard.png';
+    }
+    if (rupay.test(cc)) {
+      return 'RuPayColoured.png';
+    }
+    if (rupaytest.test(cc)) {
+      return 'RuPayColoured.png';
+    }
+    return undefined;
   }
-  if (amex.test(cc)) {
-    return 'Amex.png';
+  getCardType(number: any) {
+    let result = number.replace(/\s/g, '');
+    this.cardimgname = this.creditCardType(result);
   }
-  if (mastercard.test(cc) || mastercard2.test(cc)) {
-    return 'Mastercard.png';
+  dropdownshow = false;
+
+
+  samp: any;
+  subdrop(bankname: any) {
+    var canger;
+    let currentele = bankname?.innerHTML;
+    canger = document.getElementById('sm');
+    canger!.innerHTML = currentele;
+ this.dropdownshow = false;
+
+    $("#SBI").prop("checked", false);
+    $("#AXIS").prop("checked", false);
+    $("#KOTAK").prop("checked", false);
+    $("#ICICI").prop("checked", false);
+    $("#HDFC").prop("checked", false);
+
   }
-  if (rupay.test(cc)) {
-    return 'RuPayColoured.png';
-  }
-  if (rupaytest.test(cc)) {
-    return 'RuPayColoured.png';
-  }
-  return undefined;
+  resetdropdown(a:any) {
+    var canger;
+    canger = document.getElementById('sm');
+    canger!.innerHTML = 'Other banks';
+    this.dropdownshow = false;
 }
-getCardType (number:any) {
-  let result = number.replace(/\s/g,'')
-  this.cardimgname = this.creditCardType(result);
-}
+
+
 }

@@ -265,7 +265,7 @@
                       </div>
                       <div class="raidobox">
                         <label class="radiocontainer ">
-                          <input type="radio" id="HDFC" name="payment">
+                          <input type="radio" id="HDFC" name="payment" (change)="resetdropdown($event)">
                           <span class="checkmark"></span>
                         </label>
                       </div>
@@ -279,7 +279,7 @@
                       </div>
                       <div class="raidobox">
                         <label class="radiocontainer ">
-                          <input type="radio" id="ICICI" name="payment">
+                          <input type="radio" id="ICICI" name="payment" (change)="resetdropdown($event)">
                           <span class="checkmark"></span>
                         </label>
                       </div>
@@ -295,7 +295,7 @@
                       </div>
                       <div class="raidobox">
                         <label class="radiocontainer ">
-                          <input type="radio" id="SBI" name="payment">
+                          <input type="radio" id="SBI" name="payment"   #sbi (change)="resetdropdown($event)">
                           <span class="checkmark"></span>
                         </label>
                       </div>
@@ -309,7 +309,7 @@
                       </div>
                       <div class="raidobox">
                         <label class="radiocontainer ">
-                          <input type="radio" id="AXIS" name="payment">
+                          <input type="radio" id="AXIS" name="payment"    #axis  (change)="resetdropdown($event)">
                           <span class="checkmark"></span>
                         </label>
                       </div>
@@ -325,7 +325,7 @@
                       </div>
                       <div class="raidobox">
                         <label class="radiocontainer ">
-                          <input type="radio" id="KOTAK" name="payment">
+                          <input type="radio" id="KOTAK" name="payment" (change)="resetdropdown($event)">
                           <span class="checkmark"></span>
                         </label>
                       </div>
@@ -333,8 +333,23 @@
                   </div>
                 </div>
                 <div class="otherbanks">
-                  <div class="otherselect">
-                    <p>Other banks</p><i class='bx bx-chevron-down'></i>
+                  <div class="otherselect" (click)="this.dropdownshow = !this.dropdownshow" (focusout)="this.dropdownshow = false">
+                    <p id="sm">Other banks</p><i class='bx bx-chevron-down'></i>
+                  </div>
+                  <div class="dropdownshow" *ngIf="this.dropdownshow" (focusout)="this.dropdownshow = false">
+                    <ul>
+                      <li (click)="subdrop(boi)" #boi class="pt-3">Bake of india</li>
+                      <li (click)="subdrop(bom)" #bom class="pt-3">Bank of Maharashtra</li>
+                      <li (click)="subdrop(cb)" #cb class="pt-3">Canara Bank</li>
+                      <li (click)="subdrop(cboi)" #cboi class="pt-3">Central Bank Of India</li>
+                      <li (click)="subdrop(cub)" #cub class="pt-3">City Union Bank</li>
+                      <li (click)="subdrop(cb)" #cb class="pt-3">Corporation Bank</li>
+                      <li (click)="subdrop(dcb)" #dcb class="pt-3">Development Credit Bank</li>
+                      <li (click)="subdrop(db)" #db class="pt-3">Deutsche Bank</li>
+                    </ul>
+                  </div>
+                  <div class="btnpay pt-3">
+                    <button>PAY ₹90</button>
                   </div>
                 </div>
               </div>
@@ -344,4 +359,16 @@
       </div>
     </div>
   </div>
-  <app-footer></app-footer>
+</div>
+<app-footer></app-footer>
+<div>
+  <label>
+    <input type="radio" name="check button" id="radiobtn1"> Radio Button 1</label>
+  <label>
+    <input type="radio" name="check button" id="radiobtn2"> Radio Button 2</label>
+</div>
+<div>
+  <button type="button" class="checkRadioBtn1">Checked Radio Button 1</button>
+  <button type="button" class="checkRadioBtn2">Checked Radio Button 2</button>
+</div>
+
