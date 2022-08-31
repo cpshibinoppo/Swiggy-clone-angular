@@ -484,7 +484,8 @@ input[type=number]::-webkit-outer-spin-button {
   width: 0;
 }
 
-.checkmark {
+.checkmark,
+.checkmarkra {
   position: absolute;
   top: 0;
   left: 0;
@@ -498,7 +499,12 @@ input[type=number]::-webkit-outer-spin-button {
   background-color: #60b246;
 }
 
-.checkmark:after {
+.sublabel input:checked~.checkmarkra {
+  background-color: #60b246;
+}
+
+.checkmark:after,
+.checkmarkra:after {
   content: "";
   position: absolute;
   display: none;
@@ -508,7 +514,12 @@ input[type=number]::-webkit-outer-spin-button {
   display: block;
 }
 
-.sublabel .checkmark:after {
+.sublabel input:checked~.checkmarkra:after {
+  display: block;
+}
+
+.sublabel .checkmark:after,
+.sublabel .checkmarkra:after {
   left: 5px;
   top: 3px;
   width: 5px;
@@ -519,6 +530,7 @@ input[type=number]::-webkit-outer-spin-button {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
 
 .btnpay button {
   height: 50px;
@@ -583,7 +595,7 @@ input[type=number]::-webkit-outer-spin-button {
   width: 0;
 }
 
-.checkmark {
+.checkmarkra {
   height: 20px;
   width: 20px;
   border-radius: 25px;
@@ -591,21 +603,21 @@ input[type=number]::-webkit-outer-spin-button {
   left: -15px;
 }
 
-.radiocontainer input:checked~.checkmark {
+.radiocontainer input:checked~.checkmarkra {
   background-color: #60b246;
 }
 
-.checkmark:after {
+.checkmarkra:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-.radiocontainer input:checked~.checkmark:after {
+.radiocontainer input:checked~.checkmarkra:after {
   display: block;
 }
 
-.radiocontainer .checkmark:after {
+.radiocontainer .checkmarkra:after {
   left: 7px;
   top: 4px;
   width: 5px;
@@ -708,6 +720,151 @@ input[type=number]::-webkit-outer-spin-button {
 .otherbanks {
   position: relative;
 }
-.bankbtn:hover{
+
+.bankbtn:hover {
   box-shadow: 0 2px 8px #d4d5d9;
+}
+
+.upiimg {
+  display: flex;
+  padding-left: 5px;
+  align-items: center;
+}
+
+.upiimg img {
+  height: 18px;
+  margin-right: 10px;
+}
+
+.upiimg p {
+  margin: 0 0 4px;
+  color: #93959f;
+  font-size: 13px;
+}
+
+.upiname {
+  font-size: 12px;
+  font-weight: 500;
+  color: #7e808c;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid black;
+}
+
+.upihead {
+  display: flex;
+  justify-content: space-between;
+}
+
+.upihead img {
+  margin-top: 10px;
+  height: 15px;
+}
+
+.upihead span {
+  width: 56%;
+  color: #686b78;
+  margin-left: -23px;
+  font-size: 13px;
+}
+
+.upihead button {
+  background: none;
+  border: none;
+  color: #5d8ed5;
+  font-weight: 600;
+  margin-left: 20px;
+  font-size: 12px;
+}
+
+.upiinputhead h3 {
+  font-size: 17px;
+  font-weight: 500;
+  color: #282c3f;
+  line-height: 1;
+  margin: 0 0 3px;
+}
+
+.upiinputhead span {
+  font-size: 14px;
+  color: #686b78;
+}
+
+.upiinputmain {
+  width: 75%;
+}
+
+.checkboxcontainer {
+  display: block;
+  position: relative;
+  margin-bottom: 12px;
+  color: #3d4152;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.checkboxcontainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: transparent;
+  border: 1px solid #686b78;
+}
+
+.checkboxcontainer input:checked~.checkmark {
+  background-color: #60b246;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkboxcontainer input:checked~.checkmark:after {
+  display: block;
+}
+
+.checkboxcontainer .checkmark:after {
+  left: 5px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.upipaybtn {
+  width: 75%;
+}
+
+/* cod start*/
+.codtext {
+  padding-top: 2rem;
+  width: 70%;
+}
+
+.codtext h3 {
+  font-weight: 500;
+  font-size: 17px;
+  margin: 0 0 0px;
+}
+
+.codtext span {
+  font-size: 13px;
+  color: #7e808c;
+  font-weight: 300;
+  width: 250px;
 }

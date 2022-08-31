@@ -253,7 +253,7 @@
                   </form>
                 </div>
               </div>
-              <div class="walletshow" *ngIf="this.wallets">
+              <div class="walletshow" *ngIf="!this.wallets">
                 <div class="netmain">
                   <div>
                     <label class="bankbtn" for="HDFC">
@@ -266,7 +266,7 @@
                       <div class="raidobox">
                         <label class="radiocontainer ">
                           <input type="radio" id="HDFC" name="payment" (change)="resetdropdown($event)">
-                          <span class="checkmark"></span>
+                          <span class="checkmarkra"></span>
                         </label>
                       </div>
                     </label>
@@ -280,7 +280,7 @@
                       <div class="raidobox">
                         <label class="radiocontainer ">
                           <input type="radio" id="ICICI" name="payment" (change)="resetdropdown($event)">
-                          <span class="checkmark"></span>
+                          <span class="checkmarkra"></span>
                         </label>
                       </div>
                     </label>
@@ -295,8 +295,8 @@
                       </div>
                       <div class="raidobox">
                         <label class="radiocontainer ">
-                          <input type="radio" id="SBI" name="payment"   #sbi (change)="resetdropdown($event)">
-                          <span class="checkmark"></span>
+                          <input type="radio" id="SBI" name="payment" #sbi (change)="resetdropdown($event)">
+                          <span class="checkmarkra"></span>
                         </label>
                       </div>
                     </label>
@@ -309,8 +309,8 @@
                       </div>
                       <div class="raidobox">
                         <label class="radiocontainer ">
-                          <input type="radio" id="AXIS" name="payment"    #axis  (change)="resetdropdown($event)">
-                          <span class="checkmark"></span>
+                          <input type="radio" id="AXIS" name="payment" #axis (change)="resetdropdown($event)">
+                          <span class="checkmarkra"></span>
                         </label>
                       </div>
                     </label>
@@ -326,14 +326,15 @@
                       <div class="raidobox">
                         <label class="radiocontainer ">
                           <input type="radio" id="KOTAK" name="payment" (change)="resetdropdown($event)">
-                          <span class="checkmark"></span>
+                          <span class="checkmarkra"></span>
                         </label>
                       </div>
                     </label>
                   </div>
                 </div>
                 <div class="otherbanks">
-                  <div class="otherselect" (click)="this.dropdownshow = !this.dropdownshow" (focusout)="this.dropdownshow = false">
+                  <div class="otherselect" (click)="this.dropdownshow = !this.dropdownshow"
+                    (focusout)="this.dropdownshow = false">
                     <p id="sm">Other banks</p><i class='bx bx-chevron-down'></i>
                   </div>
                   <div class="dropdownshow" *ngIf="this.dropdownshow" (focusout)="this.dropdownshow = false">
@@ -353,6 +354,57 @@
                   </div>
                 </div>
               </div>
+              <div class="walletshow" *ngIf="!this.wallets">
+                <div class="upihead">
+                  <img src="{{this.pathofimg}}/upi/UPI-logo.png" alt="">
+                  <span>Transfer money from your bank account using UPI with your registered VPA</span>
+                  <button>How IT WORK</button>
+                </div>
+                <div class="cardname upiname pt-3">
+                  <span>WE ACCEPT</span>
+                  <div class="upiimg">
+                    <img src="{{this.pathofimg}}/upi/GooglePay.png" alt="">
+                    <img src="{{this.pathofimg}}/upi/PhonePe.png" alt="">
+                    <img src="{{this.pathofimg}}/upi/BHIM.png" alt="">
+                    <img src="{{this.pathofimg}}/upi/Pockets.png" alt="">
+                    <p>& more</p>
+                  </div>
+                </div>
+                <div class="upiinputmain">
+                  <div class="upiinputhead pt-4">
+                    <h3>Pay via New VPA</h3>
+                    <span>You must have a Virtual Payment Address</span>
+                  </div>
+                  <div class="carddiv mt-4">
+                    <input class="cardinput" (focus)="onFocus('cardnum')" (focusout)="focusOut(cardnumber.value)"
+                      (input)="getCardType(cardnumber.value)" #cardnumber type="text" required>
+                    <label [ngClass]="{'focuslabel' : this.textcard == 'cardnum'||cardnumber.value}"
+                      class="inputlabel">Enter VPA</label>
+                  </div>
+                </div>
+                <div class="pt-3 checkboxcontainer">
+                  <label class="sublabel">Securely save this VPA for a faster checkout next time.
+                    <input type="checkbox" checked>
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+                <div class="btnpay upipaybtn pt-3">
+                  <button>VERIFY AND PAY ₹90</button>
+                </div>
+              </div>
+              <div class="walletshow" *ngIf="this.wallets">
+                <div class="pt-4">
+                  <img src="{{this.pathofimg}}/cod/Cod.png" alt="">
+                  <div class="codtext">
+                    <h3>Cash</h3>
+                    <span>Pay cash at the time of delivery. We recommend you use online payments for contactless
+                      delivery</span>
+                    <div class="btnpay upipaybtn pt-4">
+                      <button> PAY ₹90</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -361,14 +413,3 @@
   </div>
 </div>
 <app-footer></app-footer>
-<div>
-  <label>
-    <input type="radio" name="check button" id="radiobtn1"> Radio Button 1</label>
-  <label>
-    <input type="radio" name="check button" id="radiobtn2"> Radio Button 2</label>
-</div>
-<div>
-  <button type="button" class="checkRadioBtn1">Checked Radio Button 1</button>
-  <button type="button" class="checkRadioBtn2">Checked Radio Button 2</button>
-</div>
-

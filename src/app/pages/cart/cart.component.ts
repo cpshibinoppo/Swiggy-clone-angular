@@ -84,22 +84,17 @@ export class CartComponent implements OnInit {
     this.cardimgname = this.creditCardType(result);
   }
   dropdownshow = false;
-
-
-  samp: any;
   subdrop(bankname: any) {
     var canger;
     let currentele = bankname?.innerHTML;
     canger = document.getElementById('sm');
     canger!.innerHTML = currentele;
- this.dropdownshow = false;
-
+    this.dropdownshow = false;
     $("#SBI").prop("checked", false);
     $("#AXIS").prop("checked", false);
     $("#KOTAK").prop("checked", false);
     $("#ICICI").prop("checked", false);
     $("#HDFC").prop("checked", false);
-
   }
   resetdropdown(a:any) {
     var canger;
@@ -107,6 +102,4 @@ export class CartComponent implements OnInit {
     canger!.innerHTML = 'Other banks';
     this.dropdownshow = false;
 }
-
-
 }
