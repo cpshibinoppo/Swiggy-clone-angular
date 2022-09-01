@@ -12,9 +12,7 @@ export class CartComponent implements OnInit {
   product: any;
   noncart = false;
   subpayment = false;
-  clickedElement: any;
-  checkid: any;
-  wallets = true;
+  wallets = 'wallets';
   cardnum = false;
   checkboxshow = true;
   cardimgname: any;
@@ -26,22 +24,6 @@ export class CartComponent implements OnInit {
     this.route.data.subscribe((data) => {
       this.product = data;
     });
-  }
-  onButtonGroupClick($event: any) {
-    this.clickedElement = $event.target || $event.srcElement;
-    let isCertainButtonAlreadyActive =
-      this.clickedElement.parentElement.querySelector('.active');
-    if (this.clickedElement.id == '') {
-      this.checkid = 'rele';
-    } else {
-      this.checkid = this.clickedElement.id;
-    }
-    if (this.clickedElement.nodeName === 'BUTTON') {
-      if (isCertainButtonAlreadyActive) {
-        isCertainButtonAlreadyActive.classList.remove('active');
-      }
-      this.clickedElement.className += ' active';
-    }
   }
   onFocus(name: any) {
     this.textcard = name;
@@ -90,16 +72,20 @@ export class CartComponent implements OnInit {
     canger = document.getElementById('sm');
     canger!.innerHTML = currentele;
     this.dropdownshow = false;
-    $("#SBI").prop("checked", false);
-    $("#AXIS").prop("checked", false);
-    $("#KOTAK").prop("checked", false);
-    $("#ICICI").prop("checked", false);
-    $("#HDFC").prop("checked", false);
+    $('#SBI').prop('checked', false);
+    $('#AXIS').prop('checked', false);
+    $('#KOTAK').prop('checked', false);
+    $('#ICICI').prop('checked', false);
+    $('#HDFC').prop('checked', false);
   }
-  resetdropdown(a:any) {
+  resetdropdown(a: any) {
     var canger;
     canger = document.getElementById('sm');
     canger!.innerHTML = 'Other banks';
     this.dropdownshow = false;
-}
+  }
+  activefun(btnname: any) {
+    document.querySelector('.active')!.classList.remove('active');
+    btnname.classList.add('active');
+  }
 }

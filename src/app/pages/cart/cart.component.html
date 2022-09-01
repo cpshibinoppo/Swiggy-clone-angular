@@ -94,34 +94,26 @@
             <h2>Choose payment method</h2>
             <div class="paymentmain">
               <div class="paymentap">
-                <div class="wallets active" (click)="this.wallets = !this.wallets">
+                <div class="wallets active" #wa (click)="this.wallets = 'wallets';activefun(wa)">
                   <i class='bx bxs-wallet-alt'></i><span>Wallets</span>
                 </div>
-                <div class="ceranddeb">
+                <div class="ceranddeb" #cr (click)="this.wallets = 'credit';activefun(cr)">
                   <i class='bx bxs-credit-card-front'></i><span>Credit & Debit cards</span>
                 </div>
-                <div class="sedexo">
+                <div class="sedexo" #se (click)="this.wallets = 'sedexo';activefun(se)">
                   <i class='bx bxs-credit-card'></i><span>Sedexo</span>
                 </div>
-                <div class="netbank">
+                <div class="netbank" #ne (click)="this.wallets = 'netbanking';activefun(ne)">
                   <i class='bx bxs-bank'></i><span>Netbanking</span>
                 </div>
-                <div class="upi">
+                <div class="upi" #up (click)="this.wallets = 'upi';activefun(up)">
                   <i class='bx bxl-paypal'></i><span>UPI</span>
                 </div>
-                <div class="payon">
+                <div class="payon" #co (click)="this.wallets = 'cod';activefun(co)">
                   <i class='bx bx-package'></i><span>Pay on delivery</span>
                 </div>
-                <!-- <div class="btn-group" (click)="onButtonGroupClick($event)" >
-                  <button #rele class="btnn active" type="button" id="rele"><i class='bx bxs-wallet-alt' ></i>Wallets</button>
-                  <button class="btnn" type="button" id="deli"><i class='bx bxs-credit-card-front' ></i>Credit & Debit cards</button>
-                  <button #rati class="btnn" type="button" id="rati"><i class='bx bxs-credit-card' ></i>Sedexo</button>
-                  <button class="btnn" type="button" id="lowt"><i class='bx bxs-bank' ></i>Netbanking</button>
-                  <button class="btnn" type="button" id="high"><i class='bx bxl-paypal'></i>UPI</button>
-                  <button class="btnn" type="button" id="high"><i class='bx bx-package'></i>Pay on delivery</button>
-                </div> -->
               </div>
-              <div class="walletshow" *ngIf="!this.wallets">
+              <div class="walletshow" *ngIf="this.wallets == 'wallets'">
                 <div class="payshow">
                   <div class="paylogo">
                     <img src="{{this.pathofimg}}/payment/amazon.png" alt="">
@@ -144,7 +136,7 @@
                   <a href="">LINK ACCOUNT</a>
                 </div>
               </div>
-              <div class="walletshow" *ngIf="!this.wallets">
+              <div class="walletshow" *ngIf="this.wallets == 'credit'">
                 <h2>Add new card</h2>
                 <div class="cardname">
                   <span>WE ACCEPT</span>
@@ -201,7 +193,7 @@
                   </form>
                 </div>
               </div>
-              <div class="walletshow" *ngIf="!this.wallets">
+              <div class="walletshow" *ngIf="this.wallets == 'sedexo'">
                 <h2>Add new food card</h2>
                 <div class="cardname">
                   <span>WE ACCEPT</span>
@@ -253,7 +245,7 @@
                   </form>
                 </div>
               </div>
-              <div class="walletshow" *ngIf="!this.wallets">
+              <div class="walletshow" *ngIf="this.wallets == 'netbanking'">
                 <div class="netmain">
                   <div>
                     <label class="bankbtn" for="HDFC">
@@ -354,7 +346,7 @@
                   </div>
                 </div>
               </div>
-              <div class="walletshow" *ngIf="!this.wallets">
+              <div class="walletshow" *ngIf="this.wallets == 'upi'">
                 <div class="upihead">
                   <img src="{{this.pathofimg}}/upi/UPI-logo.png" alt="">
                   <span>Transfer money from your bank account using UPI with your registered VPA</span>
@@ -392,7 +384,7 @@
                   <button>VERIFY AND PAY ₹90</button>
                 </div>
               </div>
-              <div class="walletshow" *ngIf="this.wallets">
+              <div class="walletshow" *ngIf="this.wallets == 'cod'">
                 <div class="pt-4">
                   <img src="{{this.pathofimg}}/cod/Cod.png" alt="">
                   <div class="codtext">
