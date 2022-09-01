@@ -25,6 +25,7 @@ import { RestaurantComponent } from './pages/restaurant/restaurant.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { NgxCleaveDirectiveModule } from 'ngx-cleave-directive';
 import { NgxMaskModule, IConfig } from 'ngx-mask';
+import { SearchComponent } from './pages/search/search.component';
 
 const maskConfigFunction: () => Partial<IConfig> = () => {
   return {
@@ -33,7 +34,7 @@ const maskConfigFunction: () => Partial<IConfig> = () => {
 };
 
 @NgModule({
-  declarations: [AppComponent,FooterComponent,HomeComponent, SignupComponent, LoginComponent, NotloginComponent, NavbarComponent, RestaurantComponent, CartComponent],
+  declarations: [AppComponent,FooterComponent,HomeComponent, SignupComponent, LoginComponent, NotloginComponent, NavbarComponent, RestaurantComponent, CartComponent, SearchComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
