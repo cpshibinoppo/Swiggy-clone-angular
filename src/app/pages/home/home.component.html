@@ -1,45 +1,166 @@
-<app-navbar></app-navbar>
-<section class="homesection">
-  <div class="container">
-    <div class="row">
-      <div class="mainhead">
-        <h1>34 restaurants</h1>
-        <div class="fliterdiv">
-          <!-- <ul>
-            <li><button #rele id="namsent" (click)="addrele(rele)" [ngClass]="{'focuslabel' : this.sam}" >Relevance</button></li>
-            <li><button #deli (click)="addrele(deli)">Delivery Time</button></li>
-            <li><button #rati (click)="addrele(rati)">Rating</button></li>
-            <li><button #low (click)="addrele(low)">Cost:Low To High</button></li>
-            <li><button #high (click)="addrele(high)">Cost:High To Low</button></li>
-          </ul> -->
-          <div class="btn-group" (click)="onButtonGroupClick($event)">
-            <button #rele class="btnn active" type="button" id="rele">Relevance</button>
-            <button class="btnn" type="button" id="deli">Delivery Time</button>
-            <button #rati class="btnn" type="button" id="rati">Rating</button>
-            <button class="btnn" type="button" id="lowt">Cost:Low To High</button>
-            <button class="btnn" type="button" id="high">Cost:High To Low</button>
+<div class="main">
+  <mat-sidenav-container>
+    <mat-sidenav-content>
+      <app-navbar></app-navbar>
+      <section class="homesection">
+        <div class="container">
+          <div class="row">
+            <div class="mainhead">
+              <h1>34 restaurants</h1>
+              <div class="fliterdiv">
+                <div class="btn-group" (click)="onButtonGroupClick($event)" >
+                  <button #rele class="btnn active" type="button" id="rele">Relevance</button>
+                  <button class="btnn" type="button" id="deli">Delivery Time</button>
+                  <button #rati class="btnn" type="button" id="rati">Rating</button>
+                  <button class="btnn" type="button" id="lowt">Cost:Low To High</button>
+                  <button class="btnn" type="button" id="high">Cost:High To Low</button>
+                  <h3  (click)="add=!add" id="{{this.checkid}}" class="filter-btn">Filter<i class='bx bx-filter'></i></h3>
+                </div>
+              </div>
+            </div>
           </div>
-          <h3>Filter<mat-icon>filter_list</mat-icon></h3>
+
+          <div class="row">
+            <div [ngClass]="{'show':this.clickedElement?.id == undefined,'block':this.clickedElement?.id!=='rele'}">
+              <section class="pt-3">
+                <a href="home/restaurant">
+                <div class="cardsub">
+                  <div class="cardcon">
+                  <div class="cardimg">
+                    <img src="../../../assets/image/restaurant img/rest1.jpeg" alt="">
+                  </div>
+                  <div class="cardtext">
+                    <p class="cardtitle">Chicking</p>
+                    <p class="cardsubtext">Snacks, Grill,Fast Food,American</p>
+                    <div class="cardprice"><div class="cardstar"><span><i class='bx bxs-star'></i></span><span>3.8</span></div><div>•</div><div>49 min</div><div>•</div><div>₹300 For Two</div></div>
+                  </div>
+                  <div class="offerdiv">
+                  <span><i class='bx bxs-offer' ></i></span><span>60% off | Use TRYNEW</span>
+                  </div>
+                  <div class="quickdiv">
+                    <button>QUICK VIEW</button>
+                  </div>
+                </div>
+                </div>
+              </a>
+              </section>
+            </div>
+            <div *ngIf="this.clickedElement?.id == 'deli'">
+              <h1>deli</h1>
+            </div>
+            <div *ngIf="this.clickedElement?.id == 'rati'">
+              <h1>rati</h1>
+            </div>
+            <div *ngIf="this.clickedElement?.id == 'lowt'">
+              <h1>lowt</h1>
+            </div>
+            <div *ngIf="this.clickedElement?.id == 'high'">
+              <h1>high</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+    </mat-sidenav-content>
+    <mat-sidenav position="end" [(opened)]="add">
+      <div class="closediv">
+        <a  class="closeiconbtn" (click)="add=!add" >
+          <mat-icon>close</mat-icon>
+        </a>
+        <h2>Filter</h2>
+      </div>
+      <div class="slide">
+        <div class="maincheckhead pt-4">
+          <h3>Cuisines</h3>
+          <div class="maincheck">
+            <div class="subcheck">
+              <ul>
+                <li>
+                  <label class="sublabel">American
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </li>
+                <li> <label class="sublabel">Arabian
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </li>
+                <li>
+                  <label class="sublabel">Barbecue
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </li>
+                <li>
+                  <label class="sublabel">Biryani
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <div class="subcheck subcheck2">
+              <ul>
+                <li>
+                  <label class="sublabel">Andhra
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </li>
+                <li>
+                  <label class="sublabel">Bakery
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </li>
+                <li>
+                  <label class="sublabel">Beverages
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </li>
+                <li>
+                  <label class="sublabel">Cafe
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="maincheckhead pt-4">
+          <h3>Show Restaurants With</h3>
+          <div class="maincheck">
+            <div class="subcheck">
+              <ul>
+                <li>
+                  <label class="sublabel">Offers
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <div class="subcheck subcheck2">
+              <ul>
+                <li>
+                  <label class="sublabel">Pure Veg
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div  [ngClass]="{'show':this.clickedElement?.id == undefined,'block':this.clickedElement?.id!=='rele'}">
-        <h1>rele</h1>
-      </div>
-      <div *ngIf="this.clickedElement?.id == 'deli'">
-        <h1>deli</h1>
-      </div>
-      <div *ngIf="this.clickedElement?.id == 'rati'" >
-        <h1>rati</h1>
-      </div>
-      <div *ngIf="this.clickedElement?.id == 'lowt'" >
-        <h1>lowt</h1>
-      </div>
-      <div *ngIf="this.clickedElement?.id == 'high'" >
-        <h1>high</h1>
-      </div>
-    </div>
-  </div>
-</section>
-
+      <section class="btnsection pt-3">
+        <div class="btndiv">
+          <button class="clearbtn" type="submit">CLEAR</button>
+          <button class="showbtn" type="submit">SHOW RESTAURANTS</button>
+        </div>
+      </section>
+    </mat-sidenav>
+  </mat-sidenav-container>
+</div>

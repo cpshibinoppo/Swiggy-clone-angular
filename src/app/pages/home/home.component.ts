@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -7,12 +7,21 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 })
 
 export class HomeComponent implements OnInit {
+  add = false;
  clickedElement:any;
+ checkid:any
   constructor() { }
-  ngOnInit(): void {}
+
+  ngOnInit(): void {
+  }
   onButtonGroupClick($event:any){
      this.clickedElement = $event.target || $event.srcElement;
     let isCertainButtonAlreadyActive = this.clickedElement.parentElement.querySelector(".active");
+    if(this.clickedElement.id == ''){
+      this.checkid = 'rele'
+    }else{
+      this.checkid = this.clickedElement.id
+    }
     if( this.clickedElement.nodeName === "BUTTON" ) {
       if( isCertainButtonAlreadyActive) {
           isCertainButtonAlreadyActive.classList.remove("active");
@@ -23,3 +32,5 @@ export class HomeComponent implements OnInit {
   }
 
 }
+
+

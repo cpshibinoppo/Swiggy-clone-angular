@@ -11,6 +11,7 @@
   transform: translateZ(0);
   transition: transform .3s ease;
   padding-bottom: 6rem;
+  position: inherit;
 }
 
 nav {
@@ -85,4 +86,9 @@ nav {
 
 .navbar ul li a:hover {
   color: var(--main-color);
+}
+.carthead{
+  font-weight: 600 !important;
+  color: black !important;
+  text-transform: uppercase;
 }

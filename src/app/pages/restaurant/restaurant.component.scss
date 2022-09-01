@@ -1,0 +1,544 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+.headmain {
+  background-color: #171a29;
+  color: #fff;
+}
+
+.headcon {
+  padding: 2rem 0 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.restimgdiv {
+  width: 260px;
+}
+
+.restimgdiv img {
+  width: 100%;
+}
+
+.headtext h1 {
+  max-width: 538px;
+  font-weight: 300;
+  font-size: 32px;
+}
+
+.headtext p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: inherit;
+  opacity: 0.7;
+  font-size: 15px;
+  max-width: 538px;
+}
+
+.ratingmain {
+  display: flex;
+}
+
+.filtermain {
+  display: flex;
+}
+
+.offertext {
+  display: flex;
+}
+
+.ratingmain {
+  justify-content: space-between;
+  width: 70%;
+}
+
+.ratingmain span {
+  color: inherit;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.serchdiv {
+  width: 230px;
+  display: table;
+  table-layout: fixed;
+  box-shadow: 0 3px 15px 0 rgb(40 44 63 / 20%);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  height: 35px;
+  background-color: #fff;
+}
+
+.icon-search {
+  width: 35px;
+  text-align: right;
+  font-size: 16px;
+  font-weight: 700;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.icon-search i {
+  width: 30px;
+  text-align: right;
+  font-size: 20px;
+  font-weight: 700;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.icon-search::before {
+  margin-right: 15px;
+}
+.textmain {
+  margin-bottom: -50px;
+  padding-top: 13px;
+}
+
+.searchinput {
+  display: table-cell;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  color: #3d4152;
+  font-weight: 500;
+  font-size: 14px;
+  pointer-events: auto;
+}
+
+.serchdiv span i {
+  color: #171a29;
+}
+
+.serchdiv input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  padding: 1px 2px;
+  border: none;
+  -webkit-appearance: textfield;
+  -webkit-rtl-ordering: logical;
+  vertical-align: middle;
+  width: 100%;
+  height: 22px;
+  line-height: 22px;
+  font-weight: 600;
+  position: relative;
+  top: -1px;
+  caret-color: #fc8019;
+}
+
+.serchdiv input:focus {
+  outline: none;
+}
+
+.vegdiv {
+  cursor: pointer;
+  float: right;
+  display: table;
+  table-layout: fixed;
+  box-shadow: 0 3px 15px 0 rgb(40 44 63 / 20%);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  height: 35px;
+  background-color: #fff;
+  margin-left: 22px;
+}
+
+.checkspan {
+  vertical-align: top;
+  padding-top: 11px;
+  text-align: right;
+  width: 41px;
+  display: table-cell;
+  font-size: 14px;
+  color: #3d4152;
+  font-weight: 500;
+}
+
+.vegtext {
+  display: table-cell;
+  vertical-align: middle;
+  padding-right: 15px;
+  text-transform: capitalize;
+  font-weight: 600;
+  transition: color 0.2s ease-in-out;
+  will-change: color;
+  color: #3d4152;
+  font-size: 14px;
+}
+
+.vegdiv:hover .vegtext {
+  color: #60b246;
+}
+
+.checklabel {
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  display: inline-block;
+}
+
+.checklabel input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  cursor: pointer;
+  display: block;
+  height: 100%;
+  border-color: #3d4152;
+  border: 1.5px solid #7e808c;
+  transition: border 0.3s;
+}
+
+.checklabel input:checked ~ .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  cursor: pointer;
+  display: block;
+  height: 100%;
+  border-color: #3d4152;
+  border: 1.5px solid #7e808c;
+  transition: border 0.3s;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checklabel .checkmark:after {
+  left: 5px;
+  top: 3px;
+  width: 3px;
+  height: 7px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.checklabel:hover svg {
+  height: 16px;
+  width: 16px;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  overflow: hidden;
+  fill: #60b246;
+  opacity: 1;
+}
+.checklabel input:checked ~ svg {
+  height: 16px;
+  width: 16px;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  overflow: hidden;
+  fill: #60b246;
+  opacity: 1;
+}
+
+svg {
+  opacity: 0;
+}
+
+/* favourite*/
+.favouritebtn {
+  float: right;
+  cursor: pointer;
+  width: 115px;
+  display: table;
+  table-layout: fixed;
+  box-shadow: 0 3px 15px 0 rgb(40 44 63 / 20%);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  height: 35px;
+  background-color: #fff;
+  color: #3d4152;
+  font-weight: 500;
+  font-size: 14px;
+  margin-left: 22px;
+}
+.onespan {
+  font-size: 17px;
+  color: #3d4152;
+  font-weight: 700;
+  position: relative;
+  transition: color 0.3s ease;
+  display: table-cell;
+  vertical-align: top;
+  padding-top: 10px;
+  text-align: right;
+  width: 30px;
+}
+.bx-heart:before {
+  margin-right: 7px;
+}
+.bi-heart-fill::before {
+  margin-right: 7px !important;
+}
+.spantwo {
+  display: table-cell;
+  vertical-align: middle;
+  padding-right: 15px;
+  font-weight: 600;
+  text-transform: capitalize;
+  transition: color 0.2s ease-in-out;
+  will-change: color;
+}
+.red-color {
+  color: red;
+}
+/* offerdiv */
+.offerdiv {
+  color: inherit;
+  width: 298px;
+  height: 100%;
+  display: table-cell;
+  vertical-align: top;
+}
+.offerdiv h1 {
+  color: inherit;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: #171a29;
+  display: inline-block;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  position: absolute;
+  top: -13px;
+  left: -6px;
+}
+.offer {
+  transform: translateZ(0);
+  transition: transform 0.2s ease-in-out;
+  border: 1px solid #bec0c8;
+  position: relative;
+}
+.offertext {
+  padding: 31px 40px 25px 25px;
+  display: block;
+}
+.suboffer {
+  display: flex;
+}
+/* show food */
+.miansection {
+  height: 100%;
+}
+.showfoodmain {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.showfood {
+  display: flex;
+  width: 80%;
+}
+.showfoodtext {
+  width: 24%;
+  text-align: right;
+}
+.foodshow {
+  width: 74%;
+  padding: 5px 55px 100px;
+}
+.foodshow h3 {
+  margin: 0 0 -1px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.cartmain {
+  width: 20%;
+}
+.cartmain div {
+  width: 100%;
+}
+.foodtext {
+  position: relative;
+  height: 100%;
+}
+.foodtext::after {
+  content: " ";
+  position: absolute;
+  top: -21px;
+  bottom: 0;
+  right: 0;
+  border-right: 1px solid #e9e9eb;
+  box-sizing: inherit;
+}
+.foodtext a p {
+  padding-bottom: 3px;
+  display: block;
+  font-size: 15px;
+  color: #282c3f;
+  padding-top: 3px;
+  font-weight: 400;
+  margin-right: -15px;
+  padding-right: 20px;
+  transition: all 0.3s;
+}
+.foodtext a p:hover {
+  color: var(--main-color);
+}
+.foodtext a p:checked {
+  color: var(--main-color);
+}
+/* botton links start */
+.link-group {
+  display: grid;
+}
+.btnn {
+  text-align: right;
+  background-color: #fff;
+  border: none;
+  margin-right: 25px;
+  color: #686b78;
+  transition: all 0.2s ease-in;
+  position: relative;
+  padding-top: 0.9rem;
+}
+
+.btnn:hover {
+  color: var(--main-color);
+}
+
+.active {
+  color: var(--main-color);
+}
+
+.active::after {
+  position: absolute;
+  content: "";
+  right: -24px;
+  width: 2%;
+  height: 20px;
+  top: 14px;
+  background: #282c3f;
+  transition: all 0.2s ease-in;
+  background: var(--main-color);
+}
+/* show food list */
+.foodtitlediv p {
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #686b78;
+}
+.icon-Veg:before {
+  content: "\E997";
+}
+.bx-checkbox {
+  font-size: 30px;
+  position: relative;
+  color: #0f8a65;
+  margin-left: -5px;
+}
+.bxs-circle {
+  font-size: 9px;
+  position: absolute;
+  top: 10.2px;
+  left: 10px;
+}
+.foodditles h3 {
+  word-break: break-word;
+}
+.price {
+  margin-top: 5px;
+}
+.description {
+  margin-top: 14px;
+  line-height: 1.3;
+  color: rgba(40, 44, 63, 0.45);
+  width: 100%;
+  letter-spacing: -0.3px;
+  font-size: 0.8rem;
+}
+.foodditlesdiv {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #d4d5d9;
+}
+.foodimg {
+  position: relative;
+  height: 120px;
+}
+.foodimg img {
+  width: 118px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+/* add btn */
+.addbtndiv {
+  position: absolute;
+  color: #60b246;
+  border: 1px solid #d4d5d9;
+  bottom: 8px;
+  width: 96px;
+  line-height: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  height: 36px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  background-color: #fff;
+}
+.addbtn {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.subpop {
+  position: absolute;
+  right: 2px;
+  top: -25%;
+  cursor: pointer;
+}
+.adddiv {
+  display: flex;
+  justify-content: space-around;
+}
+.decrease,
+.increase {
+  cursor: pointer;
+}
+/* cart */
+.emptycartdiv h1 {
+  color: #7e808c;
+  letter-spacing: -0.3px;
+  font-size: 32px;
+  font-weight: 500;
+}
+.emptycartdiv img {
+  width: 100%;
+  height: 212px;
+  margin-top: 47px;
+  opacity: 0.5;
+}
+.emptycartdiv p{
+  color: #93959f;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 200;
+    max-width: 250px;
+}

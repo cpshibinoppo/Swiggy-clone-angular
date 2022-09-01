@@ -3,6 +3,7 @@
     <div class="row">
       <nav>
         <div class="logosection">
+          <a href="home">
           <div class="logodiv">
             <svg class="_8pSp-" viewBox="0 0 559 825" height="49" width="34" fill="#fc8019">
               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -17,17 +18,19 @@
               </defs>
             </svg>
           </div>
+        </a>
           <div class="locationdiv">
-            <p><a href="">other</a>Pullur, Kerala, India<mat-icon>expand_more</mat-icon>
+            <p *ngIf="!this.cartName"><a href="">other</a>Pullur, Kerala, India<mat-icon>expand_more</mat-icon>
             </p>
+            <p class="carthead" *ngIf="this.cartName">{{this.cartName}}</p>
           </div>
         </div>
         <div class="navbar">
           <ul>
-            <li>
+            <li *ngIf="!this.cartName">
               <a href="#"><div><mat-icon>search</mat-icon></div>Search</a>
             </li>
-            <li>
+            <li *ngIf="!this.cartName">
               <a href="#"><div><mat-icon>percent</mat-icon></div>Offers</a>
             </li>
             <li>
@@ -36,8 +39,8 @@
             <li>
               <a href="#"><div><mat-icon>perm_identity</mat-icon></div>Name</a>
             </li>
-            <li>
-              <a href="#"><div><mat-icon>add_shopping_cart</mat-icon></div>Cart</a>
+            <li *ngIf="!this.cartName">
+              <a href="home/cart"><div><mat-icon>add_shopping_cart</mat-icon></div>Cart</a>
             </li>
           </ul>
         </div>

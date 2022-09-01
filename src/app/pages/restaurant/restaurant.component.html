@@ -1,0 +1,137 @@
+<app-navbar></app-navbar>
+<section class="headmain">
+  <div class="container">
+    <div class="row">
+      <div class="headcon">
+        <div class="restimgdiv">
+          <img src="../../../assets/image/restautant sub/restaurantimg1.jpeg" alt="">
+        </div>
+        <div class="textmain">
+          <div class="headtext">
+            <h1>Empire Plaza</h1>
+            <p>Arabian, North Indian</p>
+            <p>Marad, Maradu | Change Outlet</p>
+          </div>
+          <div class="ratingmain">
+            <div>
+              <div><span><i class='bx bxs-star'></i>4.0</span></div>
+              <div>1K+ Ratings</div>
+            </div>
+            <div>
+              <div><span>45 mins</span></div>
+              <div>Delivery Time</div>
+            </div>
+            <div>
+              <div><span>₹ 199</span></div>
+              <div>Cost for two</div>
+            </div>
+          </div>
+          <div class="filtermain pt-3">
+            <div class="serchdiv"><span class="icon-search"><i class='bx bx-search'></i></span><span
+                class="searchinput"><input type="text" placeholder="Search for dishes..."></span></div>
+            <div class="vegdiv">
+              <span class="checkspan">
+                <label class="checklabel">
+                  <input type="checkbox" class="checkinp" id="veg">
+                  <span class="checkmark"></span>
+                  <svg width="16" class="_2m7ny" viewBox="0 0 24 24">
+                    <path
+                      d="M24,0 L24,24 L0,24 L0,0 L24,0 Z M9.5,18.25 L20.75,7.43269231 L19,5.75 L9.5,14.8846154 L5,10.5576923 L3.25,12.2403846 L9.5,18.25 Z">
+                    </path>
+                  </svg>
+                </label>
+              </span>
+              <label class="vegtext" for="veg">veg only</label>
+            </div>
+            <div class="favouritebtn" (click)="this.full = !this.full">
+              <span class="onespan bx bx-heart" *ngIf="!this.full"></span>
+              <i class="onespan bi bi-heart-fill red-color" *ngIf="this.full"></i>
+              <span class="spantwo" *ngIf="!this.full">Favourite</span>
+              <span class="spantwo" *ngIf="this.full">Favourited</span>
+            </div>
+          </div>
+        </div>
+        <div class="offerdiv">
+          <div class="offer">
+            <h1>OFFER</h1>
+            <div class="offertext">
+              <div class="suboffer">
+                <div><i class='bx bxs-offer'></i></div>
+                <div>60% off up to ₹120 | Use code TRYNEW</div>
+              </div>
+              <div class="suboffer pt-2">
+                <div><i class='bx bxs-offer'></i></div>
+                <div>60% off up to ₹120 | Use code TRYNEW</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="miansection pt-5">
+  <div class="showfoodmain container">
+    <div class="showfood">
+      <div class="showfoodtext">
+        <div class="foodtext">
+          <!-- <a (click)="scrollToElement(target,$event)"><p>Sukrutham Specials</p></a>
+          <a href="#C4"><p>Sadhya Nadan</p></a>
+          <a href="#C4"><p>Variety Breads</p></a>
+          <a href="#C4"><p>Sweets And Savouries</p></a>
+          <a href="#C4"><p>Payasam</p></a> -->
+          <div class="link-group" (click)="onButtonGroupClick($event)">
+            <button #rele class="btnn active" type="button" id="rele">Pothichoru</button>
+            <button class="btnn" type="button" id="deli">Biryani And Rice</button>
+            <button #rati class="btnn" type="button" id="rati">Beef Add Ons</button>
+            <button class="btnn" type="button" id="high">All Day Combos</button>
+            <button class="btnn" type="button" id="high">Veg Add Ons</button>
+          </div>
+        </div>
+      </div>
+      <div class="linediv">
+        <div class="line"></div>
+      </div>
+      <div class="foodshow">
+        <div class="foodtitlediv">
+          <h3>Sukrutham Specials</h3>
+          <p>11 ITEMS</p>
+        </div>
+        <div class="foodditlesdiv pt-2">
+          <div class="foodditles">
+            <i class='bx bx-checkbox'> <i class='bx bxs-circle'></i></i>
+            <h3>Butter Roast Dosa</h3>
+            <div class="price">
+              <span><i class='bx bx-rupee'></i>140</span>
+            </div>
+            <div class="description">
+              <p>Dosa roasted with lots of butter served with sambar & chutney.</p>
+            </div>
+          </div>
+          <div class="foodimg">
+            <img src="../../../assets/image/restautant sub/restaurantimg1.jpeg" alt="">
+            <div class="addbtndiv">
+              <div class="addbtn" *ngIf="!this.add || !this.zero" (click)="this.add =true;zerocheckadd()">ADD</div>
+              <div class="subpop" *ngIf="!this.add || !this.zero">+</div>
+              <div class="adddiv" *ngIf="this.zero">
+                <div class="decrease" (click)="this.addnum = this.addnum - 1;zerocheck()" *ngIf="this.add">-</div>
+                <div class="sum" *ngIf="this.add">{{this.addnum}}</div>
+                <div class="increase" (click)="this.addnum = this.addnum + 1" *ngIf="this.add">+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cartmain">
+      <div class="emptycartdiv">
+        <h1>Cart Empty</h1>
+        <img src="../../../assets/image/cart/Cart-img.png" alt="cart-img">
+        <p>Good food is always cooking! Go ahead, order some yummy items from the menu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <!-- <div #target>shibin</div> -->
+</section>
