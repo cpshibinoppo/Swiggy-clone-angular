@@ -19,7 +19,7 @@
   <div class="container pt-5">
     <div class="row">
       <div class="col-8 ">
-        <div class="addressandpyment" *ngIf="this.subpayment">
+        <div class="addressandpyment" *ngIf="!this.subpayment">
           <div class="addressmain addresscol">
             <div class="selectaddressdiv">
               <div class="line"></div>
@@ -63,7 +63,7 @@
           </div>
         </div>
         <!--sub-->
-        <div class="addressandpyment" *ngIf="!this.subpayment">
+        <div class="addressandpyment" *ngIf="this.subpayment">
           <div class="addressmain addresscol subcol">
             <div class="selectaddressdiv subselect">
               <div class="line"></div>
@@ -494,7 +494,7 @@
             <p class="notesubpar"><span>Note:</span> If you cancel within 60 seconds of placing your order, a 100% refund will be issued.
               No refund for cancellations made after 60 seconds.</p>
             <p class="notesubpar">Avoid cancellation as it leads to food wastage.</p>
-            <a href="">Read cancellation policy</a>
+            <a href="https://www.swiggy.com/refund-policy">Read cancellation policy</a>
           </div>
         </div>
       </div>
