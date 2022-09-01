@@ -1,6 +1,7 @@
 import { VariableBinding } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import * as $ from 'jquery';
 
 @Component({
@@ -17,8 +18,9 @@ export class CartComponent implements OnInit {
   checkboxshow = true;
   cardimgname: any;
   textcard: any;
+  nocon = true;
   pathofimg = '../../../assets/image';
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private routelink: Router) {}
 
   ngOnInit(): void {
     this.route.data.subscribe((data) => {
@@ -87,5 +89,13 @@ export class CartComponent implements OnInit {
   activefun(btnname: any) {
     document.querySelector('.active')!.classList.remove('active');
     btnname.classList.add('active');
+  }
+  addnum = 1;
+  zero = true;
+
+  zerocheck() {
+    if (this.addnum < 1) {
+      this.routelink.navigate(['/home/restaurant']);
+    }
   }
 }

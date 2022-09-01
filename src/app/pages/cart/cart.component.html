@@ -401,6 +401,59 @@
           </div>
         </div>
       </div>
+      <div class="col-4">
+        <div class="slidebarmaindiv">
+          <div class="firsthead">
+            <div class="sideimgdiv">
+              <img src="../../../assets/image/cart/cartbillimg.jpeg" alt="">
+            </div>
+            <div class="foodnameshow">
+              <h4>Gokul Oottupura</h4>
+              <span>Panampill Nagar</span>
+            </div>
+          </div>
+          <div class="addandpriceshowdiv pt-4">
+            <div>
+              <i class='bx bx-checkbox'> <i class='bx bxs-circle'></i></i>
+            </div>
+            <div class="foodname">
+              <p>idii(single)</p>
+              <button class="cusbtn"><span>Customize</span><i class='bx bx-chevron-right'></i></button>
+            </div>
+            <div class="addbtndiv">
+              <div class="adddiv">
+                <div class="decrease" (click)="this.addnum = this.addnum - 1;zerocheck()">-</div>
+                <div class="sum">{{this.addnum}}</div>
+                <div class="increase" (click)="this.addnum = this.addnum + 1">+</div>
+              </div>
+            </div>
+            <div class="price">
+              <i class='bx bx-rupee'></i>75
+            </div>
+          </div>
+          <div class="textareamaindiv">
+            <textarea name="" id="sugg" maxlength="140" placeholder="Any suggestions? We will pass it on..."></textarea>
+            <div class="quoteicon"><i class='bx bxs-quote-alt-left'></i></div>
+          </div>
+          <div class="no-contactmaindiv mt-4">
+            <div class=" no-context">
+              <div style="padding-top: 5px;">
+                <label class="sublabel" style="cursor: pointer;">
+                  <input type="checkbox" (change)="this.nocon = !this.nocon">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <div>
+                <p>Opt in for No-contact Delivery</p>
+                <p class="note" *ngIf="this.nocon">Unwell, or avoiding contact? Please select no-contact delivery.
+                  Partner will safely place the order outside your door (not for COD)</p>
+                <p class="note" *ngIf="!this.nocon">Our delivery partner will call to confirm. Please ensure that your
+                  address has all the required details.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
