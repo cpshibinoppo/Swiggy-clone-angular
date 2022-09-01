@@ -1,4 +1,3 @@
-import { VariableBinding } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
@@ -98,4 +97,5 @@ export class CartComponent implements OnInit {
       this.routelink.navigate(['/home/restaurant']);
     }
   }
+
 }

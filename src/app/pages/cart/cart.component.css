@@ -1047,3 +1047,55 @@ input[type=number]::-webkit-outer-spin-button {
   opacity: .6;
   font-weight: 300 !important;
 }
+
+/* apply coupon star */
+.applymaindiv {
+  border: 1px dashed #a9abb2;
+  align-items: center;
+  cursor: pointer;
+  padding: 0 15px;
+  font-weight: 400;
+  height: 55px;
+  color: #535665;
+  display: flex;
+  font-size: 14px;
+  transition: all .3s ;
+}
+.applymaindiv:hover{
+  box-shadow: 0 3px 8px #e9e9eb;
+}
+.applymaindiv p{
+  margin: 0 10px 0px;
+}
+.applymaindiv i{
+  font-size: 20px;
+}
+.priceshow{
+  float: right;
+}
+.firstsubprice{
+  font-size: 13px;
+  color: #686b78;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e9e9eb;
+}
+.firstsubprice span{
+  position: relative;
+}
+.info {
+  position: absolute;
+  top: 3px;
+  margin-left: 5px;
+}
+.taxes{
+  font-size: 13px;
+  color: #686b78;
+  border-bottom: 2px solid black;
+}
+.taxes span{
+  position: relative;
+}
+.total{
+  font-weight: 600;
+}
+/* tooltips */

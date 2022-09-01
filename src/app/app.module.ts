@@ -20,12 +20,12 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { LoginComponent } from './pages/login/login.component';
 import { NotloginComponent } from './static/notlogin/notlogin.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatTabsModule } from '@angular/material/tabs';
 import { RestaurantComponent } from './pages/restaurant/restaurant.component';
 import { CartComponent } from './pages/cart/cart.component';
-import { NgxCleaveDirectiveModule } from 'ngx-cleave-directive';
 import { NgxMaskModule, IConfig } from 'ngx-mask';
 import { SearchComponent } from './pages/search/search.component';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 const maskConfigFunction: () => Partial<IConfig> = () => {
   return {
@@ -51,6 +51,7 @@ const maskConfigFunction: () => Partial<IConfig> = () => {
     ReactiveFormsModule,
     MatTabsModule,
     NgxMaskModule.forRoot(maskConfigFunction),
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent],
