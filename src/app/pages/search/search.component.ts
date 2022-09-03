@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
+  iconchang = false
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  iconchangfn(con:any){
+    if(con.value == ""){
+     this.iconchang = false
+    }else{
+     this.iconchang = true
+    }
+  }
+  clearinptdata(con:any){
+    con.value = ''
+    this.iconchang = false
+  }
 }

@@ -1,1 +1,15 @@
-<p>search works!</p>
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="searchmain">
+    <form class="searchform">
+      <div class="searchinputdiv">
+        <input type="text" placeholder="Serach for restaurants and food" #in (input)="iconchangfn(in)">
+        <div>
+          <i *ngIf="!this.iconchang" class='bx bx-search'></i>
+          <i *ngIf="this.iconchang" class='bx bx-x' (click)="clearinptdata(in)"></i>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<app-footer></app-footer>

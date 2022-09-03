@@ -4,6 +4,7 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { HomeComponent } from './pages/home/home.component';
 import { RestaurantComponent } from './pages/restaurant/restaurant.component';
+import { SearchComponent } from './pages/search/search.component';
 import { NotloginComponent } from './static/notlogin/notlogin.component';
 
 const routes: Routes = [
@@ -11,7 +12,8 @@ const routes: Routes = [
   {path:'location',component:NavbarComponent},
   {path:'home',component:HomeComponent},
   {path:'home/restaurant',component:RestaurantComponent},
-  {path:'home/cart',component:CartComponent, data: {con: 'SECURE CHECKOUT'}}
+  {path:'home/cart',component:CartComponent, data: {con: 'SECURE CHECKOUT'}},
+  {path:'home/search',component:SearchComponent}
 ];
 
 @NgModule({
