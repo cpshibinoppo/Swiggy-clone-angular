@@ -26,6 +26,7 @@ import { CartComponent } from './pages/cart/cart.component';
 import { NgxMaskModule, IConfig } from 'ngx-mask';
 import { SearchComponent } from './pages/search/search.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { OffersComponent } from './pages/offers/offers.component';
 
 const maskConfigFunction: () => Partial<IConfig> = () => {
   return {
@@ -34,7 +35,7 @@ const maskConfigFunction: () => Partial<IConfig> = () => {
 };
 
 @NgModule({
-  declarations: [AppComponent,FooterComponent,HomeComponent, SignupComponent, LoginComponent, NotloginComponent, NavbarComponent, RestaurantComponent, CartComponent, SearchComponent],
+  declarations: [AppComponent,FooterComponent,HomeComponent, SignupComponent, LoginComponent, NotloginComponent, NavbarComponent, RestaurantComponent, CartComponent, SearchComponent, OffersComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
