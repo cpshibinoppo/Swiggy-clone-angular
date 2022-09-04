@@ -1,0 +1,209 @@
+<app-navbar></app-navbar>
+<div class="main">
+  <header>
+    <div class="container offertittlemain">
+      <div class="offertitle">
+        <h1>Offers for you</h1>
+        <h2>Explore top deals and offers exclusively for you!</h2>
+      </div>
+      <div class="offertitleimg">
+        <img src="../../../assets/image/offerimg/offertop.png" alt="logo">
+      </div>
+    </div>
+  </header>
+  <section class="selectsection">
+    <div class="container">
+      <div class="selectmain">
+        <div id="rest" (click)="restfun(rest.id)" #rest class="restaurant">
+          <h2>Restaurant Offers</h2>
+        </div>
+        <div id="paym" (click)="restfun(paym.id)" #paym class="payment">
+          <h2>Payment offers/Coupons</h2>
+        </div>
+        <div id="line" class="line"></div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="restaurantshowmain pt-5 pb-5" *ngIf="!this.offershow">
+      <div class="container">
+        <div class="restshowtitle">
+          <h2>All offers (8)</h2>
+          <h3>All offers and deals,from restaurant near you</h3>
+        </div>
+        <section class="pt-3">
+          <a href="home/restaurant">
+            <div class="cardsub">
+              <div class="cardcon">
+                <div class="cardimg">
+                  <img src="../../../assets/image/restaurant img/rest1.jpeg" alt="">
+                </div>
+                <div class="cardtext">
+                  <p class="cardtitle">Chicking</p>
+                  <p class="cardsubtext">Snacks, Grill,Fast Food,American</p>
+                  <div class="cardprice">
+                    <div class="cardstar"><span><i class='bx bxs-star'></i></span><span>3.8</span></div>
+                    <div>•</div>
+                    <div>49 min</div>
+                    <div>•</div>
+                    <div>₹300 For Two</div>
+                  </div>
+                </div>
+                <div class="offerdiv">
+                  <span><i class='bx bxs-offer'></i></span><span>60% off | Use TRYNEW</span>
+                </div>
+                <div class="quickdiv">
+                  <button>QUICK VIEW</button>
+                </div>
+              </div>
+            </div>
+          </a>
+        </section>
+      </div>
+    </div>
+    <div class="paymentoffershow pt-5 " *ngIf="this.offershow">
+      <div class="container">
+        <div class="paymenttitle">
+          <h2>Available Coupons</h2>
+        </div>
+        <div class="offercol">
+          <div class="offerrow">
+            <div class="bankpffershowmain pt-3">
+              <div class="banksubmain mt-3">
+                <div class="banksub">
+                  <img src="../../../assets/image/offerimg/offerbank.png" alt="">
+                  <span class="banktitle" #code>ICICINB100
+                    <span class="arrowtop"></span>
+                    <span class="arrowbottom"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="offertext pt-3">
+                <h4>Get flat ₹100 discount using ICICI Bank Net Banking</h4>
+                <p>Flat ₹100 discount on orders above ₹700</p>
+                <button class="addmorebtn">
+                  <mat-icon>add</mat-icon>More
+                </button><br>
+                <button type="button" [cdkCopyToClipboard]="code.innerText" class="copybtn mt-3" #copy
+                  (click)="copyfun($event,code)">COPY CODE</button>
+              </div>
+            </div>
+            <div class="bankpffershowmain pt-3">
+              <div class="banksubmain mt-3">
+                <div class="banksub">
+                  <img src="../../../assets/image/offerimg/offerbank.png" alt="">
+                  <span class="banktitle">ICICINB100
+                    <span class="arrowtop"></span>
+                    <span class="arrowbottom"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="offertext pt-3">
+                <h4>Get flat ₹100 discount using ICICI Bank Net Banking</h4>
+                <p>Flat ₹100 discount on orders above ₹700</p>
+                <button class="addmorebtn">
+                  <mat-icon>add</mat-icon>More
+                </button><br>
+                <button type="button" class="copybtn mt-3" #copy (click)="copyfun($event,code)">COPY CODE</button>
+              </div>
+            </div>
+            <div class="bankpffershowmain pt-3">
+              <div class="banksubmain mt-3">
+                <div class="banksub">
+                  <img src="../../../assets/image/offerimg/offerbank.png" alt="">
+                  <span class="banktitle">ICICINB100
+                    <span class="arrowtop"></span>
+                    <span class="arrowbottom"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="offertext pt-3">
+                <h4>Get flat ₹100 discount using ICICI Bank Net Banking</h4>
+                <p>Flat ₹100 discount on orders above ₹700</p>
+                <button class="addmorebtn">
+                  <mat-icon>add</mat-icon>More
+                </button><br>
+                <button type="button" class="copybtn mt-3" #copy (click)="copyfun($event,code)">COPY CODE</button>
+              </div>
+            </div>
+          </div>
+          <div class="offerrow">
+            <div class="bankpffershowmain pt-3">
+              <div class="banksubmain mt-3">
+                <div class="banksub">
+                  <img src="../../../assets/image/offerimg/offerbank.png" alt="">
+                  <span class="banktitle">ICICINB100
+                    <span class="arrowtop"></span>
+                    <span class="arrowbottom"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="offertext pt-3">
+                <h4>Get flat ₹100 discount using ICICI Bank Net Banking</h4>
+                <p>Flat ₹100 discount on orders above ₹700</p>
+                <button class="addmorebtn">
+                  <mat-icon>add</mat-icon>More
+                </button><br>
+                <button type="button" class="copybtn mt-3" #copy (click)="copyfun($event,code)">COPY CODE</button>
+              </div>
+            </div>
+            <div class="bankpffershowmain pt-3">
+              <div class="banksubmain mt-3">
+                <div class="banksub">
+                  <img src="../../../assets/image/offerimg/offerbank.png" alt="">
+                  <span class="banktitle">ICICINB100
+                    <span class="arrowtop"></span>
+                    <span class="arrowbottom"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="offertext pt-3">
+                <h4>Get flat ₹100 discount using ICICI Bank Net Banking</h4>
+                <p>Flat ₹100 discount on orders above ₹700</p>
+                <button class="addmorebtn">
+                  <mat-icon>add</mat-icon>More
+                </button><br>
+                <button type="button" class="copybtn mt-3" #copy (click)="copyfun($event,code)">COPY CODE</button>
+              </div>
+            </div>
+            <div class="bankpffershowmain pt-3">
+              <div class="banksubmain mt-3">
+                <div class="banksub">
+                  <img src="../../../assets/image/offerimg/offerbank.png" alt="">
+                  <span class="banktitle">ICICINB100
+                    <span class="arrowtop"></span>
+                    <span class="arrowbottom"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="offertext pt-3">
+                <h4>Get flat ₹100 discount using ICICI Bank Net Banking</h4>
+                <p>Flat ₹100 discount on orders above ₹700</p>
+                <button class="addmorebtn">
+                  <mat-icon>add</mat-icon>More
+                </button><br>
+                <button type="button" class="copybtn mt-3" #copy (click)="copyfun($event,code)">COPY CODE</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bankofferdiv pt-5 pb-3">
+          <h2>Bank Offers</h2>
+          <div class="bankoffershow">
+            <div class="bankimg">
+              <img src="../../../assets/image/offerimg/bankoffer1.png" alt="">
+            </div>
+            <div class="bankoffertext">
+              <h3>Get 4% CashBank</h3>
+              <p>Pay using Flipkart Axis Bank Credit Cards & get 4% cashback</p>
+              <button class="addmorebtn">
+                <mat-icon>add</mat-icon>More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<app-footer></app-footer>

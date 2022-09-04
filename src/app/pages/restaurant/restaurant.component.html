@@ -124,10 +124,47 @@
       </div>
     </div>
     <div class="cartmain">
-      <div class="emptycartdiv">
+      <div class="emptycartdiv" *ngIf="this.cartcheck">
         <h1>Cart Empty</h1>
         <img src="../../../assets/image/cart/Cart-img.png" alt="cart-img">
         <p>Good food is always cooking! Go ahead, order some yummy items from the menu.</p>
+      </div>
+      <div class="cartdiv" *ngIf="!this.cartcheck">
+        <h2>Cart</h2>
+        <span>1ITEM</span>
+        <div class="addandpriceshowdiv pt-4">
+          <div class="foodname">
+            <div>
+            <i class='bx bx-checkbox'> <i class='bx bxs-circle'></i></i>
+          </div>
+          <div class="foodcarttext">
+            <p>Pepsi 250 Ml</p>
+            <button class="cusbtn"><span>Customize</span><i class='bx bx-chevron-right'></i></button>
+          </div>
+          </div>
+          <div class="addbtnmaindiv">
+            <div class="decrease" (click)="this.addnum = this.addnum - 1;zerocheck()" >-</div>
+            <div class="sum" >{{this.addnum}}</div>
+            <div class="increase" (click)="this.addnum = this.addnum + 1">+</div>
+          </div>
+          <div class="pricecart">
+            <i class='bx bx-rupee'></i>75
+          </div>
+        </div>
+        <div class="totalshow pt-4">
+          <div>
+            <h3>Subtotal</h3>
+            <span class="cartsubtitle">Extra charges may apply</span>
+          </div>
+          <div>
+            <span class="privenum">
+            <i class='bx bx-rupee'></i>95
+           </span>
+          </div>
+        </div>
+        <div class="btnpay upipaybtn pt-4">
+          <button [routerLink]="cartlink" >CHECKOUT<i class='bx bx-right-arrow-alt bx-fade-right' ></i></button>
+        </div>
       </div>
     </div>
   </div>

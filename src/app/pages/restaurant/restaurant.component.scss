@@ -367,9 +367,6 @@ svg {
 .cartmain {
   width: 20%;
 }
-.cartmain div {
-  width: 100%;
-}
 .foodtext {
   position: relative;
   height: 100%;
@@ -535,10 +532,93 @@ svg {
   margin-top: 47px;
   opacity: 0.5;
 }
-.emptycartdiv p{
+.emptycartdiv p {
   color: #93959f;
-    margin-top: 15px;
-    font-size: 16px;
-    font-weight: 200;
-    max-width: 250px;
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 200;
+  max-width: 250px;
+}
+/* full cart */
+.cusbtn {
+  background: none;
+  border: none;
+  font-size: 11px;
+  color: #686b78;
+  font-weight: 500;
+}
+
+.cusbtn i {
+  color: var(--main-color);
+  font-size: 13px;
+}
+.addbtnmaindiv {
+  display: flex;
+  color: #60b246;
+  border: 1px solid #d4d5d9;
+  width: 80px !important;
+  line-height: 36px;
+  height: 36px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  background-color: #fff;
+  justify-content: space-around;
+}
+.addandpriceshowdiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.foodname {
+  display: flex;
+}
+.foodcarttext p {
+  margin: 0 0 -3px;
+}
+.pricecart {
+  font-size: 13px;
+  color: #535665;
+}
+.totalshow {
+  display: flex;
+  justify-content: space-between;
+}
+.totalshow h3 {
+  margin: 0 0 -3px;
+  color: #3d4152;
+  font-size: 16px;
+  font-weight: 500;
+}
+.cartsubtitle {
+  font-size: 13px;
+  font-weight: 300;
+  color: #7e808c;
+}
+.privenum{
+  color: #3d4152;
+  font-size: 15px;
+  font-weight: 600;
+}
+.btnpay button {
+  height: 50px;
+  line-height: 50px;
+  background: #60b246;
+  font-size: 15px;
+  margin-bottom: 5px;
+  width: 100%;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  transition: all .3s ease;
+}
+
+.btnpay button:hover {
+  box-shadow: 0 4px 14px #d4d5d9;
+}
+
+.btnpay span {
+  color: #93959f;
+  font-size: 12px;
+  font-weight: 300;
 }

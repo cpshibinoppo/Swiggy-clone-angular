@@ -43,6 +43,7 @@
 /* cart start */
 .cartmain {
   background-color: #e9ecee;
+  padding-bottom: 5rem;
 }
 
 .addresscol {
@@ -867,4 +868,262 @@ input[type=number]::-webkit-outer-spin-button {
   color: #7e808c;
   font-weight: 300;
   width: 250px;
+}
+
+/* slide bar */
+.slidebarmaindiv {
+  background-color: #fff;
+  width: 100%;
+  padding: 20px 30px;
+}
+
+.firsthead {
+  display: flex;
+}
+
+.firsthead .sideimgdiv {
+  width: 50px;
+  height: 50px;
+}
+
+.sideimgdiv img {
+  width: 100%;
+}
+
+.foodnameshow {
+  margin-left: 13px;
+  position: relative;
+}
+
+.foodnameshow h4 {
+  font-size: 17px;
+  font-weight: 500;
+  margin: 0 0 -3px;
+}
+
+.foodnameshow span {
+  font-size: 13px;
+  color: #686b78;
+}
+
+.foodnameshow span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: black;
+  width: 40px;
+  height: 2px;
+}
+
+.adddiv {
+  display: flex;
+  justify-content: space-around;
+}
+
+.addbtndiv {
+  color: #60b246;
+  border: 1px solid #d4d5d9;
+  bottom: 8px;
+  width: 96px;
+  line-height: 36px;
+  margin-right: -70px;
+  display: inline-block;
+  height: 36px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  background-color: #fff;
+}
+
+.decrease,
+.increase {
+  cursor: pointer;
+}
+
+.price {
+  font-size: 13px;
+  color: #686b78;
+}
+
+.addandpriceshowdiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bx-checkbox {
+  font-size: 30px;
+  position: relative;
+  color: #0f8a65;
+  margin-left: -5px;
+}
+
+.bxs-circle {
+  font-size: 9px;
+  position: absolute;
+  top: 10.2px;
+  left: 10px;
+}
+
+.addandpriceshowdiv p {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0px 0 -2px;
+}
+
+.cusbtn {
+  background: none;
+  border: none;
+  font-size: 11px;
+  color: #686b78;
+  font-weight: 500;
+}
+
+.cusbtn i {
+  color: var(--main-color);
+  font-size: 13px;
+}
+
+.foodname {
+  margin-left: -70px;
+}
+
+/* text arar*/
+.textareamaindiv {
+  color: #686b78;
+  font-size: 13px;
+  margin-top: 15px;
+  position: relative;
+  height: 51px;
+}
+
+.textareamaindiv textarea {
+  border: none;
+  resize: none;
+  outline: none;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  padding: 16px 16px 16px 40px;
+  color: #3d4152;
+  font-weight: 400;
+  font-size: 14px;
+  background: #f9f9f9;
+}
+
+.quoteicon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+#sugg::placeholder {
+  font-size: 12px;
+  padding-left: 5px;
+}
+
+.no-contactmaindiv {
+  cursor: pointer;
+  padding-top: 1rem;
+  display: flex;
+  padding: 5px 15px;
+  border: 1px solid #a9abb2;
+}
+
+.no-contactmaindiv:hover {
+  box-shadow: 0 3px 8px #e9e9eb;
+}
+
+.no-contactmaindiv p {
+  font-weight: 500;
+  margin: 0 0 0px;
+}
+
+.no-context {
+  display: flex;
+}
+
+.note {
+  opacity: .6;
+  font-weight: 300 !important;
+}
+
+/* apply coupon star */
+.applymaindiv {
+  border: 1px dashed #a9abb2;
+  align-items: center;
+  cursor: pointer;
+  padding: 0 15px;
+  font-weight: 400;
+  height: 55px;
+  color: #535665;
+  display: flex;
+  font-size: 14px;
+  transition: all .3s ;
+}
+.applymaindiv:hover{
+  box-shadow: 0 3px 8px #e9e9eb;
+}
+.applymaindiv p{
+  margin: 0 10px 0px;
+}
+.applymaindiv i{
+  font-size: 20px;
+}
+.priceshow{
+  float: right;
+}
+.firstsubprice{
+  font-size: 13px;
+  color: #686b78;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e9e9eb;
+}
+.firstsubprice span{
+  position: relative;
+}
+.info {
+  position: absolute;
+  top: 3px;
+  margin-left: 5px;
+}
+.taxes{
+  font-size: 13px;
+  color: #686b78;
+  border-bottom: 2px solid black;
+}
+.taxes span{
+  position: relative;
+}
+.total{
+  font-weight: 600;
+}
+/* notemain */
+.notemain{
+  background-color: #ffff;
+  padding: 6px 30px;
+  margin-top: 16px;
+}
+.notesummain{
+  margin: 16px 0;
+  padding: 16px 16px 20px!important;
+  border: 1px solid #e9e9eb;
+  border-radius: 5px;
+}
+.notehead{
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  opacity: 1;
+}
+.notesubpar{
+  font-size: 13px;
+}
+.notesubpar span{
+  color: red;
+}
+.notesummain a{
+  color: red;
+  border-bottom: 1px dotted #ec6148!important;
 }

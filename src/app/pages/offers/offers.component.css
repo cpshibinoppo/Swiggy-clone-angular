@@ -1,0 +1,387 @@
+header {
+  background-color: var(--sub-main-background);
+}
+
+.offertittlemain {
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+  height: 300px;
+  align-items: center;
+}
+
+.offertitle h1 {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.offertitle h2 {
+  font-size: 22px;
+  line-height: 1.2;
+  opacity: .8;
+}
+
+.offertitleimg img {
+  height: 200px;
+}
+
+/* btn */
+.selectsection {
+  border-bottom: 1px solid #d4d5d9;
+}
+
+.selectmain {
+  display: flex;
+  position: relative;
+}
+
+.restaurant {
+  color: #93959f;
+  font-size: 20px;
+  padding: 24px 0 20px;
+  cursor: pointer;
+}
+
+.restaurant h2,
+.payment h2 {
+  margin: 0 0 -5px;
+}
+
+.payment {
+  font-size: 20px;
+  padding: 24px 0 20px;
+  color: #93959f;
+  margin-left: 24px;
+  cursor: pointer;
+}
+
+.line {
+  display: block;
+  transform: translate3d(0px, 0px, 0px);
+  width: 160px;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 2px;
+  background-color: #282c3f;
+  transform-origin: 0 0;
+  transition: transform .3s cubic-bezier(.645, .045, .355, 1), width .3s cubic-bezier(.645, .045, .355, 1);
+}
+
+.btnadd {
+  font-weight: 500;
+  color: #282c3f;
+}
+
+.lineadd {
+  transform: translate3d(180px, 0px, 0px);
+  width: 235px;
+}
+
+/* rest show start */
+.restshowtitle h2 {
+  margin: 0 0 0;
+  font-size: 24px;
+  margin-top: 17px;
+  font-weight: 500;
+}
+
+.restshowtitle h3 {
+  font-size: 16px;
+  margin-top: 4px;
+  color: #93959f;
+}
+
+/* card */
+.cardsub {
+  width: 20rem;
+  text-align: -webkit-center;
+  transition: all .2s ease-in;
+  border: 1px solid transparent;
+}
+
+a {
+  color: black;
+
+}
+
+.cardsub:hover {
+  border: 1px solid #d3d5df;
+  box-shadow: 0 4px 7px 0 rgb(218 220 230 / 60%);
+}
+
+.cardcon {
+  padding-top: 1rem;
+  width: 18rem;
+}
+
+.cardimg img {
+  width: 100%;
+}
+
+.cardtext {
+  margin-top: 10px;
+  text-align: start;
+}
+
+.cardtitle {
+  font-size: 18px;
+  font-weight: 500;
+  word-break: break-word;
+  margin: 0 0 5px;
+}
+
+.cardsubtext {
+  color: #686b78;
+  font-size: 13px;
+  margin: 0 0 15px;
+}
+
+.cardstar {
+  width: 45px;
+  padding: 0 5px;
+  background-color: var(--main-color);
+  color: #fff;
+  display: flex;
+}
+
+.cardprice {
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.offerdiv {
+  border-top: 1px solid #e9e9eb;
+  padding: 10px 0 10px 0;
+  margin-top: 0;
+  color: #8a584b;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.quickdiv {
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  border-top: 1px solid #e9e9eb;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.2s, opacity 0.3s linear;
+}
+
+.quickdiv button {
+  background-color: transparent;
+  color: #5d8ed5;
+  border: none;
+  font-weight: 600;
+}
+
+.quickdiv button:hover {
+  color: #93959f;
+}
+
+.cardsub:hover .quickdiv {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* payment show start */
+.paymenttitle h2 {
+  color: #282c3f;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.offerrow {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* subbank */
+.bankpffershowmain {
+  padding: 40px 30px;
+  border: 1px solid #d4d5d9;
+  width: 380px;
+  margin-right: 30px;
+  margin-bottom: 40px;
+}
+
+.banksubmain {
+  display: flex;
+}
+
+.banksub {
+  min-width: 120px;
+  height: 35px;
+  border: 1px solid #daceb7;
+  background-color: #fffae6;
+  display: flex;
+  align-items: center;
+}
+
+.banksub img {
+  width: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 20px;
+}
+
+.banktitle {
+  font-size: 1.07rem;
+  font-weight: 500;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0 15px;
+}
+
+.arrowtop {
+  position: absolute;
+  top: -1px;
+  left: -3.5px;
+  transform-origin: center;
+  transform: scaleX(.7);
+}
+
+.arrowtop::before {
+  top: 0;
+  border-top: 5px solid #daceb7 !important;
+  border: 5px solid transparent;
+}
+
+.arrowtop::before,
+.arrowbottom::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  box-sizing: border-box;
+  width: 10px;
+  height: 10px;
+}
+
+.arrowtop::after {
+  top: -2px;
+  border-top: 5px solid #fff !important;
+  border: 5px solid transparent;
+}
+
+.arrowtop::after,
+.arrowbottom::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  box-sizing: border-box;
+  width: 10px;
+  height: 10px;
+}
+
+.arrowbottom {
+  position: absolute;
+  bottom: -1px;
+  left: -3.5px;
+  transform-origin: center;
+  transform: scaleX(.7);
+}
+
+.arrowbottom::after {
+  bottom: -2px;
+  border: 5px solid transparent;
+  border-bottom: 5px solid #fff;
+}
+
+.arrowbottom::before {
+  bottom: 0;
+  border: 5px solid transparent;
+  border-bottom: 5px solid #daceb7;
+}
+
+.offertext h4 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0 0 0px;
+}
+
+.offertext p {
+  color: #686b78;
+  font-size: .75rem;
+  letter-spacing: .5px;
+}
+
+.addmorebtn {
+  border: none;
+  background: none;
+  color: #5d8ed5;
+  font-size: .75rem;
+  font-weight: 600;
+  margin-left: -8px;
+}
+
+.mat-icon {
+  vertical-align: text-top;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.copybtn {
+  border: 1px solid var(--main-color);
+  background: none;
+  color: var(--main-color);
+  padding: 0 15px;
+  font-size: 14px;
+  font-weight: 600;
+  width: 120px;
+  height: 36px;
+  transition: all 0.2s ease-in;
+}
+
+.copybtn:hover {
+  box-shadow: 0 2px 8px #d4d5d9;
+}
+
+/* banoffer start */
+.bankoffershow {
+  display: flex;
+  padding: 25px 15px;
+  margin-bottom: 40px;
+  border: 1px solid #d4d5d9;
+  width: 380px;
+  justify-content: space-between;
+}
+
+.bankimg {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  position: relative;
+  background: #eef0f5;
+}
+
+.bankimg img {
+  width: 100%;
+}
+
+.bankoffertext {
+  width: 285px;
+}
+
+.bankoffertext h3 {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0 0 -3px;
+}
+
+.bankoffertext p {
+  font-size: 13px;
+  color: #535665;
+  margin: 0 0 7px;
+}
+
+.active {
+  border-color: #bebfc5;
+  color: #686b78;
+}
