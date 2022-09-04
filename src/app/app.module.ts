@@ -27,6 +27,7 @@ import { NgxMaskModule, IConfig } from 'ngx-mask';
 import { SearchComponent } from './pages/search/search.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { OffersComponent } from './pages/offers/offers.component';
+import {ClipboardModule} from '@angular/cdk/clipboard';
 
 const maskConfigFunction: () => Partial<IConfig> = () => {
   return {
@@ -52,7 +53,8 @@ const maskConfigFunction: () => Partial<IConfig> = () => {
     ReactiveFormsModule,
     MatTabsModule,
     NgxMaskModule.forRoot(maskConfigFunction),
-    MatTooltipModule
+    MatTooltipModule,
+    ClipboardModule
   ],
   providers: [],
   bootstrap: [AppComponent],

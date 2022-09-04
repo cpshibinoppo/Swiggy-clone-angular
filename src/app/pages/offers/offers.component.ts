@@ -26,4 +26,16 @@ export class OffersComponent implements OnInit {
       $('#line').addClass('lineadd');
     }
   }
+  copyfun(copy: any, code: any) {
+    var btn = copy.target || copy.srcElement;
+    let isCertainButtonAlreadyActive = document.querySelector('.active');
+    if (btn.nodeName === 'BUTTON') {
+      if (isCertainButtonAlreadyActive) {
+        isCertainButtonAlreadyActive.classList.remove('active');
+        isCertainButtonAlreadyActive.innerHTML = 'COPY CODE';
+      }
+      btn.className += ' active';
+      btn.innerHTML = 'COPIED';
+    }
+  }
 }
