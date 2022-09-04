@@ -25,7 +25,7 @@
     </div>
   </section>
   <section>
-    <div class="restaurantshowmain pt-5" *ngIf="this.offershow">
+    <div class="restaurantshowmain pt-5 pb-5" *ngIf="!this.offershow">
       <div class="container">
         <div class="restshowtitle">
           <h2>All offers (8)</h2>
@@ -61,7 +61,7 @@
         </section>
       </div>
     </div>
-    <div class="paymentoffershow pt-5" *ngIf="!this.offershow">
+    <div class="paymentoffershow pt-5 " *ngIf="this.offershow">
       <div class="container">
         <div class="paymenttitle">
           <h2>Available Coupons</h2>

@@ -28,6 +28,7 @@ import { SearchComponent } from './pages/search/search.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { OffersComponent } from './pages/offers/offers.component';
 import {ClipboardModule} from '@angular/cdk/clipboard';
+import { UserComponent } from './pages/user/user.component';
 
 const maskConfigFunction: () => Partial<IConfig> = () => {
   return {
@@ -36,7 +37,7 @@ const maskConfigFunction: () => Partial<IConfig> = () => {
 };
 
 @NgModule({
-  declarations: [AppComponent,FooterComponent,HomeComponent, SignupComponent, LoginComponent, NotloginComponent, NavbarComponent, RestaurantComponent, CartComponent, SearchComponent, OffersComponent],
+  declarations: [AppComponent,FooterComponent,HomeComponent, SignupComponent, LoginComponent, NotloginComponent, NavbarComponent, RestaurantComponent, CartComponent, SearchComponent, OffersComponent, UserComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

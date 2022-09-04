@@ -6,6 +6,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { OffersComponent } from './pages/offers/offers.component';
 import { RestaurantComponent } from './pages/restaurant/restaurant.component';
 import { SearchComponent } from './pages/search/search.component';
+import { UserComponent } from './pages/user/user.component';
 import { NotloginComponent } from './static/notlogin/notlogin.component';
 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path:'home/restaurant',component:RestaurantComponent},
   {path:'home/cart',component:CartComponent, data: {con: 'SECURE CHECKOUT'}},
   {path:'home/search',component:SearchComponent},
-  {path:'home/offers',component:OffersComponent}
+  {path:'home/offers',component:OffersComponent},
+  {path:'home/user',component:UserComponent,data:{usernav:'MY ACCOUNT'}}
 ];
 
 @NgModule({
