@@ -1,0 +1,107 @@
+.mainsection{
+  background-color: var(--sub-main-background);
+}
+.main{
+  padding-top: 3rem;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+header h1{
+  font-size: 32px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+header p{
+  font-size: 16px;
+}
+header button{
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all .4s;
+}
+header button:hover{
+  background-color: #fff;
+  color: var(--sub-main-background);
+}
+/* user detalsa start */
+.walleticon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 3px 5px 0 rgb(40 44 63 / 40%);
+  top: 22px;
+  left: -30px;
+  background-color: #fff;
+}
+
+.walleticon i {
+  color: #282c3f;
+}
+/* payment start */
+.addressandpyment {
+  padding-bottom: 6rem;
+}
+
+.paymentmain {
+  display: flex;
+  justify-content: space-between;
+}
+
+.paymentshow {
+  position: relative;
+  background-color: #fff;
+  padding: 25px 40px 30px;
+}
+
+.paymentshow h2 {
+  color: black;
+  letter-spacing: -.3px;
+}
+.paymentap {
+  width: 230px;
+  background-color: #edf1f7;
+  padding: 20px 0 15px 15px;
+}
+
+.paymentap div {
+  font-weight: 500;
+  color: #686b78;
+  align-items: center;
+  height: 70px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+}
+
+.paymentap div:hover {
+  color: black;
+}
+
+.paymentap div i {
+  font-size: 23px;
+  margin-left: 10px;
+}
+
+.paymentap div span {
+  margin-left: 10px;
+  font-size: 18px;
+
+}
+
+.active {
+  background-color: #fff;
+  color: black !important;
+}
+
+
+
+.walletshow {
+  width: 65%;
+}

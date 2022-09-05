@@ -1,2 +1,47 @@
 <app-navbar usernavtitle="{{this.usernavbartitle.usernav}}"></app-navbar>
-<p>user works!</p>
+<section class="mainsection">
+  <div class="main">
+    <div class="container">
+      <header>
+        <div>
+          <h1>Shibin</h1>
+          <p> <span>8138059882</span><span class="mx-3">.</span><span>cpshibinoppo@gmail.com</span></p>
+        </div>
+        <div>
+          <button>EDIT PROFILE</button>
+        </div>
+      </header>
+      <section>
+        <div class="paymentshow mt-4">
+          <div class="paymentmain">
+            <div class="paymentap">
+              <div class="wallets active" #wa (click)="this.wallets = 'wallets';activefun(wa)">
+                <i class='bx bxs-cart-download'></i><span>Orders</span>
+              </div>
+              <div class="ceranddeb" #cr (click)="this.wallets = 'credit';activefun(cr)">
+                <i class='bx bxs-bowl-hot'></i><span>Swiggy One</span>
+              </div>
+              <div class="sedexo" #se (click)="this.wallets = 'sedexo';activefun(se)">
+                <i class='bx bxs-heart'></i><span>Favourites</span>
+              </div>
+              <div class="netbank" #ne (click)="this.wallets = 'netbanking';activefun(ne)">
+                <i class='bx bxs-credit-card-front'></i><span>Payments</span>
+              </div>
+              <div class="upi" #up (click)="this.wallets = 'upi';activefun(up)">
+                <i class='bx bx-current-location'></i><span>Addresses</span>
+              </div>
+              <div class="payon" #co (click)="this.wallets = 'cod';activefun(co)">
+                <i>
+                  <mat-icon>settings</mat-icon>
+                </i><span>Settings</span>
+              </div>
+            </div>
+            <div class="walletshow" *ngIf="this.wallets == 'wallets'">
+              <h1>Hello</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
