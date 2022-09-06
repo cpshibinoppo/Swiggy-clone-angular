@@ -42,10 +42,4 @@ usernavbartitle:any
   }
   addnum = 1;
   zero = true;
-
-  zerocheck() {
-    if (this.addnum < 1) {
-    }
-  }
-
 }
