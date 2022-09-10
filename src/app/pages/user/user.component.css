@@ -507,7 +507,7 @@ input:checked+.slider:before {
 
 .slide {
   padding: 2rem 30px;
-  width: 60%;
+  width: 70%;
 }
 .phone{
   border-bottom: 1px solid #d4d5d9;
@@ -616,4 +616,17 @@ input[type=number] {
 .termspara a{
   color: #000;
   font-weight: 600;
+}
+.submitdiv button{
+  margin-top: 1rem;
+  outline: none;
+  width: 100%;
+  border: none;
+  display: inline-block;
+  text-align: center;
+  line-height: 50px;
+  font-weight: 600;
+  height: 50px;
+  color: #fff;
+  background-color:var(--main-color);
 }

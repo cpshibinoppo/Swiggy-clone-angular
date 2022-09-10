@@ -17,24 +17,25 @@ export class UserComponent implements OnInit {
   add = true;
   editshow = false;
   sub = false;
-  sam = false;
-  dele = 9400
-  constructor(private route: ActivatedRoute,private fb: FormBuilder) {}
+
+  dele = 9400;
+  email = 'cpshibinoppo@gamil.com';
+  pass = 'cpshibin9400';
+
+  numcheck = true;
+  emailcheck = true;
+  phonenubererror = false;
+  useremailerror = false;
+  userpassworderror = false;
+  passwordcheck = true;
+
+  constructor(private route: ActivatedRoute, private fb: FormBuilder) {}
 
   ngOnInit(): void {
-    this.sam = true;
     this.route.data.subscribe((data) => {
       this.usernavbartitle = data;
     });
   }
-  // onFocus(name: any) {
-  //   this.textcard = name;
-  // }
-  // focusOut(con: any) {
-  //   if (con == '') {
-  //     this.textcard = false;
-  //   }
-  // }
   resetdropdown(a: any) {
     var canger;
     canger = document.getElementById('sm');
@@ -51,38 +52,59 @@ export class UserComponent implements OnInit {
       '',
       [Validators.required, Validators.pattern('^((\\+91-?)|0)?[0-9]{10}$')],
     ],
+    useremail: ['', [Validators.required, Validators.email]],
+    userpassword: [
+      '',
+      [Validators.required, Validators.minLength(8), Validators.maxLength(10)],
+    ],
   });
   get f() {
     return this.loginForm.controls;
   }
   onsubmit() {
-    this.sub = true;
     if (this.f.phonenumber.value == '') {
-      this.sam = false;
+      this.numcheck = false;
+      this.phonenubererror = true;
     } else {
-      this.sam = true;
+      this.numcheck = true;
     }
   }
   onFocus(name: any) {
     this.textcard = name;
-    if (this.f.phonenumber.value == '') {
-      this.sam = true;
+    if (name == 'num') {
+      if (this.f.phonenumber.value == '') {
+        this.numcheck = true;
+      }
+    } else if (name == 'email') {
+      if (this.f.useremail.value == '') {
+        this.emailcheck = true;
+        this.useremailerror = true;
+      }
+    } else if ((name = 'password')) {
+      this.passwordcheck = true;
+      this.userpassworderror = true;
     }
   }
   focusOut(con: any) {
-    console.log(con.value);
-
     if (con == '') {
       this.textcard = false;
     }
-    this.sub = true;
-    if (this.f.phonenumber.value == '') {
-      this.sam = false;
+    if (con == 'num') {
+      if (this.f.phonenumber.value == '') {
+        this.numcheck = false;
+      }
+    } else if (con == 'email') {
+      if (this.f.useremail.value == '') {
+        this.emailcheck = false;
+        this.useremailerror = true;
+      }
+    } else if ((con = 'password')) {
+      this.passwordcheck = false;
+      this.userpassworderror = true;
     } else {
-      this.sam = true;
+      this.numcheck = true;
+      this.emailcheck = true;
+      this.passwordcheck = true;
     }
   }
-  // close(){
-  //   this.closefn.closeloginandsignup();
-  // }
 }

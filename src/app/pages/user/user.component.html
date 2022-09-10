@@ -165,9 +165,9 @@
             <form class="formmain" [formGroup]="loginForm" (ngSubmit)="onsubmit()" action="location">
               <div class="formmaindiv" [ngClass]="{'erro' : sub&&f.phonenumber.errors}">
                 <div>
-                  <input (focus)="onFocus(phonin)" #phonin (focusout)="focusOut(phonin)" type="text"
+                  <input (focus)="onFocus('num')" (focusout)="focusOut('num')" type="number"
                     [(ngModel)]="this.dele" class="inputsignup" formControlName="phonenumber" required>
-                  <label [ngClass]="{'focuslabel' : this.sam}" class="inputlabel">
+                  <label [ngClass]="{'focuslabel' : this.numcheck}" class="inputlabel">
                     <span *ngIf="sub&&f.phonenumber.errors">Enter Your </span>
                     <span *ngIf="f.phonenumber!">Phone number</span>
                     <span *ngIf="f.phonenumber.errors&&f.phonenumber.errors?.['pattern']">correctly</span>
@@ -175,7 +175,58 @@
                 </div>
               </div>
               <div class="submitdiv">
-                <a href="#">VERIFY</a>
+                <button type="submit">VERIFY</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="phone">
+          <h2>Email</h2>
+          <div class="showdata" *ngIf="this.editshow">
+            <p>cpshibinoppo@gmail.com</p>
+            <a href="#">CHANGE</a>
+          </div>
+          <div class="showedit" *ngIf="!this.editshow">
+            <form class="formmain" [formGroup]="loginForm" (ngSubmit)="onsubmit()" action="location">
+              <div class="formmaindiv" [ngClass]="{'erro' : sub&&f.phonenumber.errors}">
+                <div>
+                  <input (focus)="onFocus('email')" (focusout)="focusOut('email')" type="email"
+                    [(ngModel)]="this.email" class="inputsignup" formControlName="userpassword" required>
+                    <label [ngClass]="{'focuslabel' : this.emailcheck,'eorrortext' : useremailerror&&this.f.useremail.errors}" class="inputlabel">
+                      <span *ngIf="useremailerror&&f.useremail.errors">Enter Your </span>
+                      <span *ngIf="f.useremail!">email</span>
+                      <span *ngIf="useremailerror&&f.useremail.errors?.['email']">correctly</span>
+                    </label>
+                </div>
+              </div>
+              <div class="submitdiv">
+                <button type="submit">VERIFY</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="phone">
+          <h2>Password</h2>
+          <div class="showdata" *ngIf="this.editshow">
+            <p>****</p>
+            <a href="#">CHANGE</a>
+          </div>
+          <div class="showedit" *ngIf="!this.editshow">
+            <form class="formmain" [formGroup]="loginForm" (ngSubmit)="onsubmit()" action="location">
+              <div class="formmaindiv" [ngClass]="{'erro' : sub&&f.phonenumber.errors}">
+                <div>
+                  <input (focus)="onFocus('password')" (focusout)="focusOut('password')" type="password"
+                    [(ngModel)]="this.pass" class="inputsignup" formControlName="useremail" required>
+                    <label [ngClass]="{'focuslabel' : this.passwordcheck,'eorrortext' : userpassworderror&&this.f.userpassword.errors}" class="inputlabel">
+                      <span *ngIf="userpassworderror&&f.userpassword.errors">Enter Your </span>
+                      <span *ngIf="f.userpassword!">Password</span>
+                      <span *ngIf="userpassworderror&&f.userpassword.errors?.['minlength']">should be min 8 chars</span>
+                      <span *ngIf="userpassworderror&&f.userpassword.errors?.['maxlength']"> Max 10</span>
+                    </label>
+                </div>
+              </div>
+              <div class="submitdiv">
+                <button type="submit">VERIFY</button>
               </div>
             </form>
           </div>
