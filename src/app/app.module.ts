@@ -29,6 +29,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import { OffersComponent } from './pages/offers/offers.component';
 import {ClipboardModule} from '@angular/cdk/clipboard';
 import { UserComponent } from './pages/user/user.component';
+import { SubnabhomeComponent } from './layout/subnabhome/subnabhome.component';
 
 
 const maskConfigFunction: () => Partial<IConfig> = () => {
@@ -38,7 +39,7 @@ const maskConfigFunction: () => Partial<IConfig> = () => {
 };
 
 @NgModule({
-  declarations: [AppComponent,FooterComponent,HomeComponent, SignupComponent, LoginComponent, NotloginComponent, NavbarComponent, RestaurantComponent, CartComponent, SearchComponent, OffersComponent, UserComponent],
+  declarations: [AppComponent,FooterComponent,HomeComponent, SignupComponent, LoginComponent, NotloginComponent, NavbarComponent, RestaurantComponent, CartComponent, SearchComponent, OffersComponent, UserComponent, SubnabhomeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

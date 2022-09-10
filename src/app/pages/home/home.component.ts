@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -10,6 +10,7 @@ export class HomeComponent implements OnInit {
   add = false;
  clickedElement:any;
  checkid:any
+ navchan = false
   constructor() { }
 
   ngOnInit(): void {
@@ -30,6 +31,24 @@ export class HomeComponent implements OnInit {
     }
 
   }
+  @HostListener('window:scroll', ['$event'])
+  scrollHandler(event:any){
+    var prevScrollpos = window.pageYOffset;
+    // console.log('pr'+prevScrollpos);
+if(prevScrollpos > 107){
+
+this.navchan = true
+console.log('show'+this.navchan);
+
+}else{
+  this.navchan = false
+  console.log('hide'+this.navchan);
+
+}
+
+
+  }
+
 
 }
 

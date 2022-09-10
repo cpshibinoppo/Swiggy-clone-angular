@@ -1,5 +1,6 @@
 <app-navbar cartName="{{this.product.con}}"></app-navbar>
-<div class="noncart" *ngIf="this.noncart">
+<div class="maindiv" (scroll)="scrollHandler($event)">
+<div class="noncart" *ngIf="this.noncart" >
   <div class="container">
     <div class="noncartcon">
       <div class="noncartimgdiv">
@@ -502,3 +503,4 @@
   </div>
 </div>
 <app-footer></app-footer>
+</div>

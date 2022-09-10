@@ -365,3 +365,8 @@ a{
   visibility: visible;
   opacity: 1;
 }
+app-subnabhome {
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+}

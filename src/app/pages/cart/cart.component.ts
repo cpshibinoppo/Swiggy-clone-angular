@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import * as $ from 'jquery';
@@ -22,6 +22,8 @@ export class CartComponent implements OnInit {
   constructor(private route: ActivatedRoute, private routelink: Router) {}
 
   ngOnInit(): void {
+
+
     this.route.data.subscribe((data) => {
       this.product = data;
     });
@@ -97,5 +99,15 @@ export class CartComponent implements OnInit {
       this.routelink.navigate(['/home/restaurant']);
     }
   }
+  @HostListener('window:scroll', ['$event'])
+  scrollHandler(event:any){
+    var prevScrollpos = window.pageYOffset;
+    console.log('pr'+prevScrollpos);
+
+    var na = event
+    // console.table(na);
+
+  }
+
 
 }
