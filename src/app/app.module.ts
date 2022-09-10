@@ -30,6 +30,7 @@ import { OffersComponent } from './pages/offers/offers.component';
 import {ClipboardModule} from '@angular/cdk/clipboard';
 import { UserComponent } from './pages/user/user.component';
 
+
 const maskConfigFunction: () => Partial<IConfig> = () => {
   return {
     validation: false,
