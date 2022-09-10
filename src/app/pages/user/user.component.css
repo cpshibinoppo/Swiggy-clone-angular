@@ -475,6 +475,7 @@ input:checked+.slider:before {
   height: 60px;
   border-right: 1px solid #d4d5d9;
 }
+
 /* slide bar start */
 .mat-drawer-container {
   height: 100% !important;
@@ -483,6 +484,7 @@ input:checked+.slider:before {
 .mat-sidenav {
   width: 30%;
 }
+
 .closediv {
   padding: 2rem 20px 1.5rem;
   display: flex;
@@ -509,35 +511,41 @@ input:checked+.slider:before {
   padding: 2rem 30px;
   width: 70%;
 }
-.phone{
+
+.phone {
   border-bottom: 1px solid #d4d5d9;
   padding-bottom: .5rem;
 }
-.phone h2{
+
+.phone h2 {
   font-size: 20px;
   font-weight: 400;
 }
-.phone .showdata{
+
+.phone .showdata {
   width: 95%;
   display: flex;
   justify-content: space-between;
 }
-.showdata p{
+
+.showdata p {
   font-size: 17px;
   color: #686b78;
 }
-.showdata a{
+
+.showdata a {
   color: var(--main-color);
   outline: none;
   font-weight: 600;
   font-size: 14px;
 }
+
 /* input */
 .formmaindiv {
   display: block;
 }
 
-.formmaindiv div{
+.formmaindiv div {
   border-bottom: 0;
   border: 1px solid #d4d5d9;
   padding: 0;
@@ -546,7 +554,7 @@ input:checked+.slider:before {
   transform: translateZ(0);
 }
 
-.inputsignup{
+.inputsignup {
   background-color: transparent;
   line-height: normal;
   border: none;
@@ -574,7 +582,8 @@ input:checked+.slider:before {
   pointer-events: none;
   font-weight: 400;
 }
- .focuslabel{
+
+.focuslabel {
   font-size: 12px;
   font-weight: 500;
   color: #7e808c;
@@ -590,12 +599,14 @@ input[type=number]::-webkit-outer-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
 /* error start */
-.erro{
+.erro {
   border: 1px solid #dc3545;
   background-image: url();
 }
-.loginbtnpage{
+
+.loginbtnpage {
   margin-top: 20px;
   width: 100%;
   cursor: pointer;
@@ -610,14 +621,17 @@ input[type=number] {
   background-color: var(--main-color);
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 12%);
 }
-.termspara{
+
+.termspara {
   padding-top: 0.7rem;
 }
-.termspara a{
+
+.termspara a {
   color: #000;
   font-weight: 600;
 }
-.submitdiv button{
+
+.submitdiv button {
   margin-top: 1rem;
   outline: none;
   width: 100%;
@@ -628,5 +642,5 @@ input[type=number] {
   font-weight: 600;
   height: 50px;
   color: #fff;
-  background-color:var(--main-color);
+  background-color: var(--main-color);
 }

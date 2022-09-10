@@ -148,7 +148,7 @@
   </mat-sidenav-content>
   <mat-sidenav position="end" [(opened)]="add">
     <div class="closediv">
-      <a class="closeiconbtn" (click)="add=!add">
+      <a class="closeiconbtn" (click)="add=!add;hideedit()">
         <mat-icon>close</mat-icon>
       </a>
       <h2>Edit profile</h2>
@@ -157,16 +157,16 @@
       <div class="slidemiandiv">
         <div class="phone">
           <h2>Phone number</h2>
-          <div class="showdata" *ngIf="this.editshow">
+          <div class="showdata" *ngIf="!this.editshowph">
             <p>8138059882</p>
-            <a href="#">CHANGE</a>
+            <a (click)="editshow('ph')">CHANGE</a>
           </div>
-          <div class="showedit" *ngIf="!this.editshow">
+          <div class="showedit" *ngIf="this.editshowph">
             <form class="formmain" [formGroup]="loginForm" (ngSubmit)="onsubmit()" action="location">
               <div class="formmaindiv" [ngClass]="{'erro' : sub&&f.phonenumber.errors}">
                 <div>
-                  <input (focus)="onFocus('num')" (focusout)="focusOut('num')" type="number"
-                    [(ngModel)]="this.dele" class="inputsignup" formControlName="phonenumber" required>
+                  <input (focus)="onFocus('num')" (focusout)="focusOut('num')" type="number" [(ngModel)]="this.dele"
+                    class="inputsignup" formControlName="phonenumber" required>
                   <label [ngClass]="{'focuslabel' : this.numcheck}" class="inputlabel">
                     <span *ngIf="sub&&f.phonenumber.errors">Enter Your </span>
                     <span *ngIf="f.phonenumber!">Phone number</span>
@@ -180,23 +180,25 @@
             </form>
           </div>
         </div>
-        <div class="phone">
+        <div class="phone pt-3">
           <h2>Email</h2>
-          <div class="showdata" *ngIf="this.editshow">
+          <div class="showdata" *ngIf="!this.editshowemail">
             <p>cpshibinoppo@gmail.com</p>
-            <a href="#">CHANGE</a>
+            <a (click)="editshow('em')">CHANGE</a>
           </div>
-          <div class="showedit" *ngIf="!this.editshow">
+          <div class="showedit" *ngIf="this.editshowemail">
             <form class="formmain" [formGroup]="loginForm" (ngSubmit)="onsubmit()" action="location">
               <div class="formmaindiv" [ngClass]="{'erro' : sub&&f.phonenumber.errors}">
                 <div>
-                  <input (focus)="onFocus('email')" (focusout)="focusOut('email')" type="email"
-                    [(ngModel)]="this.email" class="inputsignup" formControlName="userpassword" required>
-                    <label [ngClass]="{'focuslabel' : this.emailcheck,'eorrortext' : useremailerror&&this.f.useremail.errors}" class="inputlabel">
-                      <span *ngIf="useremailerror&&f.useremail.errors">Enter Your </span>
-                      <span *ngIf="f.useremail!">email</span>
-                      <span *ngIf="useremailerror&&f.useremail.errors?.['email']">correctly</span>
-                    </label>
+                  <input (focus)="onFocus('email')" (focusout)="focusOut('email')" type="email" [(ngModel)]="this.email"
+                    class="inputsignup" formControlName="userpassword" required>
+                  <label
+                    [ngClass]="{'focuslabel' : this.emailcheck,'eorrortext' : useremailerror&&this.f.useremail.errors}"
+                    class="inputlabel">
+                    <span *ngIf="useremailerror&&f.useremail.errors">Enter Your </span>
+                    <span *ngIf="f.useremail!">email</span>
+                    <span *ngIf="useremailerror&&f.useremail.errors?.['email']">correctly</span>
+                  </label>
                 </div>
               </div>
               <div class="submitdiv">
@@ -205,24 +207,26 @@
             </form>
           </div>
         </div>
-        <div class="phone">
+        <div class="phone pt-3">
           <h2>Password</h2>
-          <div class="showdata" *ngIf="this.editshow">
+          <div class="showdata" *ngIf="!this.editshowpass">
             <p>****</p>
-            <a href="#">CHANGE</a>
+            <a (click)="editshow('pa')">CHANGE</a>
           </div>
-          <div class="showedit" *ngIf="!this.editshow">
+          <div class="showedit" *ngIf="this.editshowpass">
             <form class="formmain" [formGroup]="loginForm" (ngSubmit)="onsubmit()" action="location">
               <div class="formmaindiv" [ngClass]="{'erro' : sub&&f.phonenumber.errors}">
                 <div>
                   <input (focus)="onFocus('password')" (focusout)="focusOut('password')" type="password"
                     [(ngModel)]="this.pass" class="inputsignup" formControlName="useremail" required>
-                    <label [ngClass]="{'focuslabel' : this.passwordcheck,'eorrortext' : userpassworderror&&this.f.userpassword.errors}" class="inputlabel">
-                      <span *ngIf="userpassworderror&&f.userpassword.errors">Enter Your </span>
-                      <span *ngIf="f.userpassword!">Password</span>
-                      <span *ngIf="userpassworderror&&f.userpassword.errors?.['minlength']">should be min 8 chars</span>
-                      <span *ngIf="userpassworderror&&f.userpassword.errors?.['maxlength']"> Max 10</span>
-                    </label>
+                  <label
+                    [ngClass]="{'focuslabel' : this.passwordcheck,'eorrortext' : userpassworderror&&this.f.userpassword.errors}"
+                    class="inputlabel">
+                    <span *ngIf="userpassworderror&&f.userpassword.errors">Enter Your </span>
+                    <span *ngIf="f.userpassword!">Password</span>
+                    <span *ngIf="userpassworderror&&f.userpassword.errors?.['minlength']">should be min 8 chars</span>
+                    <span *ngIf="userpassworderror&&f.userpassword.errors?.['maxlength']"> Max 10</span>
+                  </label>
                 </div>
               </div>
               <div class="submitdiv">

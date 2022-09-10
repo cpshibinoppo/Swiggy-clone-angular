@@ -14,23 +14,23 @@ export class UserComponent implements OnInit {
   textcard: any;
   nocon = true;
   usernavbartitle: any;
-  add = true;
-  editshow = false;
+  add = false;
+  editshowph = false;
+  editshowemail = false;
+  editshowpass = false;
   sub = false;
-
   dele = 9400;
   email = 'cpshibinoppo@gamil.com';
   pass = 'cpshibin9400';
-
   numcheck = true;
   emailcheck = true;
   phonenubererror = false;
   useremailerror = false;
   userpassworderror = false;
   passwordcheck = true;
-
+  addnum = 1;
+  zero = true;
   constructor(private route: ActivatedRoute, private fb: FormBuilder) {}
-
   ngOnInit(): void {
     this.route.data.subscribe((data) => {
       this.usernavbartitle = data;
@@ -45,8 +45,6 @@ export class UserComponent implements OnInit {
     document.querySelector('.active')!.classList.remove('active');
     btnname.classList.add('active');
   }
-  addnum = 1;
-  zero = true;
   loginForm = this.fb.group({
     phonenumber: [
       '',
@@ -106,5 +104,25 @@ export class UserComponent implements OnInit {
       this.emailcheck = true;
       this.passwordcheck = true;
     }
+  }
+  editshow(se: any) {
+    if (se == 'ph') {
+      this.editshowph = true;
+      this.editshowemail = false;
+      this.editshowpass = false;
+    } else if (se == 'em') {
+      this.editshowemail = true;
+      this.editshowph = false;
+      this.editshowpass = false;
+    } else if (se == 'pa') {
+      this.editshowpass = true;
+      this.editshowph = false;
+      this.editshowemail = false;
+    }
+  }
+  hideedit() {
+    this.editshowph = false;
+    this.editshowemail = false;
+    this.editshowpass = false;
   }
 }
