@@ -1,0 +1,93 @@
+.main{
+  width: 75%;
+  float: right;
+}
+.formmaindiv {
+  display: block;
+}
+
+.formmaindiv div {
+  border-bottom: 0;
+  border: 1px solid #d4d5d9;
+  padding: 0;
+  display: block;
+  position: relative;
+  transform: translateZ(0);
+}
+
+.inputsignup {
+  background-color: transparent;
+  line-height: normal;
+  border: none;
+  outline: none;
+  height: 70px;
+  width: 100%;
+  font-size: 17px;
+  margin: 0;
+  padding: 0 20px;
+  padding-top: 22px;
+  font-weight: 500;
+}
+
+.inputlabel {
+  position: absolute;
+  left: 0;
+  bottom: 24px;
+  padding-left: 20px;
+  line-height: 20px;
+  font-size: 17px;
+  transition: .2s ease;
+  width: 100%;
+  color: #93959f;
+  will-change: transform, color, font-size;
+  pointer-events: none;
+  font-weight: 400;
+}
+
+.focuslabel {
+  font-size: 12px;
+  font-weight: 500;
+  color: #7e808c;
+  -ms-transform: translateY(-70%);
+  transform: translateY(-70%);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* error start */
+.erro {
+  border: 1px solid #dc3545;
+  background-image: url();
+}
+
+.loginbtnpage {
+  margin-top: 20px;
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  line-height: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  height: 50px;
+  padding: 0 2rem;
+  color: #fff;
+  background-color: var(--main-color);
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 12%);
+}
+
+.termspara {
+  padding-top: 0.7rem;
+}
+
+.termspara a {
+  color: #000;
+  font-weight: 600;
+}

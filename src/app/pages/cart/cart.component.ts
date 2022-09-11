@@ -9,7 +9,7 @@ import * as $ from 'jquery';
   styleUrls: ['./cart.component.css'],
 })
 export class CartComponent implements OnInit {
-  add:any
+  add = true
   product: any;
   noncart = false;
   subpayment = false;

@@ -1148,3 +1148,11 @@ app-navbar {
   position: sticky;
   z-index: 2;
 }
+/* slide start */
+.mat-drawer-container {
+  height: 100% !important;
+}
+
+.mat-sidenav {
+  width: 30%;
+}
