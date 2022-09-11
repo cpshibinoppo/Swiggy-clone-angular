@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { CartComponent } from '../../pages/cart/cart.component';
 
 @Component({
   selector: 'app-addnewaddress',
@@ -13,7 +14,9 @@ export class AddnewaddressComponent implements OnInit {
   doorerror = false;
   land = false;
   landerror = false;
-  constructor(private fb: FormBuilder) {}
+  clickedElement: any;
+  checkid: any;
+  constructor(private fb: FormBuilder, private cartcomp: CartComponent) {}
 
   ngOnInit(): void {}
   loginForm = this.fb.group({
@@ -61,5 +64,26 @@ export class AddnewaddressComponent implements OnInit {
       this.door = false;
       this.land = false;
     }
+  }
+  onButtonGroupClick($event: any) {
+    console.log('btncliked');
+
+    this.clickedElement = $event.target || $event.srcElement;
+    let isCertainButtonAlreadyActive =
+      this.clickedElement.parentElement.querySelector('.active');
+    if (this.clickedElement.id == '') {
+      this.checkid = 'rele';
+    } else {
+      this.checkid = this.clickedElement.id;
+    }
+    if (this.clickedElement.nodeName === 'BUTTON') {
+      if (isCertainButtonAlreadyActive) {
+        isCertainButtonAlreadyActive.classList.remove('active');
+      }
+      this.clickedElement.className += ' active';
+    }
+  }
+  hide() {
+    this.cartcomp.add = !this.cartcomp.add;
   }
 }

@@ -1,7 +1,27 @@
-.main{
+.main {
   width: 75%;
   float: right;
+  margin-right: 20px;
 }
+
+.closeandtitle .headtext {
+  margin-left: 30px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #282c3f;
+  line-height: 1.2rem;
+}
+
+.closeandtitle span i {
+  margin-top: 7px;
+  float: left;
+  color: #3d4152;
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: 100;
+  line-height: 1.2rem;
+}
+
 .formmaindiv {
   display: block;
 }
@@ -90,4 +110,26 @@ input[type=number] {
 .termspara a {
   color: #000;
   font-weight: 600;
+}
+
+.buttonsdiv button {
+  background: none;
+  font-size: 17px;
+  margin: 0;
+  padding: 0 39.4px;
+  border: 1px solid #d4d5d9;
+  height: 70px;
+  color: #282c3f;
+  font-weight: 300;
+  transition: all .5s ease-in;
+}
+
+.buttonsdiv button:hover {
+  color: #FFF;
+  background-color: #000;
+}
+
+.active {
+  color: #FFF !important;
+  background-color: #000 !important;
 }

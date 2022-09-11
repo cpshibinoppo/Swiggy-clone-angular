@@ -1,9 +1,9 @@
 <div class="main">
-  <div class="closeandtitle">
-    <h2><span><i class='bx bx-x'></i></span><span>Save delivery address</span></h2>
+  <div class="closeandtitle pt-4">
+    <h2><span (click)="hide()"><i class='bx bx-x'></i></span><span class="headtext">Save delivery address</span></h2>
   </div>
   <div class="addressinputmain">
-    <form class="formmain pt-5" [formGroup]="loginForm" (ngSubmit)="onsubmit()" action="location">
+    <form class="formmain pt-4" [formGroup]="loginForm" (ngSubmit)="onsubmit()" action="location">
       <div class="formmaindiv" [ngClass]="{'erro' : this.addrerror&&f.address.errors}">
         <div>
           <input (focus)="onFocus('addr')" (focusout)="focusOut('addr')" type="text" class="inputsignup"
@@ -35,9 +35,12 @@
           </label>
         </div>
       </div>
-      <button class="loginbtnpage" type="submit">LOGIN</button>
-      <p class="termspara">By clicking on Login, <a href="#"> I accept the Terms & Conditions & Privacy Policy</a>
-      </p>
+      <div class="buttonsdiv" (click)="onButtonGroupClick($event)">
+        <button><span><i class='bx bxs-home-smile'></i></span><span>home</span></button>
+        <button><span><i class='bx bxs-briefcase'></i></span><span>Work</span></button>
+        <button><span><i class='bx bx-current-location'></i></span><span>Other</span></button>
+      </div>
+      <button class="loginbtnpage" type="submit">SAVE ADDRESS & PROCEED</button>
     </form>
   </div>
 </div>
