@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FormBuilder, Validators } from '@angular/forms';
 @Component({
@@ -124,5 +124,21 @@ export class UserComponent implements OnInit {
     this.editshowph = false;
     this.editshowemail = false;
     this.editshowpass = false;
+  }
+  subshow() {
+    this.add = !this.add;
+  }
+  navchan = false;
+  @HostListener('window:scroll', ['$event'])
+  scrollHandler(event: any) {
+    var prevScrollpos = window.pageYOffset;
+    console.log('pr' + prevScrollpos);
+    if (prevScrollpos > 30) {
+      this.navchan = true;
+      console.log('show' + this.navchan);
+    } else {
+      this.navchan = false;
+      console.log('hide' + this.navchan);
+    }
   }
 }

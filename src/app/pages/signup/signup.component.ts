@@ -1,17 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { NotloginComponent } from '../../static/notlogin/notlogin.component'
+import { NotloginComponent } from '../../static/notlogin/notlogin.component';
 
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.css']
+  styleUrls: ['./signup.component.css'],
 })
 export class SignupComponent implements OnInit {
-
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
   phonenubererror = false;
   usernumerror = false;
   useremailerror = false;
@@ -23,9 +20,12 @@ export class SignupComponent implements OnInit {
   sub = false;
   sam = false;
   // loging
-  constructor(private fb: FormBuilder,private closefn:NotloginComponent) {}
+  constructor(private fb: FormBuilder, private closefn: NotloginComponent) {}
   loginForm = this.fb.group({
-    phonenumber: ['',[Validators.required, Validators.pattern('^((\\+91-?)|0)?[0-9]{10}$')]],
+    phonenumber: [
+      '',
+      [Validators.required, Validators.pattern('^((\\+91-?)|0)?[0-9]{10}$')],
+    ],
     contphonenumber: [
       '',
       [Validators.required, Validators.pattern('^((\\+91-?)|0)?[0-9]{10}$')],
@@ -109,8 +109,7 @@ export class SignupComponent implements OnInit {
       this.userpassword = true;
     }
   }
-  close(){
-    this.closefn.closeloginandsignup()
+  close() {
+    this.closefn.closeloginandsignup();
   }
-
 }

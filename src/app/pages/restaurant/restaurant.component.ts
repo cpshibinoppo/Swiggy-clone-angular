@@ -14,7 +14,7 @@ export class RestaurantComponent implements OnInit {
   addnum = 1;
   zero = true;
   constructor() {}
-  public cartlink = "/home/cart";
+  public cartlink = '/home/cart';
   ngOnInit(): void {}
   onButtonGroupClick($event: any) {
     this.clickedElement = $event.target || $event.srcElement;
@@ -34,7 +34,7 @@ export class RestaurantComponent implements OnInit {
     }
   }
   zerocheckadd() {
-    this.zero = true
+    this.zero = true;
     this.addnum = 1;
     if (this.addnum == 0) {
       this.addnum = 1;
@@ -50,5 +50,5 @@ export class RestaurantComponent implements OnInit {
       this.zero = true;
     }
   }
-  cartcheck = false
+  cartcheck = false;
 }

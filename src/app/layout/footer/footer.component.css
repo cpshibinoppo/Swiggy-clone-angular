@@ -1,6 +1,7 @@
-.mainfooter{
-background-color: black;
+.mainfooter {
+  background-color: black;
 }
+
 .companycont {
   color: #fff;
   padding-top: 2rem;
@@ -19,7 +20,8 @@ background-color: black;
 .col-3 ul li {
   padding-top: 10px;
 }
-.col-3 ul li a:hover{
+
+.col-3 ul li a:hover {
   font-weight: 600;
   font-size: 16px;
 }

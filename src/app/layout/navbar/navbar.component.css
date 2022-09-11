@@ -19,7 +19,8 @@ nav {
   display: flex;
   justify-content: space-between;
 }
-.locationdiv p{
+
+.locationdiv p {
   margin-left: 20px;
   font-size: 14px;
   font-weight: 300;
@@ -27,28 +28,34 @@ nav {
   color: #686b78;
   transition: all 0.2s ease-in;
 }
-.locationdiv p a{
+
+.locationdiv p a {
   margin-right: 8px;
   color: #3d4152;
   font-weight: 700;
   position: relative;
   transition: all .2s ease-in;
 }
-.locationdiv mat-icon{
+
+.locationdiv mat-icon {
   color: var(--main-color);
   vertical-align: text-bottom;
   margin-left: 2px;
 }
-.locationdiv:hover p a{
-  color: var(--main-color) ;
+
+.locationdiv:hover p a {
+  color: var(--main-color);
 }
-.locationdiv:hover a::after{
+
+.locationdiv:hover a::after {
   background-color: var(--main-color) !important;
 }
-.locationdiv:hover p{
+
+.locationdiv:hover p {
   color: #93959f;
 }
-.locationdiv p a::after{
+
+.locationdiv p a::after {
   content: "";
   position: absolute;
   height: 2px;
@@ -58,8 +65,9 @@ nav {
   background: #3d4152;
   transition: all .2s ease-in;
 }
+
 .logosection {
-  align-items:baseline;
+  align-items: baseline;
   display: flex;
 }
 
@@ -77,7 +85,7 @@ nav {
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.3px;
-  transition:color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
 }
 
 .navbar ul li a div {
@@ -87,7 +95,8 @@ nav {
 .navbar ul li a:hover {
   color: var(--main-color);
 }
-.carthead{
+
+.carthead {
   font-weight: 600 !important;
   color: black !important;
   text-transform: uppercase;

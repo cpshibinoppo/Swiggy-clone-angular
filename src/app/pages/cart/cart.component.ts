@@ -22,8 +22,6 @@ export class CartComponent implements OnInit {
   constructor(private route: ActivatedRoute, private routelink: Router) {}
 
   ngOnInit(): void {
-
-
     this.route.data.subscribe((data) => {
       this.product = data;
     });
@@ -100,14 +98,11 @@ export class CartComponent implements OnInit {
     }
   }
   @HostListener('window:scroll', ['$event'])
-  scrollHandler(event:any){
+  scrollHandler(event: any) {
     var prevScrollpos = window.pageYOffset;
-    console.log('pr'+prevScrollpos);
+    console.log('pr' + prevScrollpos);
 
-    var na = event
+    var na = event;
     // console.table(na);
-
   }
-
-
 }
