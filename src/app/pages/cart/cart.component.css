@@ -1060,70 +1060,91 @@ input[type=number]::-webkit-outer-spin-button {
   color: #535665;
   display: flex;
   font-size: 14px;
-  transition: all .3s ;
+  transition: all .3s;
 }
-.applymaindiv:hover{
+
+.applymaindiv:hover {
   box-shadow: 0 3px 8px #e9e9eb;
 }
-.applymaindiv p{
+
+.applymaindiv p {
   margin: 0 10px 0px;
 }
-.applymaindiv i{
+
+.applymaindiv i {
   font-size: 20px;
 }
-.priceshow{
+
+.priceshow {
   float: right;
 }
-.firstsubprice{
+
+.firstsubprice {
   font-size: 13px;
   color: #686b78;
   padding-bottom: 1rem;
   border-bottom: 1px solid #e9e9eb;
 }
-.firstsubprice span{
+
+.firstsubprice span {
   position: relative;
 }
+
 .info {
   position: absolute;
   top: 3px;
   margin-left: 5px;
 }
-.taxes{
+
+.taxes {
   font-size: 13px;
   color: #686b78;
   border-bottom: 2px solid black;
 }
-.taxes span{
+
+.taxes span {
   position: relative;
 }
-.total{
+
+.total {
   font-weight: 600;
 }
+
 /* notemain */
-.notemain{
+.notemain {
   background-color: #ffff;
   padding: 6px 30px;
   margin-top: 16px;
 }
-.notesummain{
+
+.notesummain {
   margin: 16px 0;
-  padding: 16px 16px 20px!important;
+  padding: 16px 16px 20px !important;
   border: 1px solid #e9e9eb;
   border-radius: 5px;
 }
-.notehead{
+
+.notehead {
   font-size: 16px;
   font-weight: 600;
   color: black;
   opacity: 1;
 }
-.notesubpar{
+
+.notesubpar {
   font-size: 13px;
 }
-.notesubpar span{
+
+.notesubpar span {
   color: red;
 }
-.notesummain a{
+
+.notesummain a {
   color: red;
-  border-bottom: 1px dotted #ec6148!important;
+  border-bottom: 1px dotted #ec6148 !important;
+}
+
+app-navbar {
+  position: sticky;
+  z-index: 2;
 }

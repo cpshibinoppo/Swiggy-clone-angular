@@ -8,12 +8,15 @@
   background: none;
   border: none;
 }
-.signuptext{
+
+.signuptext {
   padding-top: 1rem;
 }
-.signuptext h2{
+
+.signuptext h2 {
   font-size: 2rem;
 }
+
 .closeiconbtn:focus {
   display: none;
 }
@@ -47,7 +50,7 @@
   display: block;
 }
 
-.formmaindiv div{
+.formmaindiv div {
   border-bottom: 0;
   border: 1px solid #d4d5d9;
   padding: 0;
@@ -56,7 +59,7 @@
   transform: translateZ(0);
 }
 
-.inputsignup{
+.inputsignup {
   background-color: transparent;
   line-height: normal;
   border: none;
@@ -84,7 +87,8 @@
   pointer-events: none;
   font-weight: 400;
 }
- .focuslabel{
+
+.focuslabel {
   font-size: 12px;
   font-weight: 500;
   color: #7e808c;
@@ -100,12 +104,14 @@ input[type=number]::-webkit-outer-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
 /* error start */
-.erro{
+.erro {
   border: 1px solid #dc3545;
   background-image: url();
 }
-.loginbtnpage{
+
+.loginbtnpage {
   margin-top: 20px;
   width: 100%;
   cursor: pointer;
@@ -120,10 +126,12 @@ input[type=number] {
   background-color: var(--main-color);
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 12%);
 }
-.termspara{
+
+.termspara {
   padding-top: 0.7rem;
 }
-.termspara a{
+
+.termspara a {
   color: #000;
   font-weight: 600;
 }

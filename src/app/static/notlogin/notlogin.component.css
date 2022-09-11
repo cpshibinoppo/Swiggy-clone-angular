@@ -26,7 +26,7 @@
 .loginbtn {
   color: black;
   font-weight: 600;
-  transition: color .3s ease ;
+  transition: color .3s ease;
 
 }
 
@@ -315,8 +315,10 @@
 .mat-drawer-opened {
   width: 30%;
 }
+
 .mat-drawer.mat-drawer-end {
   width: 40% !important;
 }
+
 /* slide signup section end */
 /* loging page end*/

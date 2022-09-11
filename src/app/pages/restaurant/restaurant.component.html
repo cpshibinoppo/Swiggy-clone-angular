@@ -135,16 +135,16 @@
         <div class="addandpriceshowdiv pt-4">
           <div class="foodname">
             <div>
-            <i class='bx bx-checkbox'> <i class='bx bxs-circle'></i></i>
-          </div>
-          <div class="foodcarttext">
-            <p>Pepsi 250 Ml</p>
-            <button class="cusbtn"><span>Customize</span><i class='bx bx-chevron-right'></i></button>
-          </div>
+              <i class='bx bx-checkbox'> <i class='bx bxs-circle'></i></i>
+            </div>
+            <div class="foodcarttext">
+              <p>Pepsi 250 Ml</p>
+              <button class="cusbtn"><span>Customize</span><i class='bx bx-chevron-right'></i></button>
+            </div>
           </div>
           <div class="addbtnmaindiv">
-            <div class="decrease" (click)="this.addnum = this.addnum - 1;zerocheck()" >-</div>
-            <div class="sum" >{{this.addnum}}</div>
+            <div class="decrease" (click)="this.addnum = this.addnum - 1;zerocheck()">-</div>
+            <div class="sum">{{this.addnum}}</div>
             <div class="increase" (click)="this.addnum = this.addnum + 1">+</div>
           </div>
           <div class="pricecart">
@@ -158,12 +158,12 @@
           </div>
           <div>
             <span class="privenum">
-            <i class='bx bx-rupee'></i>95
-           </span>
+              <i class='bx bx-rupee'></i>95
+            </span>
           </div>
         </div>
         <div class="btnpay upipaybtn pt-4">
-          <button [routerLink]="cartlink" >CHECKOUT<i class='bx bx-right-arrow-alt bx-fade-right' ></i></button>
+          <button [routerLink]="cartlink">CHECKOUT<i class='bx bx-right-arrow-alt bx-fade-right'></i></button>
         </div>
       </div>
     </div>

@@ -1,33 +1,38 @@
-app-navbar{
+app-navbar {
   position: sticky;
 }
 
-.searchmain{
+.searchmain {
   padding-top: 3rem;
   text-align: -webkit-center;
   height: 100vh;
 }
-.searchinputdiv{
+
+.searchinputdiv {
   display: flex;
   height: 48px;
-  border: 1px solid rgba(40,44,63,.2);
+  border: 1px solid rgba(40, 44, 63, .2);
   align-items: center;
 }
-.searchinputdiv input{
+
+.searchinputdiv input {
   border: none;
   outline: none;
   padding-left: 15px;
   width: 100%;
 }
-.searchform{
+
+.searchform {
   width: 75%;
 }
-.searchinputdiv i{
+
+.searchinputdiv i {
   font-size: 25px;
   margin-right: 7px;
   cursor: pointer;
   opacity: .6;
 }
+
 ::placeholder {
   font-size: 1rem;
   font-weight: 500;

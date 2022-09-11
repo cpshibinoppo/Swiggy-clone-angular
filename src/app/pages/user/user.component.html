@@ -1,241 +1,245 @@
-<mat-sidenav-container>
-  <mat-sidenav-content>
-    <app-navbar usernavtitle="{{this.usernavbartitle.usernav}}"></app-navbar>
-    <section class="mainsection">
-      <div class="main">
-        <div class="container">
-          <header>
-            <div>
-              <h1>Shibin</h1>
-              <p> <span>8138059882</span><span class="mx-3">.</span><span>cpshibinoppo@gmail.com</span></p>
-            </div>
-            <div>
-              <button type="button" (click)="this.add = !this.add">EDIT PROFILE</button>
-            </div>
-          </header>
-          <section>
-            <div class="paymentshow mt-4">
-              <div class="paymentmain">
-                <div class="paymentap">
-                  <div class="wallets active" #wa (click)="this.wallets = 'wallets';activefun(wa)">
-                    <i class='bx bxs-cart-download'></i><span>Orders</span>
+<div class="mainsecton" (scroll)="scrollHandler($event)">
+  <mat-sidenav-container>
+    <mat-sidenav-content>
+      <app-navbar usernavtitle="{{this.usernavbartitle.usernav}}"></app-navbar>
+      <!-- <app-userssubnav *ngIf="this.navchan"></app-userssubnav> -->
+      <section class="mainsection">
+        <div class="main">
+          <div class="container">
+            <header>
+              <div>
+                <h1>Shibin</h1>
+                <p> <span>8138059882</span><span class="mx-3">.</span><span>cpshibinoppo@gmail.com</span></p>
+              </div>
+              <div>
+                <button type="button" (click)="this.add = !this.add">EDIT PROFILE</button>
+              </div>
+            </header>
+            <section>
+              <div class="paymentshow mt-4">
+                <div class="paymentmain">
+                  <div class="paymentap">
+                    <div class="wallets active" #wa (click)="this.wallets = 'wallets';activefun(wa)">
+                      <i class='bx bxs-cart-download'></i><span>Orders</span>
+                    </div>
+                    <div class="ceranddeb" #cr (click)="this.wallets = 'credit';activefun(cr)">
+                      <i class='bx bxs-bowl-hot'></i><span>Swiggy One</span>
+                    </div>
+                    <div class="sedexo" #se (click)="this.wallets = 'sedexo';activefun(se)">
+                      <i class='bx bxs-heart-circle'></i><span>Favourites</span>
+                    </div>
+                    <div class="netbank" #ne (click)="this.wallets = 'netbanking';activefun(ne)">
+                      <i class='bx bxs-credit-card-front'></i><span>Payments</span>
+                    </div>
+                    <div class="upi" #up (click)="this.wallets = 'upi';activefun(up)">
+                      <i class='bx bx-current-location'></i><span>Addresses</span>
+                    </div>
+                    <div class="payon" #co (click)="this.wallets = 'cod';activefun(co)">
+                      <i>
+                        <mat-icon>settings</mat-icon>
+                      </i><span>Settings</span>
+                    </div>
                   </div>
-                  <div class="ceranddeb" #cr (click)="this.wallets = 'credit';activefun(cr)">
-                    <i class='bx bxs-bowl-hot'></i><span>Swiggy One</span>
-                  </div>
-                  <div class="sedexo" #se (click)="this.wallets = 'sedexo';activefun(se)">
-                    <i class='bx bxs-heart-circle'></i><span>Favourites</span>
-                  </div>
-                  <div class="netbank" #ne (click)="this.wallets = 'netbanking';activefun(ne)">
-                    <i class='bx bxs-credit-card-front'></i><span>Payments</span>
-                  </div>
-                  <div class="upi" #up (click)="this.wallets = 'upi';activefun(up)">
-                    <i class='bx bx-current-location'></i><span>Addresses</span>
-                  </div>
-                  <div class="payon" #co (click)="this.wallets = 'cod';activefun(co)">
-                    <i>
-                      <mat-icon>settings</mat-icon>
-                    </i><span>Settings</span>
-                  </div>
-                </div>
-                <div class="walletshow" *ngIf="this.wallets == 'wallets'">
-                  <div class="pastodermaindiv mt-4">
-                    <h2>Past Orders</h2>
-                    <div class="pastordershowmain">
-                      <div class="firstsection">
-                        <div class="restaurantimg">
-                          <img src="../../../assets/image/pastorder/Pastorder.jpeg" alt="">
+                  <div class="walletshow" *ngIf="this.wallets == 'wallets'">
+                    <div class="pastodermaindiv mt-4">
+                      <h2>Past Orders</h2>
+                      <div class="pastordershowmain">
+                        <div class="firstsection">
+                          <div class="restaurantimg">
+                            <img src="../../../assets/image/pastorder/Pastorder.jpeg" alt="">
+                          </div>
+                          <div class="restaurantname">
+                            <h3>EZY CAFE</h3>
+                            <p>Manjeri</p>
+                            <p>ORDER #122127391718 | Thu, Dec 9, 2021, 05:46 PM</p>
+                            <button>VIEW DETAILS</button>
+                          </div>
+                          <div class="pastorderdate">
+                            <p><span>Delivered on Thu, Dec 9, 2021, 06:25 PM</span> <span class="mx-1"><i
+                                  class='bx bxs-check-circle'></i></span></p>
+                          </div>
                         </div>
-                        <div class="restaurantname">
-                          <h3>EZY CAFE</h3>
-                          <p>Manjeri</p>
-                          <p>ORDER #122127391718 | Thu, Dec 9, 2021, 05:46 PM</p>
-                          <button>VIEW DETAILS</button>
-                        </div>
-                        <div class="pastorderdate">
-                          <p><span>Delivered on Thu, Dec 9, 2021, 06:25 PM</span> <span class="mx-1"><i
-                                class='bx bxs-check-circle'></i></span></p>
-                        </div>
-                      </div>
-                      <div class="seconsection pt-3">
-                        <div class="dishname">
-                          <h4>Chicken Pizza(7") x 1</h4>
-                          <p>Total Paid<i class='bx bx-rupee'></i>103</p>
-                        </div>
-                        <div class="btninreorder pt-3">
-                          <a class="reorderbtn" href="#">REORDER</a>
-                          <a class="helpbtn" href="#">HELP</a>
+                        <div class="seconsection pt-3">
+                          <div class="dishname">
+                            <h4>Chicken Pizza(7") x 1</h4>
+                            <p>Total Paid<i class='bx bx-rupee'></i>103</p>
+                          </div>
+                          <div class="btninreorder pt-3">
+                            <a class="reorderbtn" href="#">REORDER</a>
+                            <a class="helpbtn" href="#">HELP</a>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="walletshow" *ngIf="this.wallets == 'credit'">
-                  <h1>Swiggy One</h1>
-                </div>
-                <div class="walletshow" *ngIf="this.wallets == 'sedexo'">
-                  <div class="favmaindiv pt-3">
-                    <h1 class="fav">Favourites</h1>
-                    <section class="pt-3">
-                      <div class="cardsub">
-                        <a href="home/restaurant">
-                          <div class="cardcon">
-                            <div class="cardimg">
-                              <img src="../../../assets/image/restaurant img/rest1.jpeg" alt="">
-                            </div>
-                            <div class="cardtext">
-                              <p class="cardtitle">Chicking</p>
-                              <p class="cardsubtext">Snacks, Grill,Fast Food,American</p>
-                              <div class="cardprice">
-                                <div class="cardstar"><span><i class='bx bxs-star'></i></span><span>3.8</span></div>
-                                <div>•</div>
-                                <div>49 min</div>
-                                <div>•</div>
-                                <div>₹300 For Two</div>
+                  <div class="walletshow" *ngIf="this.wallets == 'credit'">
+                    <h1>Swiggy One</h1>
+                  </div>
+                  <div class="walletshow" *ngIf="this.wallets == 'sedexo'">
+                    <div class="favmaindiv pt-3">
+                      <h1 class="fav">Favourites</h1>
+                      <section class="pt-3">
+                        <div class="cardsub">
+                          <a href="home/restaurant">
+                            <div class="cardcon">
+                              <div class="cardimg">
+                                <img src="../../../assets/image/restaurant img/rest1.jpeg" alt="">
+                              </div>
+                              <div class="cardtext">
+                                <p class="cardtitle">Chicking</p>
+                                <p class="cardsubtext">Snacks, Grill,Fast Food,American</p>
+                                <div class="cardprice">
+                                  <div class="cardstar"><span><i class='bx bxs-star'></i></span><span>3.8</span></div>
+                                  <div>•</div>
+                                  <div>49 min</div>
+                                  <div>•</div>
+                                  <div>₹300 For Two</div>
+                                </div>
+                              </div>
+                              <div class="offerdiv">
+                                <span><i class='bx bxs-offer'></i></span><span>60% off | Use TRYNEW</span>
                               </div>
                             </div>
-                            <div class="offerdiv">
-                              <span><i class='bx bxs-offer'></i></span><span>60% off | Use TRYNEW</span>
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </section>
-                  </div>
-                </div>
-                <div class="walletshow" *ngIf="this.wallets == 'netbanking'">
-                  <h1>Payments</h1>
-                </div>
-                <div class="walletshow" *ngIf="this.wallets == 'upi'">
-                  <h1>Manage Addresses</h1>
-                  <div class="addressmaindiv">
-                    <div><i class='bx bx-home-alt'></i></div>
-                    <div class="addresstext">
-                      <h2>Home</h2>
-                      <p>cp home, 44Q3+45C, Pullur, Pulpatta, Kerala 676121, India</p>
-                      <a href="#">EDIT</a>
-                      <a class="delebtn" href="#">DELETE</a>
+                          </a>
+                        </div>
+                      </section>
                     </div>
                   </div>
-                </div>
-                <div class="walletshow" *ngIf="this.wallets == 'cod'">
-                  <h1>SMS Preferences</h1>
-                  <div class="smsmaindiv">
-                    <div class="smshead">
-                      Order related SMS cannot be disabled as they are critical to provide service
-                    </div>
-                    <div class="swithmaindiv mt-3">
-                      <div class="swithdiv">
-                        <h2>Recommendations & Reminders</h2>
-                        <label class="switch">
-                          <input type="checkbox" checked>
-                          <span class="slider round"></span>
-                        </label>
+                  <div class="walletshow" *ngIf="this.wallets == 'netbanking'">
+                    <h1>Payments</h1>
+                  </div>
+                  <div class="walletshow" *ngIf="this.wallets == 'upi'">
+                    <h1>Manage Addresses</h1>
+                    <div class="addressmaindiv">
+                      <div><i class='bx bx-home-alt'></i></div>
+                      <div class="addresstext">
+                        <h2>Home</h2>
+                        <p>cp home, 44Q3+45C, Pullur, Pulpatta, Kerala 676121, India</p>
+                        <a href="#">EDIT</a>
+                        <a class="delebtn" href="#">DELETE</a>
                       </div>
-                      <div class="line"></div>
-                      <div class="subswitch">
-                        <p>Keep this on to receive offer recommendations & timely reminders based on your interests</p>
+                    </div>
+                  </div>
+                  <div class="walletshow" *ngIf="this.wallets == 'cod'">
+                    <h1>SMS Preferences</h1>
+                    <div class="smsmaindiv">
+                      <div class="smshead">
+                        Order related SMS cannot be disabled as they are critical to provide service
+                      </div>
+                      <div class="swithmaindiv mt-3">
+                        <div class="swithdiv">
+                          <h2>Recommendations & Reminders</h2>
+                          <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                        <div class="line"></div>
+                        <div class="subswitch">
+                          <p>Keep this on to receive offer recommendations & timely reminders based on your interests
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </mat-sidenav-content>
+    <mat-sidenav position="end" [(opened)]="add">
+      <div class="closediv">
+        <a class="closeiconbtn" (click)="add=!add;hideedit()">
+          <mat-icon>close</mat-icon>
+        </a>
+        <h2>Edit profile</h2>
+      </div>
+      <div class="slide">
+        <div class="slidemiandiv">
+          <div class="phone">
+            <h2>Phone number</h2>
+            <div class="showdata" *ngIf="!this.editshowph">
+              <p>8138059882</p>
+              <a (click)="editshow('ph')">CHANGE</a>
             </div>
-          </section>
-        </div>
-      </div>
-    </section>
-  </mat-sidenav-content>
-  <mat-sidenav position="end" [(opened)]="add">
-    <div class="closediv">
-      <a class="closeiconbtn" (click)="add=!add;hideedit()">
-        <mat-icon>close</mat-icon>
-      </a>
-      <h2>Edit profile</h2>
-    </div>
-    <div class="slide">
-      <div class="slidemiandiv">
-        <div class="phone">
-          <h2>Phone number</h2>
-          <div class="showdata" *ngIf="!this.editshowph">
-            <p>8138059882</p>
-            <a (click)="editshow('ph')">CHANGE</a>
-          </div>
-          <div class="showedit" *ngIf="this.editshowph">
-            <form class="formmain" [formGroup]="loginForm" (ngSubmit)="onsubmit()" action="location">
-              <div class="formmaindiv" [ngClass]="{'erro' : sub&&f.phonenumber.errors}">
-                <div>
-                  <input (focus)="onFocus('num')" (focusout)="focusOut('num')" type="number" [(ngModel)]="this.dele"
-                    class="inputsignup" formControlName="phonenumber" required>
-                  <label [ngClass]="{'focuslabel' : this.numcheck}" class="inputlabel">
-                    <span *ngIf="sub&&f.phonenumber.errors">Enter Your </span>
-                    <span *ngIf="f.phonenumber!">Phone number</span>
-                    <span *ngIf="f.phonenumber.errors&&f.phonenumber.errors?.['pattern']">correctly</span>
-                  </label>
+            <div class="showedit" *ngIf="this.editshowph">
+              <form class="formmain" [formGroup]="loginForm" (ngSubmit)="onsubmit()" action="location">
+                <div class="formmaindiv" [ngClass]="{'erro' : sub&&f.phonenumber.errors}">
+                  <div>
+                    <input (focus)="onFocus('num')" (focusout)="focusOut('num')" type="number" [(ngModel)]="this.dele"
+                      class="inputsignup" formControlName="phonenumber" required>
+                    <label [ngClass]="{'focuslabel' : this.numcheck}" class="inputlabel">
+                      <span *ngIf="sub&&f.phonenumber.errors">Enter Your </span>
+                      <span *ngIf="f.phonenumber!">Phone number</span>
+                      <span *ngIf="f.phonenumber.errors&&f.phonenumber.errors?.['pattern']">correctly</span>
+                    </label>
+                  </div>
                 </div>
-              </div>
-              <div class="submitdiv">
-                <button type="submit">VERIFY</button>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="phone pt-3">
-          <h2>Email</h2>
-          <div class="showdata" *ngIf="!this.editshowemail">
-            <p>cpshibinoppo@gmail.com</p>
-            <a (click)="editshow('em')">CHANGE</a>
-          </div>
-          <div class="showedit" *ngIf="this.editshowemail">
-            <form class="formmain" [formGroup]="loginForm" (ngSubmit)="onsubmit()" action="location">
-              <div class="formmaindiv" [ngClass]="{'erro' : sub&&f.phonenumber.errors}">
-                <div>
-                  <input (focus)="onFocus('email')" (focusout)="focusOut('email')" type="email" [(ngModel)]="this.email"
-                    class="inputsignup" formControlName="userpassword" required>
-                  <label
-                    [ngClass]="{'focuslabel' : this.emailcheck,'eorrortext' : useremailerror&&this.f.useremail.errors}"
-                    class="inputlabel">
-                    <span *ngIf="useremailerror&&f.useremail.errors">Enter Your </span>
-                    <span *ngIf="f.useremail!">email</span>
-                    <span *ngIf="useremailerror&&f.useremail.errors?.['email']">correctly</span>
-                  </label>
+                <div class="submitdiv">
+                  <button type="submit">VERIFY</button>
                 </div>
-              </div>
-              <div class="submitdiv">
-                <button type="submit">VERIFY</button>
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
-        </div>
-        <div class="phone pt-3">
-          <h2>Password</h2>
-          <div class="showdata" *ngIf="!this.editshowpass">
-            <p>****</p>
-            <a (click)="editshow('pa')">CHANGE</a>
-          </div>
-          <div class="showedit" *ngIf="this.editshowpass">
-            <form class="formmain" [formGroup]="loginForm" (ngSubmit)="onsubmit()" action="location">
-              <div class="formmaindiv" [ngClass]="{'erro' : sub&&f.phonenumber.errors}">
-                <div>
-                  <input (focus)="onFocus('password')" (focusout)="focusOut('password')" type="password"
-                    [(ngModel)]="this.pass" class="inputsignup" formControlName="useremail" required>
-                  <label
-                    [ngClass]="{'focuslabel' : this.passwordcheck,'eorrortext' : userpassworderror&&this.f.userpassword.errors}"
-                    class="inputlabel">
-                    <span *ngIf="userpassworderror&&f.userpassword.errors">Enter Your </span>
-                    <span *ngIf="f.userpassword!">Password</span>
-                    <span *ngIf="userpassworderror&&f.userpassword.errors?.['minlength']">should be min 8 chars</span>
-                    <span *ngIf="userpassworderror&&f.userpassword.errors?.['maxlength']"> Max 10</span>
-                  </label>
+          <div class="phone pt-3">
+            <h2>Email</h2>
+            <div class="showdata" *ngIf="!this.editshowemail">
+              <p>cpshibinoppo@gmail.com</p>
+              <a (click)="editshow('em')">CHANGE</a>
+            </div>
+            <div class="showedit" *ngIf="this.editshowemail">
+              <form class="formmain" [formGroup]="loginForm" (ngSubmit)="onsubmit()" action="location">
+                <div class="formmaindiv" [ngClass]="{'erro' : sub&&f.phonenumber.errors}">
+                  <div>
+                    <input (focus)="onFocus('email')" (focusout)="focusOut('email')" type="email"
+                      [(ngModel)]="this.email" class="inputsignup" formControlName="userpassword" required>
+                    <label
+                      [ngClass]="{'focuslabel' : this.emailcheck,'eorrortext' : useremailerror&&this.f.useremail.errors}"
+                      class="inputlabel">
+                      <span *ngIf="useremailerror&&f.useremail.errors">Enter Your </span>
+                      <span *ngIf="f.useremail!">email</span>
+                      <span *ngIf="useremailerror&&f.useremail.errors?.['email']">correctly</span>
+                    </label>
+                  </div>
                 </div>
-              </div>
-              <div class="submitdiv">
-                <button type="submit">VERIFY</button>
-              </div>
-            </form>
+                <div class="submitdiv">
+                  <button type="submit">VERIFY</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="phone pt-3">
+            <h2>Password</h2>
+            <div class="showdata" *ngIf="!this.editshowpass">
+              <p>****</p>
+              <a (click)="editshow('pa')">CHANGE</a>
+            </div>
+            <div class="showedit" *ngIf="this.editshowpass">
+              <form class="formmain" [formGroup]="loginForm" (ngSubmit)="onsubmit()" action="location">
+                <div class="formmaindiv" [ngClass]="{'erro' : sub&&f.phonenumber.errors}">
+                  <div>
+                    <input (focus)="onFocus('password')" (focusout)="focusOut('password')" type="password"
+                      [(ngModel)]="this.pass" class="inputsignup" formControlName="useremail" required>
+                    <label
+                      [ngClass]="{'focuslabel' : this.passwordcheck,'eorrortext' : userpassworderror&&this.f.userpassword.errors}"
+                      class="inputlabel">
+                      <span *ngIf="userpassworderror&&f.userpassword.errors">Enter Your </span>
+                      <span *ngIf="f.userpassword!">Password</span>
+                      <span *ngIf="userpassworderror&&f.userpassword.errors?.['minlength']">should be min 8 chars</span>
+                      <span *ngIf="userpassworderror&&f.userpassword.errors?.['maxlength']"> Max 10</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="submitdiv">
+                  <button type="submit">VERIFY</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </mat-sidenav>
-</mat-sidenav-container>
+    </mat-sidenav>
+  </mat-sidenav-container>
+</div>

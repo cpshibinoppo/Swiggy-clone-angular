@@ -4,6 +4,7 @@
 }
 
 .main {
+  margin-top: 5.2rem;
   padding-top: 3rem;
 }
 
@@ -643,4 +644,33 @@ input[type=number] {
   height: 50px;
   color: #fff;
   background-color: var(--main-color);
+}
+
+app-userssubnav {
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  transform: translateY(0px);
+  z-index: 2;
+  animation-name: navdown;
+  animation-duration: 1s;
+}
+
+@keyframes navdown {
+  0% {
+    transform: translateY(-50px)
+  }
+
+  100% {
+    transform: translateY(0px)
+  }
+}
+
+app-navbar {
+  position: fixed;
+  width: 100%;
+  transform: translateY(0px);
+  z-index: 2;
+  animation-name: navdown;
+  animation-duration: 1s;
 }
