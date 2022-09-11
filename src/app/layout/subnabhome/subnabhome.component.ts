@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HomeComponent} from '../../pages/home/home.component'
 
 @Component({
   selector: 'app-subnabhome',
@@ -8,25 +9,16 @@ import { Component, OnInit } from '@angular/core';
 export class SubnabhomeComponent implements OnInit {
   clickedElement: any;
   checkid: any;
+  add:any
 
-  constructor() { }
+  constructor(public homecomp:HomeComponent) { }
 
   ngOnInit(): void {
   }
-  onButtonGroupClick($event:any){
-    this.clickedElement = $event.target || $event.srcElement;
-   let isCertainButtonAlreadyActive = this.clickedElement.parentElement.querySelector(".active");
-   if(this.clickedElement.id == ''){
-     this.checkid = 'rele'
-   }else{
-     this.checkid = this.clickedElement.id
-   }
-   if( this.clickedElement.nodeName === "BUTTON" ) {
-     if( isCertainButtonAlreadyActive) {
-         isCertainButtonAlreadyActive.classList.remove("active");
-     }
-     this.clickedElement.className += " active";
-   }
-
+  onButtonGroupClick(btn:any){
+  this.homecomp.onButtonGroupClick(btn)
+ }
+ openandhide(){
+  this.homecomp.openandhide()
  }
 }

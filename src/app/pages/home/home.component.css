@@ -3,6 +3,7 @@ a{
 }
 .homesection {
   padding-top: 3rem;
+  margin-top: 5.2rem;
 }
 
 .mainhead {
@@ -365,8 +366,24 @@ a{
   visibility: visible;
   opacity: 1;
 }
+app-navbar{
+  position: fixed;
+  background-color: #FFF;
+  z-index: 2;
+  width: 100%;
+  animation-name: navdown;
+  animation-duration: 1s;
+}
 app-subnabhome {
   position: fixed;
   width: 100%;
   background-color: #fff;
+  transform: translateY(0px);
+  z-index: 2;
+  animation-name: navdown;
+  animation-duration: 1s;
+}
+@keyframes navdown{
+  0%   {transform: translateY(-50px)}
+  100% {transform: translateY(0px)}
 }

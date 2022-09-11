@@ -35,7 +35,7 @@ export class HomeComponent implements OnInit {
   scrollHandler(event:any){
     var prevScrollpos = window.pageYOffset;
     // console.log('pr'+prevScrollpos);
-if(prevScrollpos > 107){
+if(prevScrollpos > 110){
 
 this.navchan = true
 console.log('show'+this.navchan);
@@ -45,11 +45,10 @@ console.log('show'+this.navchan);
   console.log('hide'+this.navchan);
 
 }
-
-
   }
-
-
+openandhide(){
+  this.add = !this.add
+}
 }
 
 

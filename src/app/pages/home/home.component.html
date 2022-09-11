@@ -1,10 +1,10 @@
 <div class="main" (scroll)="scrollHandler($event)">
   <mat-sidenav-container>
     <mat-sidenav-content>
-      <app-navbar *ngIf="!this.navchan"></app-navbar>
+      <app-navbar *ngIf="!this.navchan" ></app-navbar>
       <app-subnabhome *ngIf="this.navchan" ></app-subnabhome>
 
-      <section class="homesection" >
+      <section class="homesection " >
         <div class="container">
           <div class="row">
             <div class="mainhead">
