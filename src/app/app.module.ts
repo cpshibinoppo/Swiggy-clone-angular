@@ -32,6 +32,7 @@ import { UserComponent } from './pages/user/user.component';
 import { SubnabhomeComponent } from './layout/subnabhome/subnabhome.component';
 import { UserssubnavComponent } from './layout/userssubnav/userssubnav.component';
 import { AddnewaddressComponent } from './layout/addnewaddress/addnewaddress.component';
+import { EditaddressComponent } from './layout/editaddress/editaddress.component';
 
 
 const maskConfigFunction: () => Partial<IConfig> = () => {
@@ -41,7 +42,7 @@ const maskConfigFunction: () => Partial<IConfig> = () => {
 };
 
 @NgModule({
-  declarations: [AppComponent,FooterComponent,HomeComponent, SignupComponent, LoginComponent, NotloginComponent, NavbarComponent, RestaurantComponent, CartComponent, SearchComponent, OffersComponent, UserComponent, SubnabhomeComponent, UserssubnavComponent, AddnewaddressComponent],
+  declarations: [AppComponent,FooterComponent,HomeComponent, SignupComponent, LoginComponent, NotloginComponent, NavbarComponent, RestaurantComponent, CartComponent, SearchComponent, OffersComponent, UserComponent, SubnabhomeComponent, UserssubnavComponent, AddnewaddressComponent, EditaddressComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

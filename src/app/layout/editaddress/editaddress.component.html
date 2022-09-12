@@ -1,0 +1,46 @@
+<div class="main">
+  <div class="closeandtitle pt-4">
+    <h2><span (click)="hide()"><i class='bx bx-x'></i></span><span class="headtext">Save delivery address</span></h2>
+  </div>
+  <div class="addressinputmain">
+    <form class="formmain pt-4" [formGroup]="loginForm" (ngSubmit)="onsubmit()" action="location">
+      <div class="formmaindiv" [ngClass]="{'erro' : this.addrerror&&f.address.errors}">
+        <div>
+          <input (focus)="onFocus('addr')" (focusout)="focusOut('addr')" [(ngModel)]="this.address" type="text"
+            class="inputsignup" formControlName="address" required>
+          <label [ngClass]="{'focuslabel' : this.addr}" class="inputlabel">
+            <span *ngIf="this.addrerror&&f.address.errors">Enter Your </span>
+            <span *ngIf="f.address!">Address</span>
+            <span *ngIf="f.address.errors&&f.address.errors?.['minlength']">min 8 letters</span>
+          </label>
+        </div>
+      </div>
+      <div class="formmaindiv" [ngClass]="{'erro' : this.doorerror&&f.dooraddress.errors}">
+        <div>
+          <input (focus)="onFocus('door')" (focusout)="focusOut('door')" [(ngModel)]="this.doorno" type="text"
+            class="inputsignup" formControlName="dooraddress" required>
+          <label [ngClass]="{'focuslabel' : this.door}" class="inputlabel">
+            <span *ngIf="f.dooraddress!">Door / Flat No.</span>
+            <span *ngIf="f.dooraddress.errors">Can not be empty</span>
+          </label>
+        </div>
+      </div>
+      <div class="formmaindiv" [ngClass]="{'erro' : this.landerror&&f.landmark.errors}">
+        <div>
+          <input (focus)="onFocus('land')" (focusout)="focusOut('land')" [(ngModel)]="this.lankmark" type="text"
+            class="inputsignup" formControlName="landmark" required>
+          <label [ngClass]="{'focuslabel' : this.land}" class="inputlabel">
+            <span *ngIf="f.landmark!">Landmark</span>
+            <span *ngIf="f.landmark.errors"> Can not be empty</span>
+          </label>
+        </div>
+      </div>
+      <div class="buttonsdiv" (click)="onButtonGroupClick($event)">
+        <button class="active"><span><i class='bx bxs-home-smile'></i></span><span>home</span></button>
+        <button><span><i class='bx bxs-briefcase'></i></span><span>Work</span></button>
+        <button><span><i class='bx bx-current-location'></i></span><span>Other</span></button>
+      </div>
+      <button class="loginbtnpage" type="submit">SAVE ADDRESS & PROCEED</button>
+    </form>
+  </div>
+</div>
