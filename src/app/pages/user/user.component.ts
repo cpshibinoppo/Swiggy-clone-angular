@@ -141,4 +141,5 @@ export class UserComponent implements OnInit {
       console.log('hide' + this.navchan);
     }
   }
+  editaddress = false
 }

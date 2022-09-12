@@ -154,6 +154,7 @@
 }
 
 .addaddress {
+  cursor: pointer;
   padding: 23px 30px 29px 57px;
   border: 1px solid #e9e9eb;
   border-style: dashed;
@@ -1147,4 +1148,13 @@ input[type=number]::-webkit-outer-spin-button {
 app-navbar {
   position: sticky;
   z-index: 2;
+}
+
+/* slide start */
+.mat-drawer-container {
+  height: 100% !important;
+}
+
+.mat-sidenav {
+  width: 30%;
 }

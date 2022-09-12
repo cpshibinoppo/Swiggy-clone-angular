@@ -6,8 +6,8 @@
     <form class="formmain pt-4" [formGroup]="loginForm" (ngSubmit)="onsubmit()" action="location">
       <div class="formmaindiv" [ngClass]="{'erro' : this.addrerror&&f.address.errors}">
         <div>
-          <input (focus)="onFocus('addr')" (focusout)="focusOut('addr')" type="text" class="inputsignup"
-            formControlName="address" required>
+          <input (focus)="onFocus('addr')" (focusout)="focusOut('addr')" [(ngModel)]="this.address" type="text"
+            class="inputsignup" formControlName="address" required>
           <label [ngClass]="{'focuslabel' : this.addr}" class="inputlabel">
             <span *ngIf="this.addrerror&&f.address.errors">Enter Your </span>
             <span *ngIf="f.address!">Address</span>
@@ -17,8 +17,8 @@
       </div>
       <div class="formmaindiv" [ngClass]="{'erro' : this.doorerror&&f.dooraddress.errors}">
         <div>
-          <input (focus)="onFocus('door')" (focusout)="focusOut('door')" type="text" class="inputsignup"
-            formControlName="dooraddress" required>
+          <input (focus)="onFocus('door')" (focusout)="focusOut('door')" [(ngModel)]="this.doorno" type="text"
+            class="inputsignup" formControlName="dooraddress" required>
           <label [ngClass]="{'focuslabel' : this.door}" class="inputlabel">
             <span *ngIf="f.dooraddress!">Door / Flat No.</span>
             <span *ngIf="f.dooraddress.errors">Can not be empty</span>
@@ -27,8 +27,8 @@
       </div>
       <div class="formmaindiv" [ngClass]="{'erro' : this.landerror&&f.landmark.errors}">
         <div>
-          <input (focus)="onFocus('land')" (focusout)="focusOut('land')" type="text" class="inputsignup"
-            formControlName="landmark" required>
+          <input (focus)="onFocus('land')" (focusout)="focusOut('land')" [(ngModel)]="this.lankmark" type="text"
+            class="inputsignup" formControlName="landmark" required>
           <label [ngClass]="{'focuslabel' : this.land}" class="inputlabel">
             <span *ngIf="f.landmark!">Landmark</span>
             <span *ngIf="f.landmark.errors"> Can not be empty</span>
@@ -36,7 +36,7 @@
         </div>
       </div>
       <div class="buttonsdiv" (click)="onButtonGroupClick($event)">
-        <button><span><i class='bx bxs-home-smile'></i></span><span>home</span></button>
+        <button class="active"><span><i class='bx bxs-home-smile'></i></span><span>home</span></button>
         <button><span><i class='bx bxs-briefcase'></i></span><span>Work</span></button>
         <button><span><i class='bx bx-current-location'></i></span><span>Other</span></button>
       </div>

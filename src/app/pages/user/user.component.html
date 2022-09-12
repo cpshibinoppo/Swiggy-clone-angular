@@ -115,7 +115,7 @@
                       <div class="addresstext">
                         <h2>Home</h2>
                         <p>cp home, 44Q3+45C, Pullur, Pulpatta, Kerala 676121, India</p>
-                        <a href="#">EDIT</a>
+                        <a (click)="this.editaddress = !this.editaddress">EDIT</a>
                         <a class="delebtn" href="#">DELETE</a>
                       </div>
                     </div>
@@ -240,6 +240,9 @@
           </div>
         </div>
       </div>
+    </mat-sidenav>
+    <mat-sidenav [(opened)]="editaddress">
+      <app-editaddress></app-editaddress>
     </mat-sidenav>
   </mat-sidenav-container>
 </div>

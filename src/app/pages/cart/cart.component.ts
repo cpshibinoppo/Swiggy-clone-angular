@@ -9,7 +9,7 @@ import * as $ from 'jquery';
   styleUrls: ['./cart.component.css'],
 })
 export class CartComponent implements OnInit {
-  add:any
+  add = false;
   product: any;
   noncart = false;
   subpayment = false;
@@ -102,8 +102,5 @@ export class CartComponent implements OnInit {
   scrollHandler(event: any) {
     var prevScrollpos = window.pageYOffset;
     console.log('pr' + prevScrollpos);
-
-    var na = event;
-    // console.table(na);
   }
 }

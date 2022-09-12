@@ -1,22 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { CartComponent } from '../../pages/cart/cart.component';
-
+import { UserComponent } from 'src/app/pages/user/user.component';
 @Component({
-  selector: 'app-addnewaddress',
-  templateUrl: './addnewaddress.component.html',
-  styleUrls: ['./addnewaddress.component.css'],
+  selector: 'app-editaddress',
+  templateUrl: './editaddress.component.html',
+  styleUrls: ['./editaddress.component.css'],
 })
-export class AddnewaddressComponent implements OnInit {
-  addr = false;
+export class EditaddressComponent implements OnInit {
+  addr = true;
   addrerror = false;
-  door = false;
+  door = true;
   doorerror = false;
-  land = false;
+  land = true;
   landerror = false;
   clickedElement: any;
   checkid: any;
-  constructor(private fb: FormBuilder, private cartcomp: CartComponent) {}
+  address = 'pullur';
+  doorno = 28;
+  lankmark = 'school rode ';
+  constructor(private fb: FormBuilder, private usercom: UserComponent) {}
 
   ngOnInit(): void {}
   loginForm = this.fb.group({
@@ -76,14 +78,14 @@ export class AddnewaddressComponent implements OnInit {
     } else {
       this.checkid = this.clickedElement.id;
     }
-    if (this.clickedElement.nodeName === 'BUTTON') {
-      if (isCertainButtonAlreadyActive) {
-        isCertainButtonAlreadyActive.classList.remove('active');
-      }
-      this.clickedElement.className += ' active';
+    // if (this.clickedElement.nodeName === 'BUTTON') {
+    if (isCertainButtonAlreadyActive) {
+      isCertainButtonAlreadyActive.classList.remove('active');
     }
+    this.clickedElement.className += ' active';
+    // }
   }
   hide() {
-    this.cartcomp.add = !this.cartcomp.add;
+    this.usercom.editaddress = !this.usercom.editaddress;
   }
 }
