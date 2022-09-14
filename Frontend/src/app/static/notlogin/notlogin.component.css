@@ -322,3 +322,84 @@
 
 /* slide signup section end */
 /* loging page end*/
+@media only screen and (min-width: 768px) {
+  .gitlocation {
+    right: 70px;
+  }
+
+  .phonelogingdiv img {
+    width: 210px;
+  }
+
+  .section3row .col-5 h5 {
+    padding-bottom: 15px;
+  }
+
+  .section3row .col-5 h2 {
+    padding-top: 0;
+  }
+}
+
+
+@media only screen and (min-width: 992px) {
+  .topfoodimage {
+    left: calc(2% + 230px);
+  }
+
+  .gitlocation {
+    right: -70px;
+  }
+
+  .phonelogingdiv img {
+    width: 250px;
+  }
+
+  .section3row .col-5 h5 {
+    padding-bottom: 50px;
+  }
+
+  .section3row .col-5 h2 {
+    padding-top: 3rem;
+  }
+
+  .section3row {
+    margin-left: 50px;
+  }
+}
+
+
+@media only screen and (min-width: 1200px) {
+  .topfoodimage {
+    left: calc(2% + 130px);
+  }
+
+  .gitlocation {
+    right: -70px;
+  }
+
+  .phonelogingdiv img {
+    width: 300px;
+  }
+
+  .section3row {
+    margin-left: 50px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .topfoodimage {
+    left: calc(2% + 43px);
+  }
+
+  .gitlocation {
+    right: 125px;
+  }
+
+  .phonelogingdiv img {
+    width: 370px;
+  }
+
+  .section3row {
+    margin-left: 50px;
+  }
+}
