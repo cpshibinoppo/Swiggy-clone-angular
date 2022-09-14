@@ -414,4 +414,10 @@
     margin-left: 50px;
   }
 }
+@media only screen and (min-width: 1500px) {
+  .topfoodimage {
+    left: calc(2% + 215px);
+    width: 112%;
+  }
+}
 /* respons end */
