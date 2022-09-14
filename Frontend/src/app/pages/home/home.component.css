@@ -400,3 +400,34 @@ app-subnabhome {
     transform: translateY(0px)
   }
 }
+/* responce start*/
+@media only screen and (min-width: 768px) {
+  .mat-sidenav {
+    width: 50%;
+  }
+}
+
+
+@media only screen and (min-width: 992px) {
+  .mat-sidenav {
+    width: 50%;
+  }
+}
+
+
+@media only screen and (min-width: 1200px) {
+  .mat-sidenav {
+    width: 40%;
+  }
+
+}
+
+@media only screen and (min-width: 1400px) {
+  .mat-sidenav {
+    width: 30%;
+  }
+}
+@media only screen and (min-width: 1500px) {
+
+}
+/* respons end */
