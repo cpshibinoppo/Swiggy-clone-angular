@@ -323,12 +323,16 @@
 /* slide signup section end */
 /* loging page end*/
 @media only screen and (min-width: 768px) {
+  .topfoodimage {
+    left: calc(2% + 59px);
+    width: 100%;
+  }
   .gitlocation {
     right: 70px;
   }
 
   .phonelogingdiv img {
-    width: 210px;
+    width: 180px;
   }
 
   .section3row .col-5 h5 {
@@ -342,8 +346,12 @@
 
 
 @media only screen and (min-width: 992px) {
+  .logocol{
+    z-index: 2;
+  }
   .topfoodimage {
-    left: calc(2% + 230px);
+    left: calc(2% + 36px);
+    width: 100%;
   }
 
   .gitlocation {
@@ -351,7 +359,7 @@
   }
 
   .phonelogingdiv img {
-    width: 250px;
+    width: 240px;
   }
 
   .section3row .col-5 h5 {
@@ -370,7 +378,8 @@
 
 @media only screen and (min-width: 1200px) {
   .topfoodimage {
-    left: calc(2% + 130px);
+    left: calc(2% + 59px);
+    width: 100%;
   }
 
   .gitlocation {
@@ -388,7 +397,8 @@
 
 @media only screen and (min-width: 1400px) {
   .topfoodimage {
-    left: calc(2% + 43px);
+    left: calc(2% + 59px);
+    width: 100%;
   }
 
   .gitlocation {
@@ -396,7 +406,7 @@
   }
 
   .phonelogingdiv img {
-    width: 370px;
+    width: 330px;
   }
 
   .section3row {
