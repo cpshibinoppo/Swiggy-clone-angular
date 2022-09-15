@@ -431,3 +431,6 @@ app-subnabhome {
 
 }
 /* respons end */
+.mat-drawer-content{
+  overflow: hidden;
+}
