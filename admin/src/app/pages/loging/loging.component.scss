@@ -1,0 +1,16 @@
+.main {
+  background: var(--body-color);
+  align-items: center;
+}
+.logingcol {
+  margin-top:1rem;
+  background-color: var(--background-color);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  header {
+    text-align: center;
+    color: var(--sp-text);
+    p{
+      font-weight:400 ;
+    }
+  }
+}
