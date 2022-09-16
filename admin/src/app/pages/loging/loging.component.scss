@@ -2,7 +2,7 @@
   background: var(--body-color);
   align-items: center;
 }
-a{
+a {
   text-decoration: none;
 }
 .logingcol {
@@ -23,16 +23,18 @@ a{
 }
 .loginsection {
   form {
-    label{
+    label {
       color: var(--text-light);
       font-weight: 500;
     }
-    .emaildiv input,.passworddiv input{
+    .emaildiv input,
+    .passworddiv input {
       height: 3.5rem;
       padding: 0.3125rem 1.25rem;
       border: 0.5px solid #f0f1f5;
       border-radius: 5px;
       outline-color: var(--active-color);
+      width: 100%;
     }
     .emaildiv {
       display: grid;
@@ -43,14 +45,14 @@ a{
     .remembermain {
       display: flex;
       justify-content: space-between;
-      label{
+      label {
         margin-left: 5px;
         font-weight: 300;
       }
-      a{
+      a {
         color: var(--text-light);
-        transition:var(--hover-transition);
-        &:hover{
+        transition: var(--hover-transition);
+        &:hover {
           color: var(--hover);
         }
       }
@@ -64,13 +66,25 @@ a{
         border: none;
         width: 100%;
         height: 45px;
-        transition:var(--hover-transition);
+        transition: var(--hover-transition);
         font-weight: 500;
         font-size: large;
-        &:hover{
+        &:hover {
           background: var(--hover);
         }
       }
     }
   }
 }
+@media only screen and (max-width: 600px) {
+  .logingcol {
+    padding: 3rem 2rem 5rem 2rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .logingcol {
+    padding: 3rem 4rem 5rem 4rem;
+  }
+}
+
