@@ -2,15 +2,75 @@
   background: var(--body-color);
   align-items: center;
 }
+a{
+  text-decoration: none;
+}
 .logingcol {
-  margin-top:1rem;
+  padding: 3rem 4rem 5rem 4rem;
+  margin-top: 1rem;
+  border-radius: 5px;
   background-color: var(--background-color);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   header {
     text-align: center;
     color: var(--sp-text);
-    p{
-      font-weight:400 ;
+    margin-top: -15px;
+    p {
+      letter-spacing: 1px;
+      font-weight: 400;
+    }
+  }
+}
+.loginsection {
+  form {
+    label{
+      color: var(--text-light);
+      font-weight: 500;
+    }
+    .emaildiv input,.passworddiv input{
+      height: 3.5rem;
+      padding: 0.3125rem 1.25rem;
+      border: 0.5px solid #f0f1f5;
+      border-radius: 5px;
+      outline-color: var(--active-color);
+    }
+    .emaildiv {
+      display: grid;
+    }
+    .passworddiv {
+      display: grid;
+    }
+    .remembermain {
+      display: flex;
+      justify-content: space-between;
+      label{
+        margin-left: 5px;
+        font-weight: 300;
+      }
+      a{
+        color: var(--text-light);
+        transition:var(--hover-transition);
+        &:hover{
+          color: var(--hover);
+        }
+      }
+    }
+    .loginbutdiv {
+      text-align: center;
+      button {
+        background: var(--dark-background);
+        border-radius: 7px;
+        color: var(--white-text);
+        border: none;
+        width: 100%;
+        height: 45px;
+        transition:var(--hover-transition);
+        font-weight: 500;
+        font-size: large;
+        &:hover{
+          background: var(--hover);
+        }
+      }
     }
   }
 }
