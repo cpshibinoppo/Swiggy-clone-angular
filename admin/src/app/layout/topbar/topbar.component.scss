@@ -1,0 +1,70 @@
+.navmain{
+  display: flex;
+  justify-content: space-between;
+.menuandsearch {
+  display: flex;
+  .linemaindiv {
+    width: 30px;
+    position: relative;
+    &:hover .linef,
+    &:hover .linet {
+      width: 25px;
+    }
+    .line {
+      background: var(--dark-background);
+      display: block;
+      height: 3.3px;
+      border-radius: 3px;
+      margin-top: 6px;
+      margin-left: auto;
+      margin-bottom: 6px;
+      transition: all 0.3s ease-in-out;
+    }
+    .linef {
+      width: 15px;
+    }
+    .lines {
+      width: 25px;
+    }
+    .linet {
+      width: 20px;
+    }
+  }
+  .search {
+    margin-left: 20px;
+    background-color: var(--light-backgroud);
+    border-radius: 5px;
+    width: fit-content;
+    display: flex;
+    padding: 5px 15px 5px 15px;
+    input {
+      outline: none;
+      border: none;
+      background: transparent;
+      &::placeholder {
+        font-size: 15px;
+      }
+    }
+    i {
+      cursor: pointer;
+      vertical-align: middle;
+      color: var(--text-light);
+      font-size: 20px;
+    }
+  }
+}
+.usermaindiv{
+  display: flex;
+  .user{
+    display: flex;
+    .userimg{
+width: 30px;
+border-radius: 50%;
+overflow: hidden;
+    }
+    img{
+      width: 100%;
+    }
+  }
+}
+}
