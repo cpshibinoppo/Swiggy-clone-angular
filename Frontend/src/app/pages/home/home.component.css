@@ -99,9 +99,9 @@ a {
   transition: all .2s ease-in;
 }
 
-.main {
+/* .main {
   height: 100%;
-}
+} */
 
 .mat-drawer-container {
   height: 100% !important;
