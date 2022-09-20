@@ -2,12 +2,12 @@
   <div class="navmain pt-3">
     <div class="menuandsearch">
       <div class="menudiv">
-        <div class="linemaindiv" (click)="this.menuchange = !this.menuchange" *ngIf="!this.menuchange">
+        <div class="linemaindiv" (click)="this.menuchange = !this.menuchange;menushowandhide()" *ngIf="!this.menuchange">
           <span class="line linef"></span>
           <span class="line lines"></span>
           <span class="line linet"></span>
         </div>
-        <div class="back" (click)="this.menuchange = !this.menuchange" *ngIf="this.menuchange"><i class='bx bx-right-arrow-alt'></i></div>
+        <div class="back" (click)="this.menuchange = !this.menuchange;menushowandhide()" *ngIf="this.menuchange"><i class='bx bx-right-arrow-alt'></i></div>
       </div>
       <div class="searchdiv">
         <div class="search">

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-topbar',
@@ -6,11 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./topbar.component.scss'],
 })
 export class TopbarComponent implements OnInit {
-  constructor() {}
+  constructor() {
+
+  }
   docElement: HTMLElement | undefined;
   isFullScreen: boolean = false;
-  userdropdownshow = false
-  menuchange = false
+  userdropdownshow = false;
+  menuchange = false;
   ngOnInit(): void {}
   fullscreen() {
     this.docElement = document.documentElement;
@@ -20,5 +22,8 @@ export class TopbarComponent implements OnInit {
       document.exitFullscreen();
     }
     this.isFullScreen = !this.isFullScreen;
+  }
+  menushowandhide() {
+
   }
 }
