@@ -22,7 +22,8 @@ export class TopbarComponent implements OnInit {
     }
     this.isFullScreen = !this.isFullScreen;
   }
-  menushowandhide() {
+ async menushowandhide() {
     this.navbarService.sendClickEvent();
   }
+
 }

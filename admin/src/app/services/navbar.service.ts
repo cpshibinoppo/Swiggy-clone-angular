@@ -9,6 +9,7 @@ export class NavbarService {
   constructor() { }
   private subject = new Subject<any>();
 
+
   sendClickEvent() {
     this.subject.next(null);
   }
