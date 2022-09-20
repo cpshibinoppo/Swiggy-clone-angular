@@ -1,25 +1,33 @@
 import { Component, OnInit } from '@angular/core';
-
+import { NavbarService } from '../../services/navbar.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
-
-showorhide = false;
-sm = false
-  constructor() {
-
-
-   }
-
-  ngOnInit(): void {
+  clickEventsubscription: Subscription;
+  showorhide = false;
+  constructor(private navbarService: NavbarService) {
+    this.clickEventsubscription = this.navbarService
+      .getClickEvent()
+      .subscribe(() => {
+        this.showorhidefun();
+      });
   }
+  ngOnInit(): void {}
+  showorhidefun() {
+    console.log('ch');
 
-showorhidefun(){
+    if (this.showorhide == true) {
+      console.log('if');
 
-
-}
+      this.showorhide = false;
+    } else if(this.showorhide == false) {
+      console.log('else');
+      this.showorhide = true;
+    }
+  }
 }

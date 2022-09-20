@@ -1,4 +1,5 @@
 import { Component, OnInit, Output } from '@angular/core';
+import { NavbarService } from '../../services/navbar.service';
 
 @Component({
   selector: 'app-topbar',
@@ -6,9 +7,7 @@ import { Component, OnInit, Output } from '@angular/core';
   styleUrls: ['./topbar.component.scss'],
 })
 export class TopbarComponent implements OnInit {
-  constructor() {
-
-  }
+  constructor(private navbarService: NavbarService) {}
   docElement: HTMLElement | undefined;
   isFullScreen: boolean = false;
   userdropdownshow = false;
@@ -24,6 +23,6 @@ export class TopbarComponent implements OnInit {
     this.isFullScreen = !this.isFullScreen;
   }
   menushowandhide() {
-
+    this.navbarService.sendClickEvent();
   }
 }
