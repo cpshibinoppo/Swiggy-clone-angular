@@ -3,13 +3,20 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-topbar',
   templateUrl: './topbar.component.html',
-  styleUrls: ['./topbar.component.scss']
+  styleUrls: ['./topbar.component.scss'],
 })
 export class TopbarComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() {}
+  docElement: HTMLElement | undefined;
+  isFullScreen: boolean = false;
+  ngOnInit(): void {}
+  fullscreen() {
+    this.docElement = document.documentElement;
+    if (!this.isFullScreen) {
+      this.docElement!.requestFullscreen();
+    } else {
+      document.exitFullscreen();
+    }
+    this.isFullScreen = !this.isFullScreen;
   }
-
 }
