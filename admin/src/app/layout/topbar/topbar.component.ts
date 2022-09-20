@@ -9,6 +9,8 @@ export class TopbarComponent implements OnInit {
   constructor() {}
   docElement: HTMLElement | undefined;
   isFullScreen: boolean = false;
+  userdropdownshow = false
+  menuchange = false
   ngOnInit(): void {}
   fullscreen() {
     this.docElement = document.documentElement;

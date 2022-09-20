@@ -2,11 +2,12 @@
   <div class="navmain pt-3">
     <div class="menuandsearch">
       <div class="menudiv">
-        <div class="linemaindiv">
+        <div class="linemaindiv" (click)="this.menuchange = !this.menuchange" *ngIf="!this.menuchange">
           <span class="line linef"></span>
           <span class="line lines"></span>
           <span class="line linet"></span>
         </div>
+        <div class="back" (click)="this.menuchange = !this.menuchange" *ngIf="this.menuchange"><i class='bx bx-right-arrow-alt'></i></div>
       </div>
       <div class="searchdiv">
         <div class="search">
@@ -20,11 +21,18 @@
       <div class="mess"><i class='bx bx-message-square-detail'></i></div>
       <div class="bell"><i class='bx bxs-bell-ring'></i></div>
       <div class="user">
-        <div class="username">
+        <div class="username" (click)="this.userdropdownshow = !this.userdropdownshow">
           <h5>Hello, Olivia</h5>
         </div>
         <div class="userimg">
           <img src="../../../assets/img/userimg/profileimg.jpg" alt="userimg">
+        </div>
+        <div class="dropdowndin" *ngIf="this.userdropdownshow">
+          <ul>
+            <li><a href=""><div><span><i class='bx bx-user'></i></span><span>Profile</span></div></a></li>
+            <li><a href=""><div><span><i class='bx bx-user-plus' ></i></span><span>Add user</span></div></a></li>
+            <li><a href=""><div><span><i class='bx bx-log-out'></i></span><span>Logout</span></div></a></li>
+          </ul>
         </div>
       </div>
     </div>
